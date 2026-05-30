@@ -162,50 +162,94 @@ require_once 'includes/header.php';
         </div>
 
         <!-- Destinations Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
             <?php 
             $count = 0;
             foreach ($TOURS as $key => $tour): 
                 if ($count >= 6) break; // Display first 6 on homepage
                 $count++;
             ?>
-            <div class="group relative rounded-3xl overflow-hidden shadow-lg bg-white border border-slate-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-xl">
-                <!-- Image Container with Zoom & Badge -->
-                <div class="relative overflow-hidden aspect-[4/3] z-0">
-                    <img src="<?php echo $tour['image']; ?>" alt="<?php echo $tour['title']; ?>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-80"></div>
+            <div class="group bg-white rounded-[32px] overflow-hidden border border-slate-100 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2.5 hover:shadow-[0_20px_40px_rgba(15,23,42,0.08)]">
+                <!-- Image Section with Hover Zoom -->
+                <div class="relative overflow-hidden aspect-[16/11] z-0">
+                    <img src="<?php echo $tour['image']; ?>" alt="<?php echo $tour['title']; ?>" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                    <!-- Premium Soft Dark Overlay Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                     
-                    <!-- Rating Badge -->
-                    <div class="absolute top-4 right-4 bg-slate-950/80 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-white text-xs font-semibold flex items-center space-x-1">
-                        <i class="fa-solid fa-star text-brand"></i>
-                        <span><?php echo $tour['rating']; ?></span>
+                    <!-- Top Luxury Badges -->
+                    <div class="absolute top-5 left-5 right-5 flex justify-between items-center pointer-events-none">
+                        <!-- Rating Badge -->
+                        <div class="bg-slate-950/70 backdrop-blur-md border border-white/10 px-3 py-1 rounded-full text-white text-[11px] font-bold flex items-center space-x-1.5">
+                            <i class="fa-solid fa-star text-brand"></i>
+                            <span><?php echo $tour['rating']; ?></span>
+                            <span class="text-slate-400 font-normal">(<?php echo $tour['reviews']; ?>)</span>
+                        </div>
+                        
+                        <!-- Featured Tag (If applicable) -->
+                        <?php if (isset($tour['featured']) && $tour['featured']): ?>
+                            <span class="bg-gradient-gold text-obsidian-950 text-[9px] uppercase tracking-widest font-extrabold px-3 py-1 rounded-full shadow-sm">Featured</span>
+                        <?php endif; ?>
                     </div>
 
-                    <!-- Destination Short Title Overlay -->
-                    <div class="absolute bottom-4 left-6">
-                        <span class="text-brand-light text-xs font-bold uppercase tracking-wider"><?php echo $tour['subtitle']; ?></span>
-                        <h3 class="text-white text-xl font-bold font-display mt-0.5"><?php echo $tour['title']; ?></h3>
+                    <!-- Bottom Title Overlay -->
+                    <div class="absolute bottom-5 left-6 right-6">
+                        <span class="text-brand-light text-[10px] font-extrabold uppercase tracking-widest"><?php echo $tour['subtitle']; ?></span>
+                        <h3 class="text-white text-xl font-bold font-display mt-1 leading-tight tracking-tight"><?php echo $tour['title']; ?></h3>
                     </div>
                 </div>
 
-                <!-- Info Body -->
-                <div class="p-6 space-y-4 flex-grow">
-                    <div class="flex justify-between items-center text-sm text-slate-500">
-                        <span><i class="fa-regular fa-clock text-brand mr-2"></i><?php echo $tour['duration']; ?></span>
-                        <span><i class="fa-regular fa-user text-brand mr-2"></i>Group & Private</span>
-                    </div>
-                    <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
-                        <div>
-                            <p class="text-xs text-slate-400">Starting From</p>
-                            <p class="text-lg font-extrabold text-obsidian-950"><?php echo $tour['price']; ?> <span class="text-xs text-slate-400 font-normal">/ person</span></p>
+                <!-- Card Body & Inclusions -->
+                <div class="p-6 md:p-7 flex-grow flex flex-col justify-between space-y-6">
+                    <!-- Details Columns -->
+                    <div class="grid grid-cols-2 gap-4 text-xs font-semibold text-slate-700">
+                        <div class="flex items-center space-x-2.5">
+                            <span class="w-8 h-8 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-brand-accent text-xs">
+                                <i class="fa-regular fa-clock"></i>
+                            </span>
+                            <div>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Duration</p>
+                                <p class="text-slate-700 text-[11px]"><?php echo $tour['duration']; ?></p>
+                            </div>
                         </div>
-                        <a href="<?php echo BASE_URL . $tour['link']; ?>" class="px-5 py-2 bg-slate-900 hover:bg-brand hover:text-obsidian-950 text-white font-bold rounded-xl transition-all duration-300 text-sm">
-                            View Tour
+                        <div class="flex items-center space-x-2.5">
+                            <span class="w-8 h-8 rounded-full bg-slate-50 border border-slate-100 flex items-center justify-center text-brand-accent text-xs">
+                                <i class="fa-solid fa-route"></i>
+                            </span>
+                            <div>
+                                <p class="text-[10px] text-slate-400 uppercase tracking-wider font-bold">Tour Type</p>
+                                <p class="text-slate-700 text-[11px]">Private/Group</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bottom pricing section -->
+                    <div class="pt-5 border-t border-slate-100 flex justify-between items-center">
+                        <div>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Starting From</p>
+                            <p class="text-xl font-black text-slate-900 leading-none mt-1 font-display"><?php echo $tour['price']; ?> <span class="text-[10px] text-slate-400 font-normal lowercase">/ guest</span></p>
+                        </div>
+                        <a href="<?php echo BASE_URL . $tour['link']; ?>" class="relative group/btn overflow-hidden px-5 py-2.5 bg-slate-950 text-white rounded-xl text-xs uppercase tracking-wider font-extrabold shadow-md whitespace-nowrap inline-flex items-center justify-center transition-all duration-300">
+                            <!-- Smooth gradient fade-in overlay -->
+                            <div class="absolute inset-0 bg-gradient-gold opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
+                            <!-- Button contents on top of overlay -->
+                            <span class="relative z-10 group-hover/btn:text-obsidian-950 transition-colors duration-300">Explore</span>
+                            <i class="fa-solid fa-chevron-right ml-1.5 text-[9px] relative z-10 group-hover/btn:text-obsidian-950 transition-all duration-300 group-hover/btn:translate-x-1.5"></i>
                         </a>
                     </div>
                 </div>
             </div>
             <?php endforeach; ?>
+        </div>
+
+        <!-- Explore All Destinations Button -->
+        <div class="text-center mt-16">
+            <a href="<?php echo BASE_URL; ?>tours.php" class="relative group overflow-hidden px-8 py-4 bg-slate-950 text-white border border-slate-800 text-xs uppercase tracking-widest font-extrabold rounded-full inline-flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-brand/10 hover:-translate-y-0.5 active:translate-y-0">
+                <!-- Smooth gradient fade-in overlay -->
+                <div class="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+                <!-- Button contents on top of overlay -->
+                <span class="relative z-10 group-hover:text-obsidian-950 transition-colors duration-300">Explore All Destinations</span>
+                <i class="fa-solid fa-arrow-right ml-2.5 text-xs text-brand relative z-10 group-hover:text-obsidian-950 transition-all duration-300 group-hover:translate-x-1.5"></i>
+            </a>
         </div>
 
     </div>
@@ -214,53 +258,80 @@ require_once 'includes/header.php';
 <!-- Luxury Tempo Traveller Fleet Section -->
 <section id="tempo-travellers" class="py-20 bg-gradient-dark text-white relative overflow-hidden">
     <!-- Glow Effect in Background -->
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand/5 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-brand/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-brand-dark/5 rounded-full blur-[120px] pointer-events-none" style="animation-delay: 3s;"></div>
 
     <div class="max-w-[1440px] mx-auto px-4 relative z-10">
         
         <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span class="text-brand font-bold text-xs uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full border border-white/10">Group Travel in Style</span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">Luxury Tempo Travellers</h2>
-            <p class="text-slate-400">Travel together without compromising on elegance. Our executive tempo travellers feature premium pushback seats, individual climate vents, and modern styling.</p>
+            <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-star text-xs"></i>
+                <span>Group Travel in Style</span>
+            </span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-white leading-tight">
+                Luxury <span class="text-gradient-gold font-display">Tempo Travellers</span>
+            </h2>
+            <p class="text-slate-400 text-sm md:text-base leading-relaxed">
+                Travel together without compromising on elegance. Our executive tempo travellers feature premium pushback seating, individual climate vents, and modern high-end styling.
+            </p>
         </div>
 
         <!-- Fleet Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10">
             <?php foreach ($TEMPO_TRAVELLERS as $key => $fleet): ?>
-            <div class="glass-card rounded-3xl overflow-hidden flex flex-col justify-between border border-white/5 hover:border-brand/20 transition-all duration-300 hover:shadow-xl hover:shadow-brand/5">
+            <div class="group/card bg-slate-900/40 backdrop-blur-md rounded-[32px] overflow-hidden flex flex-col justify-between border border-white/5 hover:border-brand/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_50px_rgba(240,210,90,0.06)]">
                 <!-- Vehicle Image -->
-                <div class="relative overflow-hidden aspect-[16/10]">
-                    <img src="<?php echo $fleet['image']; ?>" alt="<?php echo $fleet['title']; ?>" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-transparent to-transparent"></div>
+                <div class="relative overflow-hidden aspect-[16/10] z-0">
+                    <img src="<?php echo $fleet['image']; ?>" alt="<?php echo $fleet['title']; ?>" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/card:scale-105">
+                    <!-- Soft luxury overlays -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/20 to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span class="text-white/80 bg-slate-950/60 backdrop-blur-md border border-white/10 px-3 py-1.5 rounded-full text-[10px] font-bold uppercase tracking-wider flex items-center space-x-1.5">
+                            <i class="fa-solid fa-crown text-brand text-[9px]"></i>
+                            <span>Executive Class</span>
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Info -->
-                <div class="p-6 md:p-8 space-y-6 flex-grow">
-                    <div>
-                        <h3 class="text-xl font-bold font-display text-white mb-2"><?php echo $fleet['title']; ?></h3>
-                        <p class="text-xs text-brand bg-brand/10 border border-brand/20 px-2.5 py-1 rounded inline-block font-semibold">
-                            <i class="fa-solid fa-users mr-1.5"></i> <?php echo $fleet['capacity']; ?>
-                        </p>
+                <div class="p-6 md:p-8 space-y-6 flex-grow flex flex-col justify-between">
+                    <div class="space-y-4">
+                        <h3 class="text-xl font-bold font-display text-white transition-colors duration-300 group-hover/card:text-brand-light leading-tight"><?php echo $fleet['title']; ?></h3>
+                        <div class="flex items-center space-x-2">
+                            <span class="text-[10px] text-brand bg-brand/10 border border-brand/25 px-3 py-1 rounded-full font-bold uppercase tracking-wider">
+                                <i class="fa-solid fa-users mr-1"></i> <?php echo $fleet['capacity']; ?>
+                            </span>
+                            <span class="text-[10px] text-slate-400 bg-white/5 border border-white/10 px-3 py-1 rounded-full font-semibold uppercase tracking-wider">
+                                AC Vehicles
+                            </span>
+                        </div>
                     </div>
 
                     <!-- Amenities list -->
-                    <ul class="space-y-2 text-sm text-slate-300">
+                    <ul class="space-y-2.5 text-xs font-medium text-slate-300/95 pt-2">
                         <?php foreach (array_slice($fleet['features'], 0, 4) as $feature): ?>
                         <li class="flex items-center">
-                            <i class="fa-solid fa-circle-check text-brand text-xs mr-2"></i>
-                            <?php echo $feature; ?>
+                            <span class="w-5 h-5 rounded-full bg-brand/10 border border-brand/20 flex items-center justify-center text-brand text-[8px] mr-2.5 flex-shrink-0">
+                                <i class="fa-solid fa-check"></i>
+                            </span>
+                            <span><?php echo $feature; ?></span>
                         </li>
                         <?php endforeach; ?>
                     </ul>
 
-                    <div class="pt-6 border-t border-white/10 flex justify-between items-center">
+                    <div class="pt-6 border-t border-white/5 flex justify-between items-center mt-auto">
                         <div>
-                            <p class="text-xs text-slate-400">Rate starts at</p>
-                            <p class="text-lg font-bold text-brand"><?php echo $fleet['price']; ?></p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Starting From</p>
+                            <p class="text-xl font-extrabold text-brand font-display leading-none mt-1"><?php echo $fleet['price']; ?></p>
                         </div>
-                        <a href="<?php echo BASE_URL; ?>tempo-traveller.php" class="px-5 py-2.5 bg-gradient-gold text-obsidian-950 font-bold rounded-xl hover:shadow-lg transition-all duration-300 text-sm">
-                            Rent Now
+                        
+                        <a href="<?php echo BASE_URL; ?>tempo-traveller.php" class="relative group/btn overflow-hidden px-5 py-2.5 bg-slate-950 text-white rounded-xl text-xs uppercase tracking-wider font-extrabold shadow-md whitespace-nowrap inline-flex items-center justify-center transition-all duration-300 border border-white/10">
+                            <!-- Smooth gradient fade-in overlay -->
+                            <div class="absolute inset-0 bg-gradient-gold opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
+                            <!-- Button contents on top of overlay -->
+                            <span class="relative z-10 group-hover/btn:text-obsidian-950 transition-colors duration-300">Rent Now</span>
+                            <i class="fa-solid fa-chevron-right ml-1.5 text-[9px] relative z-10 group-hover/btn:text-obsidian-950 transition-all duration-300 group-hover/btn:translate-x-1.5"></i>
                         </a>
                     </div>
                 </div>
@@ -272,48 +343,74 @@ require_once 'includes/header.php';
 </section>
 
 <!-- Executive Car Rental Section -->
-<section id="fleet" class="py-20 bg-slate-50">
-    <div class="max-w-[1440px] mx-auto px-4">
+<section id="fleet" class="py-20 bg-slate-50 relative overflow-hidden">
+    <!-- Subtle Ambient Background Accents -->
+    <div class="absolute top-1/4 right-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-[1440px] mx-auto px-4 relative z-10">
         
         <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span class="text-brand-accent font-bold text-xs uppercase tracking-widest bg-brand/10 px-3 py-1.5 rounded-full border border-brand/15">Luxury Vehicles</span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-obsidian-950 leading-tight">Premium Car Rentals</h2>
-            <p class="text-slate-600">Choose from our premium class sedans and SUVs for a smooth and comfortable voyage. Perfect for local corporate transfers, outstation packages, and VIP family trips.</p>
+            <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand-accent text-xs font-bold uppercase tracking-wider">
+                <i class="fa-solid fa-crown text-[10px]"></i>
+                <span>Elite Fleet Experience</span>
+            </span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-obsidian-950 leading-tight">
+                Premium <span class="text-gradient-gold font-display">Car Rentals</span>
+            </h2>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                Choose from our premium class sedans and SUVs for a smooth and comfortable voyage. Perfect for local corporate transfers, outstation packages, and VIP family trips.
+            </p>
         </div>
 
         <!-- Cars list -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <?php foreach ($CARS as $key => $car): ?>
-            <div class="group bg-white rounded-3xl border border-slate-100 overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 flex flex-col justify-between">
+            <div class="group/card bg-white rounded-[32px] border border-slate-100 overflow-hidden shadow-sm hover:shadow-[0_20px_40px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
                 <!-- Vehicle Image -->
-                <div class="relative overflow-hidden aspect-[4/3] bg-slate-100">
-                    <img src="<?php echo $car['image']; ?>" alt="<?php echo $car['title']; ?>" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                <div class="relative overflow-hidden aspect-[4/3] bg-slate-50 z-0">
+                    <img src="<?php echo $car['image']; ?>" alt="<?php echo $car['title']; ?>" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover/card:scale-105">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950/20 via-transparent to-transparent"></div>
+                    <div class="absolute top-4 left-4">
+                        <span class="text-slate-900 bg-white/95 backdrop-blur-md border border-slate-200/50 px-3 py-1 rounded-full text-[9px] font-bold uppercase tracking-wider flex items-center space-x-1.5 shadow-sm">
+                            <i class="fa-solid fa-user-tie text-brand-accent"></i>
+                            <span>Chauffeur Driven</span>
+                        </span>
+                    </div>
                 </div>
 
                 <!-- Info -->
-                <div class="p-5 flex-grow space-y-4 flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold text-obsidian-950 font-display line-clamp-1"><?php echo $car['title']; ?></h3>
-                        <p class="text-xs text-slate-500 mt-1 flex items-center">
-                            <i class="fa-solid fa-users mr-1"></i> Max Capacity: <?php echo $car['capacity']; ?>
-                        </p>
+                <div class="p-6 flex-grow space-y-5 flex flex-col justify-between">
+                    <div class="space-y-3">
+                        <h3 class="text-lg font-bold text-obsidian-950 font-display transition-colors duration-300 group-hover/card:text-brand-accent line-clamp-1 leading-tight"><?php echo $car['title']; ?></h3>
+                        <div class="flex items-center space-x-2 text-[10px] text-slate-500 font-bold uppercase tracking-wider">
+                            <span class="bg-slate-100 px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <i class="fa-solid fa-user-group text-slate-400"></i> Max <?php echo $car['capacity']; ?>
+                            </span>
+                            <span class="bg-slate-100 px-2.5 py-1 rounded-full flex items-center gap-1">
+                                <i class="fa-solid fa-snowflake text-slate-400"></i> AC Cab
+                            </span>
+                        </div>
                     </div>
 
                     <!-- Short amenities -->
-                    <div class="flex flex-wrap gap-1.5">
+                    <div class="flex flex-wrap gap-1.5 pt-1">
                         <?php foreach (array_slice($car['features'], 0, 2) as $f): ?>
-                        <span class="bg-slate-100 text-slate-600 text-[10px] px-2 py-0.5 rounded-full font-medium"><?php echo $f; ?></span>
+                        <span class="bg-brand/5 text-brand-accent border border-brand/10 text-[9px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider"><?php echo $f; ?></span>
                         <?php endforeach; ?>
                     </div>
 
-                    <div class="pt-4 border-t border-slate-100 flex justify-between items-center">
+                    <div class="pt-5 border-t border-slate-100 flex justify-between items-center mt-auto">
                         <div>
-                            <p class="text-[10px] text-slate-400">Per km rate</p>
-                            <p class="text-base font-bold text-slate-900"><?php echo $car['price']; ?></p>
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-semibold">Per KM Rate</p>
+                            <p class="text-lg font-extrabold text-slate-900 font-display leading-none mt-1"><?php echo $car['price']; ?></p>
                         </div>
-                        <a href="<?php echo BASE_URL; ?>car-rental.php" class="p-2.5 bg-slate-900 hover:bg-brand hover:text-obsidian-950 text-white rounded-lg transition-colors">
-                            <i class="fa-solid fa-arrow-right"></i>
+                        
+                        <a href="<?php echo BASE_URL; ?>car-rental.php" class="relative group/btn overflow-hidden w-10 h-10 bg-slate-950 text-white rounded-xl inline-flex items-center justify-center transition-all duration-300 shadow-md border border-white/10 flex-shrink-0">
+                            <!-- Smooth gradient fade-in overlay -->
+                            <div class="absolute inset-0 bg-gradient-gold opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
+                            <!-- Button contents on top of overlay -->
+                            <i class="fa-solid fa-chevron-right text-[11px] relative z-10 group-hover/btn:text-obsidian-950 transition-all duration-300 group-hover/btn:translate-x-0.5"></i>
                         </a>
                     </div>
                 </div>

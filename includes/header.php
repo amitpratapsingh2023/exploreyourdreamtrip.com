@@ -101,8 +101,8 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
             <nav class="hidden lg:flex items-center space-x-10 text-white">
                 <a href="<?php echo BASE_URL; ?>"
                     class="nav-link-premium <?php echo ($current_page === 'index.php' && $current_dir !== 'tours') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Home</a>
-                <a href="<?php echo BASE_URL; ?>#destinations"
-                    class="nav-link-premium <?php echo ($current_dir === 'tours') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Tours</a>
+                <a href="<?php echo BASE_URL; ?>tours.php"
+                    class="nav-link-premium <?php echo ($current_page === 'tours.php' || $current_dir === 'tours') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Tours</a>
                 <a href="<?php echo BASE_URL; ?>tempo-traveller.php"
                     class="nav-link-premium <?php echo ($current_page === 'tempo-traveller.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Tempo
                     Traveller</a>
@@ -163,8 +163,8 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
         <div class="flex-grow py-6 overflow-y-auto px-6 space-y-4">
             <a href="<?php echo BASE_URL; ?>"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'index.php' && $current_dir !== 'tours') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Home</a>
-            <a href="<?php echo BASE_URL; ?>#destinations"
-                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_dir === 'tours') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Popular
+            <a href="<?php echo BASE_URL; ?>tours.php"
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'tours.php' || $current_dir === 'tours') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Popular
                 Tours</a>
             <a href="<?php echo BASE_URL; ?>tempo-traveller.php"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'tempo-traveller.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Tempo
