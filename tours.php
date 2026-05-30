@@ -18,11 +18,10 @@ require_once 'includes/header.php';
     <div class="absolute top-1/4 left-1/3 w-80 h-80 bg-brand/5 rounded-full blur-3xl animate-pulse pointer-events-none"></div>
 
     <!-- Content -->
-    <div class="max-w-[1440px] mx-auto px-4 z-10 w-full text-center space-y-4">
-        <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand text-xs font-bold uppercase tracking-wider">
-            <i class="fa-solid fa-compass text-xs"></i>
-            <span>Curated Luxury Destinations</span>
-        </span>
+    <div class="max-w-[1440px] mx-auto px-4 z-10 w-full text-center space-y-6">
+        <div class="flex justify-center">
+            <?php require_once 'includes/breadcrumb.php'; ?>
+        </div>
         <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight font-display">
             Our Premium <br class="sm:hidden"> <span class="text-gradient-gold">Tour Packages</span>
         </h1>
@@ -55,6 +54,33 @@ require_once 'includes/header.php';
                 </span>
             </div>
         </div>
+
+        <!-- ItemList Schema for Tour Packages -->
+        <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "numberOfItems": <?php echo count($TOURS); ?>,
+          "itemListElement": [
+            <?php 
+            $idx = 1;
+            $tour_keys = array_keys($TOURS);
+            foreach ($TOURS as $key => $tour): 
+              $comma = ($idx < count($TOURS)) ? "," : "";
+            ?>
+            {
+              "@type": "ListItem",
+              "position": <?php echo $idx; ?>,
+              "url": "<?php echo BASE_URL . $tour['link']; ?>",
+              "name": "<?php echo htmlspecialchars($tour['title']); ?>"
+            }<?php echo $comma; ?>
+            <?php 
+              $idx++;
+            endforeach; 
+            ?>
+          ]
+        }
+        </script>
 
         <!-- Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">

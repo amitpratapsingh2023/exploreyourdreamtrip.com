@@ -61,42 +61,42 @@
                 <form action="javascript:void(0);" onsubmit="alert('Thank you for your inquiry! Our travel representative will contact you shortly.');" class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Your Full Name *</label>
+                            <label for="cta-name" class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Your Full Name *</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                     <i class="fa-solid fa-user text-brand/80 text-xs"></i>
                                 </span>
-                                <input type="text" required placeholder="Enter name" class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                <input id="cta-name" type="text" required placeholder="Enter name" class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Phone Number *</label>
+                            <label for="cta-phone" class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Phone Number *</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                     <i class="fa-solid fa-phone text-brand/80 text-xs"></i>
                                 </span>
-                                <input type="tel" required placeholder="Enter mobile number" class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                <input id="cta-phone" type="tel" required placeholder="Enter mobile number" class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
                             </div>
                         </div>
                     </div>
 
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Email Address</label>
+                            <label for="cta-email" class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Email Address</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                     <i class="fa-solid fa-envelope text-brand/80 text-xs"></i>
                                 </span>
-                                <input type="email" placeholder="Enter email" class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                <input id="cta-email" type="email" placeholder="Enter email" class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
                             </div>
                         </div>
                         <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Select Tour / Service</label>
+                            <label for="cta-service" class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Select Tour / Service</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                     <i class="fa-solid fa-map-location-dot text-brand/80 text-xs"></i>
                                 </span>
-                                <select class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-10 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)] appearance-none font-medium">
+                                <select id="cta-service" class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-10 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)] appearance-none font-medium">
                                     <option value="" class="bg-slate-950 text-white/80">Select Option</option>
                                     <optgroup label="Tours" class="bg-slate-950 text-white">
                                         <?php foreach ($TOURS as $key => $tour): ?>
@@ -116,12 +116,12 @@
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Tell Us About Your Requirements</label>
+                        <label for="cta-requirements" class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Tell Us About Your Requirements</label>
                         <div class="relative">
                             <span class="absolute top-4 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                 <i class="fa-solid fa-pen-to-square text-brand/80 text-xs"></i>
                             </span>
-                            <textarea rows="4" placeholder="e.g. Travel dates, number of travelers, budget details, etc." class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm resize-none focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]"></textarea>
+                            <textarea id="cta-requirements" rows="4" placeholder="e.g. Travel dates, number of travelers, budget details, etc." class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm resize-none focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]"></textarea>
                         </div>
                     </div>
 
