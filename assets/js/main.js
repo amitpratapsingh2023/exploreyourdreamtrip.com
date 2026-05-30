@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initFAQ();
     initBackToTop();
     initGalleryLightbox();
+    initPremiumTabs();
 });
 
 /**
@@ -90,6 +91,7 @@ function initFAQ() {
                 if (otherContent && otherContent !== content) {
                     otherContent.classList.remove('active');
                     otherContent.style.maxHeight = null;
+                    otherItem.classList.remove('active');
                 }
                 if (otherIcon) {
                     otherIcon.style.transform = 'rotate(0deg)';
@@ -100,10 +102,12 @@ function initFAQ() {
             if (isOpen) {
                 content.classList.remove('active');
                 content.style.maxHeight = null;
+                item.classList.remove('active');
                 if (icon) icon.style.transform = 'rotate(0deg)';
             } else {
                 content.classList.add('active');
                 content.style.maxHeight = content.scrollHeight + 'px';
+                item.classList.add('active');
                 if (icon) icon.style.transform = 'rotate(180deg)';
             }
         });
@@ -250,3 +254,124 @@ function initGalleryLightbox() {
 }
 
 
+/**
+ * Premium Tabs — Tour Detail Page
+ * Handles tab switching, animated indicator, keyboard nav, and URL hash deep-linking
+ */
+function initPremiumTabs() {
+    const nav = document.getElementById('tourTabsNav');
+    const panelsContainer = document.getElementById('tourTabPanels');
+    const indicator = document.getElementById('tabIndicator');
+
+    if (!nav || !panelsContainer) return;
+
+    const tabs = nav.querySelectorAll('.premium-tab');
+    const panels = panelsContainer.querySelectorAll('.premium-tab-panel');
+
+    if (tabs.length === 0) return;
+
+    // ── Position the sliding indicator ──
+    function moveIndicator(tab) {
+        if (!indicator) return;
+        const navRect = nav.getBoundingClientRect();
+        const tabRect = tab.getBoundingClientRect();
+        indicator.style.left = (tabRect.left - navRect.left + nav.scrollLeft) + 'px';
+        indicator.style.width = tabRect.width + 'px';
+        indicator.style.display = 'block';
+    }
+
+    // ── Switch to a specific tab ──
+    function switchTab(targetTab) {
+        const tabId = targetTab.getAttribute('data-tab');
+
+        // Deactivate all
+        tabs.forEach(t => {
+            t.classList.remove('active');
+            t.setAttribute('aria-selected', 'false');
+        });
+        panels.forEach(p => {
+            p.classList.remove('active');
+        });
+
+        // Activate target
+        targetTab.classList.add('active');
+        targetTab.setAttribute('aria-selected', 'true');
+        const targetPanel = document.getElementById('panel-' + tabId);
+        if (targetPanel) {
+            targetPanel.classList.add('active');
+        }
+
+        // Slide indicator
+        moveIndicator(targetTab);
+
+        // Auto-scroll the tab into view on mobile (horizontal overflow)
+        targetTab.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+
+        // Update URL hash without scrolling
+        history.replaceState(null, '', '#tab-' + tabId);
+    }
+
+    // ── Click handlers ──
+    tabs.forEach(tab => {
+        tab.addEventListener('click', () => switchTab(tab));
+    });
+
+    // ── Keyboard navigation (Arrow Left / Right) ──
+    nav.addEventListener('keydown', (e) => {
+        const tabsArr = Array.from(tabs);
+        const currentIdx = tabsArr.findIndex(t => t.classList.contains('active'));
+
+        if (e.key === 'ArrowRight') {
+            e.preventDefault();
+            const nextIdx = (currentIdx + 1) % tabsArr.length;
+            tabsArr[nextIdx].focus();
+            switchTab(tabsArr[nextIdx]);
+        } else if (e.key === 'ArrowLeft') {
+            e.preventDefault();
+            const prevIdx = (currentIdx - 1 + tabsArr.length) % tabsArr.length;
+            tabsArr[prevIdx].focus();
+            switchTab(tabsArr[prevIdx]);
+        }
+    });
+
+    // ── Deep-link from URL hash ──
+    function handleHash() {
+        const hash = window.location.hash;
+        if (hash && hash.startsWith('#tab-')) {
+            const tabId = hash.replace('#tab-', '');
+            const target = nav.querySelector(`.premium-tab[data-tab="${tabId}"]`);
+            if (target) {
+                switchTab(target);
+                // Scroll to the tabs section smoothly
+                const section = document.getElementById('tour-details');
+                if (section) {
+                    setTimeout(() => {
+                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 100);
+                }
+            }
+        }
+    }
+
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+
+    // ── Initial indicator position ──
+    const activeTab = nav.querySelector('.premium-tab.active');
+    if (activeTab) {
+        // Small delay to ensure layout is computed
+        requestAnimationFrame(() => {
+            moveIndicator(activeTab);
+        });
+    }
+
+    // ── Reposition indicator on window resize ──
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            const active = nav.querySelector('.premium-tab.active');
+            if (active) moveIndicator(active);
+        }, 150);
+    });
+}

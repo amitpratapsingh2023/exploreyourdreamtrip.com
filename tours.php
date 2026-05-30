@@ -9,7 +9,7 @@ require_once 'includes/header.php';
 <section class="relative min-h-[45vh] flex items-center justify-center bg-obsidian-950 overflow-hidden pt-32 pb-16">
     <!-- Background Overlay -->
     <div class="absolute inset-0 z-0">
-        <img src="<?php echo BASE_URL; ?>assets/images/hero.png" alt="Luxury Travel Packages" class="w-full h-full object-cover object-center opacity-30">
+        <img src="<?php echo BASE_URL; ?>assets/images/premium_hero.png" alt="Luxury Travel Packages" class="w-full h-full object-cover object-center opacity-30">
         <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/70 to-transparent"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-obsidian-950/80 via-transparent to-obsidian-950/20"></div>
     </div>

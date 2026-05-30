@@ -171,7 +171,7 @@ require_once __DIR__ . '/config.php';
 
 <!-- Floating WhatsApp Button -->
 <a href="<?php echo WHATSAPP_LINK; ?>" target="_blank" id="whatsapp-float"
-    class="fixed bottom-6 right-6 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 z-40 glow-emerald"
+    class="fixed bottom-6 right-6 w-14 h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full hidden md:flex items-center justify-center shadow-2xl hover:scale-110 active:scale-95 transition-all duration-300 z-40 glow-emerald"
     aria-label="Chat on WhatsApp">
     <i class="fa-brands fa-whatsapp text-3xl"></i>
     <span class="absolute -top-1 -right-1 flex h-3 w-3">

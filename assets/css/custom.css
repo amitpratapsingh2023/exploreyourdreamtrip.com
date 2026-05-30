@@ -182,3 +182,286 @@ h1, h2, h3, h4, h5, h6 {
 .group:hover .group-hover\:text-brand-light {
     color: var(--brand-gold-light) !important;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PREMIUM TABS — Tour Detail Page
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Wrapper — adds horizontal scroll shadow hints on mobile */
+.premium-tabs-wrapper {
+    position: relative;
+}
+
+.premium-tabs-wrapper::before,
+.premium-tabs-wrapper::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    z-index: 2;
+    pointer-events: none;
+    transition: opacity 0.3s;
+}
+.premium-tabs-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, #f8fafc 30%, transparent);
+    opacity: 0;
+}
+.premium-tabs-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, #f8fafc 30%, transparent);
+}
+
+/* Navigation Bar */
+.premium-tabs-nav {
+    position: relative;
+    display: flex;
+    gap: 4px;
+    padding: 5px;
+    background: rgba(255,255,255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+    border-radius: 20px;
+    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.03);
+    overflow-x: auto;
+    scrollbar-width: none;           /* Firefox */
+    -ms-overflow-style: none;        /* IE/Edge */
+    scroll-behavior: smooth;
+}
+.premium-tabs-nav::-webkit-scrollbar {
+    display: none;                   /* Chrome/Safari */
+}
+
+/* Individual Tab Button */
+.premium-tab {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 12px 20px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #64748b;
+    white-space: nowrap;
+    border: none;
+    background: transparent;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: color 0.35s ease, background 0.35s ease, transform 0.2s ease;
+    flex-shrink: 0;
+}
+.premium-tab i {
+    font-size: 0.7rem;
+    transition: color 0.35s ease, transform 0.35s ease;
+}
+
+/* Hover state */
+.premium-tab:hover {
+    color: #0f172a;
+    background: rgba(15, 23, 42, 0.04);
+}
+
+/* Active state */
+.premium-tab.active {
+    color: #0B0F17;
+    background: linear-gradient(135deg, rgba(240, 210, 90, 0.15) 0%, rgba(225, 180, 75, 0.08) 100%);
+    box-shadow: 0 2px 12px rgba(240, 210, 90, 0.12), inset 0 1px 0 rgba(255,255,255,0.6);
+}
+.premium-tab.active i {
+    color: var(--brand-gold-dark);
+    transform: scale(1.15);
+}
+
+/* Animated sliding indicator */
+.premium-tab-indicator {
+    position: absolute;
+    bottom: 5px;
+    height: calc(100% - 10px);
+    border-radius: 16px;
+    background: linear-gradient(135deg, rgba(240, 210, 90, 0.12) 0%, rgba(225, 180, 75, 0.06) 100%);
+    border: 1px solid rgba(240, 210, 90, 0.18);
+    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+    z-index: 0;
+    display: none; /* hidden — JS positions & shows it */
+}
+
+/* ── Tab Panels ── */
+.premium-tab-panels {
+    position: relative;
+    min-height: 400px;
+}
+
+.premium-tab-panel {
+    display: none;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: none;
+}
+
+.premium-tab-panel.active {
+    display: block;
+    animation: tabFadeIn 0.45s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes tabFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── Responsive Adjustments ── */
+@media (max-width: 640px) {
+    .premium-tab {
+        padding: 10px 14px;
+        font-size: 0.65rem;
+        gap: 5px;
+        border-radius: 14px;
+    }
+    .premium-tab i {
+        font-size: 0.6rem;
+    }
+    .premium-tabs-nav {
+        border-radius: 16px;
+        padding: 4px;
+        gap: 2px;
+    }
+    .premium-tab-indicator {
+        border-radius: 14px;
+    }
+    /* Show scroll shadow on small screens */
+    .premium-tabs-wrapper::after {
+        opacity: 1;
+    }
+}
+
+@media (min-width: 641px) {
+    .premium-tabs-wrapper::before,
+    .premium-tabs-wrapper::after {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .premium-tab {
+        padding: 13px 22px;
+        font-size: 0.73rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   LUXURY & PREMIUM DESIGN UTILITIES
+   ═══════════════════════════════════════════════════════════════════════ */
+
+/* Ultra-premium glass container */
+.glass-luxury {
+    background: rgba(11, 15, 23, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(240, 210, 90, 0.15);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+/* Elegant gold divider with subtle fade-out edges */
+.gold-fade-divider {
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(225, 180, 75, 0.3) 15%, rgba(240, 210, 90, 0.6) 50%, rgba(225, 180, 75, 0.3) 85%, transparent);
+}
+
+/* Premium Gold Shimmer (glossy sheen moving left-to-right) */
+@keyframes luxury-shimmer {
+    0% {
+        left: -150%;
+    }
+    45% {
+        left: 150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+.btn-shimmer {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-shimmer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.35) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    animation: luxury-shimmer 5s ease-in-out infinite;
+    pointer-events: none;
+}
+
+/* Soft gold glowing card highlights */
+.border-luxury-gold {
+    border: 1px solid rgba(225, 180, 75, 0.18);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.border-luxury-gold:hover {
+    border-color: rgba(240, 210, 90, 0.45);
+    box-shadow: 0 12px 30px rgba(240, 210, 90, 0.08);
+}
+
+/* Dynamic Trust strip scroll snapping on mobile devices */
+.trust-scroll-container {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.trust-scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+.trust-scroll-item {
+    scroll-snap-align: center;
+    flex-shrink: 0;
+}
+
+/* Elevated timeline accordion focus states */
+.faq-item.active .faq-btn {
+    background: linear-gradient(to right, rgba(240, 210, 90, 0.03), transparent);
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+    color: var(--brand-gold-dark) !important;
+}
+
+/* Luxury visual vignette effect for cinematic overlays */
+.luxury-vignette {
+    background: radial-gradient(circle, rgba(11,15,23,0.1) 0%, rgba(11,15,23,0.85) 100%);
+}
+
+/* Ensure the main navigation header stays fixed and on top of all sticky page content */
+#main-header {
+    position: fixed !important;
+    z-index: 100 !important;
+}
+
+

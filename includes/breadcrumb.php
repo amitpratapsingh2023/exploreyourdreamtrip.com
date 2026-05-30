@@ -30,24 +30,26 @@ if (isset($breadcrumb_custom) && is_array($breadcrumb_custom)) {
 ?>
 
 <nav aria-label="Breadcrumb" class="inline-flex items-center justify-center py-2 px-4 rounded-full bg-white/5 border border-white/10 backdrop-blur-md shadow-lg">
-    <ol class="flex items-center space-x-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
+    <ol itemScope itemType="https://schema.org/BreadcrumbList" class="flex items-center space-x-2.5 text-[10px] sm:text-xs font-semibold uppercase tracking-wider">
         <?php foreach ($breadcrumbs as $index => $crumb): ?>
             <?php if ($index > 0): ?>
-                <li class="text-white/20 select-none">
+                <li class="text-white/20 select-none" aria-hidden="true">
                     <i class="fa-solid fa-chevron-right text-[8px] sm:text-[9px]"></i>
                 </li>
             <?php endif; ?>
             
-            <li>
+            <li itemScope itemType="https://schema.org/ListItem">
                 <?php if ($crumb['active'] || empty($crumb['url'])): ?>
-                    <span class="text-brand font-bold"><?php echo htmlspecialchars($crumb['title']); ?></span>
+                    <span itemProp="name" aria-current="page" class="text-brand font-bold"><?php echo htmlspecialchars($crumb['title']); ?></span>
+                    <meta itemProp="position" content="<?php echo $index + 1; ?>">
                 <?php else: ?>
-                    <a href="<?php echo $crumb['url']; ?>" class="text-slate-300 hover:text-brand transition-colors duration-300 flex items-center group">
+                    <a itemProp="item" href="<?php echo $crumb['url']; ?>" class="text-slate-300 hover:text-brand transition-colors duration-300 flex items-center group">
                         <?php if ($crumb['title'] === 'Home'): ?>
                             <i class="fa-solid fa-house text-[9px] sm:text-[10px] mr-1.5 text-slate-400 group-hover:text-brand transition-colors"></i>
                         <?php endif; ?>
-                        <span><?php echo htmlspecialchars($crumb['title']); ?></span>
+                        <span itemProp="name"><?php echo htmlspecialchars($crumb['title']); ?></span>
                     </a>
+                    <meta itemProp="position" content="<?php echo $index + 1; ?>">
                 <?php endif; ?>
             </li>
         <?php endforeach; ?>
