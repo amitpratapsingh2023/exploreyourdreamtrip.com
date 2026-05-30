@@ -35,79 +35,87 @@ require_once 'includes/header.php';
                 <p class="text-slate-300 text-base md:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
                     Experience luxury travel like never before. From custom private tours of heritage wonders to executive tempo travellers and premium cars, we redefine Indian hospitality.
                 </p>
-                <div class="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-                    <a href="#destinations" class="px-8 py-3.5 bg-gradient-gold text-obsidian-950 font-bold rounded-full hover:shadow-lg hover:shadow-brand/20 transition-all duration-300 hover:-translate-y-0.5">
-                        Explore Packages
+                <div class="flex flex-wrap justify-center lg:justify-start gap-5 pt-6">
+                    <a href="#destinations" class="group inline-flex items-center justify-center px-8 py-4 bg-gradient-gold text-obsidian-950 text-xs uppercase tracking-widest font-extrabold rounded-full hover:shadow-xl hover:shadow-brand/20 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 pulse-gold-btn">
+                        <span>Explore Packages</span>
+                        <i class="fa-solid fa-arrow-right ml-2.5 text-xs transition-transform duration-300 group-hover:translate-x-1.5"></i>
                     </a>
-                    <a href="#fleet" class="px-8 py-3.5 bg-white/10 hover:bg-white/15 text-white font-semibold rounded-full border border-white/20 transition-all duration-300">
-                        View Fleet Rental
+                    <a href="#fleet" class="group inline-flex items-center justify-center px-8 py-4 bg-white/5 hover:bg-white/10 text-white/90 hover:text-white border border-white/10 hover:border-white/20 rounded-full text-xs uppercase tracking-widest font-bold transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0">
+                        <span>View Fleet Rental</span>
+                        <i class="fa-solid fa-car-side ml-2.5 text-brand/80 transition-transform duration-300 group-hover:scale-110"></i>
                     </a>
                 </div>
             </div>
 
             <!-- Right Side: Luxury Quick Booking Widget -->
             <div class="lg:col-span-5 w-full">
-                <div class="glass-card glow-gold rounded-3xl p-6 md:p-8 border border-white/10">
-                    <h3 class="text-xl md:text-2xl font-bold text-white mb-2">Book Your Luxury Escape</h3>
-                    <p class="text-sm text-slate-400 mb-6">Let us know your travel plans for a free custom quote</p>
+                <div class="bg-slate-950/75 backdrop-blur-xl glow-gold rounded-[32px] p-6 md:p-8 border border-white/10 shadow-2xl shadow-black/60 relative">
+                    <h3 class="text-xl md:text-2xl font-bold text-white mb-1.5 font-display">Book Your Luxury Escape</h3>
+                    <p class="text-xs text-slate-400 mb-6 uppercase tracking-wider font-semibold">Let us know your travel plans for a free custom quote</p>
                     
-                    <form action="#inquiry" method="GET" class="space-y-4">
+                    <form action="#inquiry" method="GET" class="space-y-5">
                         <!-- Destination Input -->
                         <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Where To?</label>
+                            <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-2">Where To?</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
-                                    <i class="fa-solid fa-location-dot"></i>
+                                    <i class="fa-solid fa-location-dot text-brand/80"></i>
                                 </span>
-                                <select name="destination" class="w-full bg-slate-900/60 border border-white/10 text-white rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-brand transition-colors appearance-none">
-                                    <option value="" class="bg-slate-950">Select Destination</option>
+                                <select name="destination" class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-10 focus:outline-none transition-all duration-300 appearance-none font-medium text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                    <option value="" class="bg-slate-950 text-white/80">Select Destination</option>
                                     <?php foreach ($TOURS as $key => $tour): ?>
-                                        <option value="<?php echo $key; ?>" class="bg-slate-950"><?php echo $tour['title']; ?></option>
+                                        <option value="<?php echo $key; ?>" class="bg-slate-950 text-white"><?php echo $tour['title']; ?></option>
                                     <?php endforeach; ?>
-                                    <option value="other" class="bg-slate-950">Custom Tour Plan</option>
+                                    <option value="other" class="bg-slate-950 text-white">Custom Tour Plan</option>
                                 </select>
+                                <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-brand pointer-events-none">
+                                    <i class="fa-solid fa-chevron-down text-xs"></i>
+                                </span>
                             </div>
                         </div>
 
                         <!-- Date & Traveler Row -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                             <div>
-                                <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Departure Date</label>
+                                <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-2">Departure Date</label>
                                 <div class="relative">
                                     <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
-                                        <i class="fa-solid fa-calendar-days"></i>
+                                        <i class="fa-solid fa-calendar-days text-brand/80"></i>
                                     </span>
-                                    <input type="date" name="travel_date" class="w-full bg-slate-900/60 border border-white/10 text-white rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-brand transition-colors text-sm">
+                                    <input type="date" name="travel_date" class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
                                 </div>
                             </div>
                             <div>
-                                <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Service Type</label>
+                                <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-2">Service Type</label>
                                 <div class="relative">
                                     <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
-                                        <i class="fa-solid fa-car-side"></i>
+                                        <i class="fa-solid fa-car-side text-brand/80"></i>
                                     </span>
-                                    <select name="service" class="w-full bg-slate-900/60 border border-white/10 text-white rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-brand transition-colors appearance-none text-sm">
-                                        <option value="tour" class="bg-slate-950">All-Inclusive Tour</option>
-                                        <option value="tempo" class="bg-slate-950">Tempo Traveller Hire</option>
-                                        <option value="car" class="bg-slate-950">Premium Car Hire</option>
+                                    <select name="service" class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-10 focus:outline-none transition-all duration-300 appearance-none text-sm font-medium focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                        <option value="tour" class="bg-slate-950 text-white">All-Inclusive Tour</option>
+                                        <option value="tempo" class="bg-slate-950 text-white">Tempo Traveller Hire</option>
+                                        <option value="car" class="bg-slate-950 text-white">Premium Car Hire</option>
                                     </select>
+                                    <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-brand pointer-events-none">
+                                        <i class="fa-solid fa-chevron-down text-xs"></i>
+                                    </span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Phone Number -->
                         <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Mobile Number</label>
+                            <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-2">Mobile Number</label>
                             <div class="relative">
                                 <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
-                                    <i class="fa-solid fa-phone"></i>
+                                    <i class="fa-solid fa-phone text-brand/80"></i>
                                 </span>
-                                <input type="tel" placeholder="Enter your contact number" required class="w-full bg-slate-900/60 border border-white/10 text-white rounded-xl py-3 pl-10 pr-4 focus:outline-none focus:border-brand transition-colors text-sm">
+                                <input type="tel" placeholder="Enter your contact number" required class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
                             </div>
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="submit" class="w-full py-4 mt-2 bg-gradient-gold hover:bg-gradient-gold text-obsidian-950 font-bold rounded-xl shadow-lg transition-transform duration-200 active:scale-98 pulse-gold-btn">
+                        <button type="submit" class="w-full py-4 mt-3 bg-gradient-gold hover:bg-gradient-gold text-obsidian-950 text-xs uppercase tracking-widest font-extrabold rounded-xl shadow-lg hover:shadow-brand/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 pulse-gold-btn">
                             Get Custom Price Quote
                         </button>
                     </form>

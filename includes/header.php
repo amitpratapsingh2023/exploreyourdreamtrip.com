@@ -56,26 +56,30 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
 <body class="bg-slate-50 text-obsidian-950 flex flex-col min-h-screen">
 
     <!-- Top Utility Bar (Hidden on Mobile) -->
-    <div class="bg-obsidian-950 text-slate-300 py-2 px-4 border-b border-white/5 text-sm hidden md:block z-50 relative">
+    <div
+        class="bg-slate-950/95 text-slate-400 py-2.5 px-6 border-b border-white/5 text-[10px] uppercase tracking-widest font-bold hidden md:block z-50 relative">
         <div class="w-full max-w-[1440px] mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-6">
-                <a href="tel:<?php echo CONTACT_PHONE_RAW; ?>" class="hover:text-brand transition-colors">
-                    <i class="fa-solid fa-phone text-brand mr-2"></i><?php echo CONTACT_PHONE; ?>
+            <div class="flex items-center space-x-8">
+                <a href="tel:<?php echo CONTACT_PHONE_RAW; ?>"
+                    class="hover:text-brand flex items-center transition-colors">
+                    <i class="fa-solid fa-phone text-brand mr-2.5 text-xs"></i><?php echo CONTACT_PHONE; ?>
                 </a>
-                <a href="mailto:<?php echo CONTACT_EMAIL; ?>" class="hover:text-brand transition-colors">
-                    <i class="fa-solid fa-envelope text-brand mr-2"></i><?php echo CONTACT_EMAIL; ?>
+                <a href="mailto:<?php echo CONTACT_EMAIL; ?>"
+                    class="hover:text-brand flex items-center transition-colors normal-case">
+                    <i class="fa-solid fa-envelope text-brand mr-2.5 text-xs"></i><?php echo CONTACT_EMAIL; ?>
                 </a>
             </div>
-            <div class="flex items-center space-x-4">
-                <span class="text-xs bg-brand/10 text-brand px-2 py-0.5 rounded-full border border-brand/20">Govt.
+            <div class="flex items-center space-x-6">
+                <span
+                    class="bg-brand/10 text-brand px-3 py-1 rounded border border-brand/25 text-[9px] uppercase tracking-widest font-extrabold">Govt.
                     Approved Agency</span>
-                <div class="flex items-center space-x-3 border-l border-white/10 pl-4">
+                <div class="flex items-center space-x-4 border-l border-white/10 pl-6 py-0.5">
                     <a href="<?php echo SOCIAL_FACEBOOK; ?>" target="_blank"
-                        class="hover:text-brand transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                        class="hover:text-brand text-xs transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="<?php echo SOCIAL_INSTAGRAM; ?>" target="_blank"
-                        class="hover:text-brand transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                        class="hover:text-brand text-xs transition-colors"><i class="fa-brands fa-instagram"></i></a>
                     <a href="<?php echo SOCIAL_TWITTER; ?>" target="_blank"
-                        class="hover:text-brand transition-colors"><i class="fa-brands fa-twitter"></i></a>
+                        class="hover:text-brand text-xs transition-colors"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
         </div>
@@ -83,43 +87,47 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
 
     <!-- Main Navigation Header -->
     <header id="main-header"
-        class="fixed top-0 md:top-9 left-0 w-full z-40 transition-all duration-300 bg-transparent py-4 px-4">
+        class="fixed top-0 md:top-9 left-0 w-full z-40 transition-all duration-300 bg-transparent py-4 px-6 md:px-12">
         <div class="w-full max-w-[1440px] mx-auto flex justify-between items-center">
 
             <!-- Brand Logo -->
             <a href="<?php echo BASE_URL; ?>" class="flex items-center">
                 <img src="<?php echo BASE_URL; ?>assets/images/brand/header-logo.png"
                     alt="<?php echo SITE_NAME; ?> Logo"
-                    class="h-12 md:h-14 w-auto object-contain transition-transform duration-300 hover:scale-105">
+                    class="h-14 md:h-16 w-auto object-contain transition-transform duration-300 hover:scale-105">
             </a>
 
             <!-- Desktop Menu Links -->
-            <nav class="hidden lg:flex items-center space-x-8 text-white font-medium">
+            <nav class="hidden lg:flex items-center space-x-10 text-white">
                 <a href="<?php echo BASE_URL; ?>"
-                    class="<?php echo ($current_page === 'index.php' && $current_dir !== 'tours') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Home</a>
+                    class="nav-link-premium <?php echo ($current_page === 'index.php' && $current_dir !== 'tours') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Home</a>
                 <a href="<?php echo BASE_URL; ?>#destinations"
-                    class="<?php echo ($current_dir === 'tours') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Tours</a>
+                    class="nav-link-premium <?php echo ($current_dir === 'tours') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Tours</a>
                 <a href="<?php echo BASE_URL; ?>tempo-traveller.php"
-                    class="<?php echo ($current_page === 'tempo-traveller.php') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Tempo
+                    class="nav-link-premium <?php echo ($current_page === 'tempo-traveller.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Tempo
                     Traveller</a>
                 <a href="<?php echo BASE_URL; ?>car-rental.php"
-                    class="<?php echo ($current_page === 'car-rental.php') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Car
+                    class="nav-link-premium <?php echo ($current_page === 'car-rental.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Car
                     Rental</a>
                 <a href="<?php echo BASE_URL; ?>about.php"
-                    class="<?php echo ($current_page === 'about.php') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">About</a>
+                    class="nav-link-premium <?php echo ($current_page === 'about.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">About</a>
                 <a href="<?php echo BASE_URL; ?>contact.php"
-                    class="<?php echo ($current_page === 'contact.php') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Contact</a>
+                    class="nav-link-premium <?php echo ($current_page === 'contact.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Contact</a>
             </nav>
 
             <!-- Navigation Actions (Desktop Only) -->
-            <div class="hidden lg:flex items-center space-x-4">
+            <div class="hidden lg:flex items-center space-x-5">
                 <a href="tel:<?php echo CONTACT_PHONE_RAW; ?>"
-                    class="flex items-center text-white bg-white/10 hover:bg-white/20 border border-white/20 px-4 py-2 rounded-full font-semibold transition-all duration-300">
-                    <i class="fa-solid fa-phone mr-2 text-brand"></i> Call Now
+                    class="group inline-flex items-center text-white/90 hover:text-brand bg-slate-950/40 hover:bg-slate-950/60 border border-white/10 hover:border-brand/40 px-5 py-2.5 rounded-full text-xs uppercase tracking-wider font-bold transition-all duration-300">
+                    <i
+                        class="fa-solid fa-phone text-brand mr-2.5 transition-transform duration-300 group-hover:scale-110"></i>
+                    <span>Call Now</span>
                 </a>
                 <a href="#inquiry"
-                    class="bg-gradient-gold text-obsidian-950 px-6 py-2.5 rounded-full font-bold hover:shadow-lg hover:shadow-brand/20 transition-all duration-300 hover:-translate-y-0.5">
-                    Plan My Trip
+                    class="group inline-flex items-center justify-center bg-gradient-gold text-obsidian-950 px-6 py-2.5 rounded-full text-xs uppercase tracking-widest font-extrabold shadow-[0_0_15px_rgba(240,210,90,0.15)] hover:shadow-[0_0_25px_rgba(240,210,90,0.35)] transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0">
+                    <span>Plan My Trip</span>
+                    <i
+                        class="fa-solid fa-arrow-right ml-2 text-xs transition-transform duration-300 group-hover:translate-x-1"></i>
                 </a>
             </div>
 

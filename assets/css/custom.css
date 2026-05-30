@@ -144,3 +144,36 @@ h1, h2, h3, h4, h5, h6 {
 .accordion-content.active {
     max-height: 500px; /* arbitrary height to fit content */
 }
+
+/* Premium Navigation Links */
+.nav-link-premium {
+    position: relative;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    padding-bottom: 6px;
+}
+
+.nav-link-premium::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 20px;
+    height: 2px;
+    background-color: var(--brand-gold);
+    transition: transform 0.3s ease;
+    transform-origin: center;
+}
+
+.nav-link-premium.active-link {
+    color: var(--brand-gold) !important;
+}
+
+.nav-link-premium.active-link::after,
+.nav-link-premium:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
