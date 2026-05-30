@@ -351,12 +351,12 @@ require_once 'includes/header.php';
         
         <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/20 text-brand-accent text-xs font-bold uppercase tracking-wider">
-                <i class="fa-solid fa-crown text-[10px]"></i>
+            <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/15 text-brand-accent text-xs font-bold uppercase tracking-widest">
+                <i class="fa-solid fa-crown text-[9px]"></i>
                 <span>Elite Fleet Experience</span>
             </span>
             <h2 class="text-3xl md:text-5xl font-extrabold text-obsidian-950 leading-tight">
-                Premium <span class="text-gradient-gold font-display">Car Rentals</span>
+                Premium Car Rentals
             </h2>
             <p class="text-slate-600 text-sm md:text-base leading-relaxed">
                 Choose from our premium class sedans and SUVs for a smooth and comfortable voyage. Perfect for local corporate transfers, outstation packages, and VIP family trips.
@@ -396,7 +396,7 @@ require_once 'includes/header.php';
                     <!-- Short amenities -->
                     <div class="flex flex-wrap gap-1.5 pt-1">
                         <?php foreach (array_slice($car['features'], 0, 2) as $f): ?>
-                        <span class="bg-brand/5 text-brand-accent border border-brand/10 text-[9px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider"><?php echo $f; ?></span>
+                        <span class="bg-slate-100 text-slate-700 text-[10px] px-3 py-1 rounded-full font-semibold"><?php echo $f; ?></span>
                         <?php endforeach; ?>
                     </div>
 
@@ -406,7 +406,7 @@ require_once 'includes/header.php';
                             <p class="text-lg font-extrabold text-slate-900 font-display leading-none mt-1"><?php echo $car['price']; ?></p>
                         </div>
                         
-                        <a href="<?php echo BASE_URL; ?>car-rental.php" class="relative group/btn overflow-hidden w-10 h-10 bg-slate-950 text-white rounded-xl inline-flex items-center justify-center transition-all duration-300 shadow-md border border-white/10 flex-shrink-0">
+                        <a href="<?php echo BASE_URL; ?>car-rental.php" class="relative group/btn overflow-hidden w-10 h-10 bg-slate-950 text-white rounded-xl inline-flex items-center justify-center transition-all duration-300 shadow-md flex-shrink-0">
                             <!-- Smooth gradient fade-in overlay -->
                             <div class="absolute inset-0 bg-gradient-gold opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300 z-0"></div>
                             <!-- Button contents on top of overlay -->
@@ -422,24 +422,33 @@ require_once 'includes/header.php';
 </section>
 
 <!-- Why Choose Us & Trust Badges Section -->
-<section class="py-20 bg-obsidian-950 text-white relative border-t border-white/5">
-    <div class="max-w-[1440px] mx-auto px-4">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<section class="py-20 bg-obsidian-950 text-white relative border-t border-white/5 overflow-hidden">
+    <!-- Subtle Background Glows -->
+    <div class="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-brand/5 rounded-full blur-[120px] pointer-events-none"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-brand-dark/5 rounded-full blur-[120px] pointer-events-none" style="animation-delay: 2s;"></div>
+
+    <div class="max-w-[1440px] mx-auto px-4 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             
             <!-- Left: Description and Image (Taj Mahal/Scenic) -->
-            <div class="lg:col-span-5 space-y-6">
-                <span class="text-brand font-bold text-xs uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full border border-white/10">Unmatched Quality</span>
-                <h2 class="text-3xl md:text-5xl font-extrabold font-display leading-tight">Why Choose <br><span class="text-gradient-gold">Explore Your Dream Trip?</span></h2>
+            <div class="lg:col-span-5 space-y-8">
+                <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-brand text-xs font-bold uppercase tracking-wider">
+                    <i class="fa-solid fa-shield text-[10px]"></i>
+                    <span>Unmatched Quality</span>
+                </span>
+                <h2 class="text-3xl md:text-5xl font-extrabold font-display leading-tight">
+                    Why Choose <br><span class="text-gradient-gold">Explore Your Dream Trip?</span>
+                </h2>
                 <p class="text-slate-400 text-base leading-relaxed">
                     With over a decade of excellence in the Indian travel space, we create memories that linger forever. Our dedication to safety, local immersion, and premium comfort sets us apart from ordinary operators.
                 </p>
-                <div class="p-6 glass-card rounded-2xl border border-white/5 flex items-start space-x-4">
-                    <div class="text-brand text-3xl mt-1">
+                <div class="p-6 bg-slate-900/40 backdrop-blur-md rounded-3xl border border-white/5 flex items-start space-x-4 hover:border-brand/20 transition-all duration-300">
+                    <div class="w-12 h-12 bg-brand/10 border border-brand/20 text-brand rounded-2xl flex items-center justify-center text-xl flex-shrink-0">
                         <i class="fa-solid fa-headset"></i>
                     </div>
                     <div>
                         <h4 class="text-white font-bold text-lg mb-1">24/7 Guest Assistance</h4>
-                        <p class="text-slate-400 text-sm">We provide continuous concierge support for flight/train changes, itinerary adjustments, and queries.</p>
+                        <p class="text-slate-400 text-sm leading-relaxed">We provide continuous concierge support for flight/train changes, itinerary adjustments, and queries.</p>
                     </div>
                 </div>
             </div>
@@ -448,38 +457,38 @@ require_once 'includes/header.php';
             <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
                 
                 <!-- Card 1: Govt Approved -->
-                <div class="p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-brand/10 transition-colors space-y-4">
-                    <div class="w-12 h-12 bg-brand/15 text-brand rounded-2xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-shield-circle-check"></i>
+                <div class="group p-8 bg-slate-900/40 backdrop-blur-md rounded-[32px] border border-white/5 hover:border-brand/25 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(240,210,90,0.05)] space-y-5">
+                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-gradient-gold group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300">
+                        <i class="fa-solid fa-award transition-colors duration-300 group-hover:text-slate-950"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Govt. Certified Operator</h3>
+                    <h3 class="text-xl font-bold text-white font-display group-hover:text-brand transition-colors duration-300">Govt. Certified Operator</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">We are fully registered and approved by the Ministry of Tourism, ensuring 100% safety and standards.</p>
                 </div>
 
                 <!-- Card 2: Custom Itineraries -->
-                <div class="p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-brand/10 transition-colors space-y-4">
-                    <div class="w-12 h-12 bg-brand/15 text-brand rounded-2xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-sliders"></i>
+                <div class="group p-8 bg-slate-900/40 backdrop-blur-md rounded-[32px] border border-white/5 hover:border-brand/25 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(240,210,90,0.05)] space-y-5">
+                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-gradient-gold group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300">
+                        <i class="fa-solid fa-sliders transition-colors duration-300 group-hover:text-slate-950"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Fully Customized Tours</h3>
+                    <h3 class="text-xl font-bold text-white font-display group-hover:text-brand transition-colors duration-300">Fully Customized Tours</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Tailor your trip at your own pace. Add destinations, customize hotels, and pick your choice of cars.</p>
                 </div>
 
                 <!-- Card 3: Safe Payments -->
-                <div class="p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-brand/10 transition-colors space-y-4">
-                    <div class="w-12 h-12 bg-brand/15 text-brand rounded-2xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-credit-card"></i>
+                <div class="group p-8 bg-slate-900/40 backdrop-blur-md rounded-[32px] border border-white/5 hover:border-brand/25 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(240,210,90,0.05)] space-y-5">
+                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-gradient-gold group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300">
+                        <i class="fa-solid fa-credit-card transition-colors duration-300 group-hover:text-slate-950"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Secure Flexible Booking</h3>
+                    <h3 class="text-xl font-bold text-white font-display group-hover:text-brand transition-colors duration-300">Secure Flexible Booking</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Secure your booking with a small token amount and pay the balance during the tour safely.</p>
                 </div>
 
                 <!-- Card 4: Veteran Drivers -->
-                <div class="p-8 bg-white/5 rounded-3xl border border-white/5 hover:border-brand/10 transition-colors space-y-4">
-                    <div class="w-12 h-12 bg-brand/15 text-brand rounded-2xl flex items-center justify-center text-xl">
-                        <i class="fa-solid fa-user-tie"></i>
+                <div class="group p-8 bg-slate-900/40 backdrop-blur-md rounded-[32px] border border-white/5 hover:border-brand/25 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(240,210,90,0.05)] space-y-5">
+                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-gradient-gold group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300">
+                        <i class="fa-solid fa-user-tie transition-colors duration-300 group-hover:text-slate-950"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">Professional Drivers</h3>
+                    <h3 class="text-xl font-bold text-white font-display group-hover:text-brand transition-colors duration-300">Professional Drivers</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Our drivers are background verified, highly experienced in tourist routes, and strictly professional.</p>
                 </div>
 
@@ -490,197 +499,284 @@ require_once 'includes/header.php';
 </section>
 
 <!-- Customer Testimonials Section -->
-<section class="py-20 bg-slate-50 overflow-hidden">
-    <div class="max-w-4xl mx-auto px-4 relative">
+<section id="testimonials" class="py-20 bg-slate-50 relative overflow-hidden">
+    <!-- Subtle Ambient Glow Accent -->
+    <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-[1440px] mx-auto px-4 relative z-10">
         
         <!-- Header -->
-        <div class="text-center mb-12 space-y-3">
-            <span class="text-brand-accent font-bold text-xs uppercase tracking-widest bg-brand/10 px-3 py-1.5 rounded-full border border-brand/15">Guest Feedback</span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-obsidian-950 font-display">What Our Guests Say</h2>
+        <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+            <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/15 text-brand-accent text-xs font-bold uppercase tracking-widest">
+                <i class="fa-solid fa-star text-[9px]"></i>
+                <span>Guest Experiences</span>
+            </span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-obsidian-950 leading-tight">
+                What Our Guests Say
+            </h2>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">
+                Read real reviews and feedback from travelers who experienced India in luxurious comfort with our premium fleet and tours.
+            </p>
         </div>
 
-        <!-- Testimonial Slider Container -->
-        <div class="relative bg-white border border-slate-100 rounded-3xl p-8 md:p-12 shadow-sm glow-gold/5 min-h-[250px]">
-            <!-- Quote Icon -->
-            <div class="absolute -top-6 left-12 w-12 h-12 bg-brand rounded-2xl flex items-center justify-center text-obsidian-950 text-xl shadow-lg shadow-brand/10">
-                <i class="fa-solid fa-quote-left"></i>
-            </div>
-
-            <!-- Slide 1 -->
-            <div class="testimonial-slide space-y-6 transition-opacity duration-500">
-                <div class="flex items-center space-x-1 text-brand text-sm">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p class="text-slate-600 text-base md:text-lg italic leading-relaxed">
-                    "We rented a 12 seater tempo traveller for our family trip to Agra and Jaipur. The vehicle was in immaculate condition with superb pushback seats and strong air-conditioning. The driver, Rajesh, was extremely polite and guided us nicely. High-end experience!"
-                </p>
-                <div class="flex items-center space-x-3 pt-2">
-                    <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-obsidian-950 font-bold text-sm">AS</div>
-                    <div>
-                        <h4 class="font-bold text-obsidian-950 text-sm">Amit Singh</h4>
-                        <p class="text-xs text-slate-400">Delhi, India</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="testimonial-slide space-y-6 transition-opacity duration-500 hidden">
-                <div class="flex items-center space-x-1 text-brand text-sm">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p class="text-slate-600 text-base md:text-lg italic leading-relaxed">
-                    "The Shimla-Manali tour planned by Explore Your Dream Trip was flawless. Right from hotel pickup to the mountain drivers and premium property bookings, everything felt very executive. Highly recommended for family travels!"
-                </p>
-                <div class="flex items-center space-x-3 pt-2">
-                    <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-obsidian-950 font-bold text-sm">PM</div>
-                    <div>
-                        <h4 class="font-bold text-obsidian-950 text-sm">Priya Mehta</h4>
-                        <p class="text-xs text-slate-400">Mumbai, India</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="testimonial-slide space-y-6 transition-opacity duration-500 hidden">
-                <div class="flex items-center space-x-1 text-brand text-sm">
-                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                </div>
-                <p class="text-slate-600 text-base md:text-lg italic leading-relaxed">
-                    "Booked an Innova Crysta for outstation travel to Ayodhya. The car was clean, smells fresh and driver knows the routes perfectly. Very professional support team available on phone even at midnight. Will book again."
-                </p>
-                <div class="flex items-center space-x-3 pt-2">
-                    <div class="w-10 h-10 rounded-full bg-slate-200 flex items-center justify-center text-obsidian-950 font-bold text-sm">RK</div>
-                    <div>
-                        <h4 class="font-bold text-obsidian-950 text-sm">Rohit Kapoor</h4>
-                        <p class="text-xs text-slate-400">Gurugram, India</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Dots Navigation -->
-            <div class="flex justify-center space-x-2 mt-8">
-                <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-brand focus:outline-none" aria-label="Slide 1"></button>
-                <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gray-400 focus:outline-none" aria-label="Slide 2"></button>
-                <button class="testimonial-dot w-2.5 h-2.5 rounded-full bg-gray-400 focus:outline-none" aria-label="Slide 3"></button>
-            </div>
+        <!-- Testimonial Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             
-            <!-- Prev/Next Buttons (Desktop Only) -->
-            <button id="testimonial-prev" class="absolute -left-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white border border-slate-100 shadow-lg rounded-full flex items-center justify-center hover:bg-brand hover:text-obsidian-950 text-slate-600 transition-colors hidden md:flex" aria-label="Previous testimonial">
-                <i class="fa-solid fa-chevron-left"></i>
-            </button>
-            <button id="testimonial-next" class="absolute -right-6 top-1/2 -translate-y-1/2 w-12 h-12 bg-white border border-slate-100 shadow-lg rounded-full flex items-center justify-center hover:bg-brand hover:text-obsidian-950 text-slate-600 transition-colors hidden md:flex" aria-label="Next testimonial">
-                <i class="fa-solid fa-chevron-right"></i>
-            </button>
+            <!-- Card 1 -->
+            <div class="group bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
+                <div class="space-y-5">
+                    <div class="flex justify-between items-center">
+                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent transition-all duration-300">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </span>
+                        <div class="flex items-center space-x-1 text-brand text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed">
+                        "We rented a 12 seater tempo traveller for our family trip to Agra and Jaipur. The vehicle was in immaculate condition with superb pushback seats and strong air-conditioning. The driver, Rajesh, was extremely polite and guided us nicely. High-end experience!"
+                    </p>
+                </div>
+                <div class="flex items-center space-x-3 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-slate-950 text-white font-bold text-xs flex items-center justify-center border-2 border-brand/40 uppercase">AS</div>
+                    <div>
+                        <h4 class="font-bold text-obsidian-950 text-sm font-display leading-none group-hover:text-brand-accent transition-colors duration-300">Amit Singh</h4>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase mt-1.5">Delhi, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="group bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
+                <div class="space-y-5">
+                    <div class="flex justify-between items-center">
+                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent transition-all duration-300">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </span>
+                        <div class="flex items-center space-x-1 text-brand text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed">
+                        "The Shimla-Manali tour planned by Explore Your Dream Trip was flawless. Right from hotel pickup to the mountain drivers and premium property bookings, everything felt very executive. Highly recommended for family travels!"
+                    </p>
+                </div>
+                <div class="flex items-center space-x-3 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-slate-950 text-white font-bold text-xs flex items-center justify-center border-2 border-brand/40 uppercase">PM</div>
+                    <div>
+                        <h4 class="font-bold text-obsidian-950 text-sm font-display leading-none group-hover:text-brand-accent transition-colors duration-300">Priya Mehta</h4>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase mt-1.5">Mumbai, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="group bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
+                <div class="space-y-5">
+                    <div class="flex justify-between items-center">
+                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent transition-all duration-300">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </span>
+                        <div class="flex items-center space-x-1 text-brand text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed">
+                        "Booked an Innova Crysta for outstation travel to Ayodhya. The car was clean, smells fresh and driver knows the routes perfectly. Very professional support team available on phone even at midnight. Will book again."
+                    </p>
+                </div>
+                <div class="flex items-center space-x-3 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-slate-950 text-white font-bold text-xs flex items-center justify-center border-2 border-brand/40 uppercase">RK</div>
+                    <div>
+                        <h4 class="font-bold text-obsidian-950 text-sm font-display leading-none group-hover:text-brand-accent transition-colors duration-300">Rohit Kapoor</h4>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase mt-1.5">Gurugram, India</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="group bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
+                <div class="space-y-5">
+                    <div class="flex justify-between items-center">
+                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent transition-all duration-300">
+                            <i class="fa-solid fa-quote-left"></i>
+                        </span>
+                        <div class="flex items-center space-x-1 text-brand text-xs">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-slate-600 text-sm italic leading-relaxed">
+                        "Outstanding coordination! We rented a Force Urbania for a corporate tour to Rishikesh. The captain seating was exceptionally comfortable, and the client managers handled everything with great detail. 5-star service all the way!"
+                    </p>
+                </div>
+                <div class="flex items-center space-x-3 pt-6 mt-6 border-t border-slate-100">
+                    <div class="w-10 h-10 rounded-full bg-slate-950 text-white font-bold text-xs flex items-center justify-center border-2 border-brand/40 uppercase">SS</div>
+                    <div>
+                        <h4 class="font-bold text-obsidian-950 text-sm font-display leading-none group-hover:text-brand-accent transition-colors duration-300">Dr. Sandeep Sharma</h4>
+                        <p class="text-[10px] text-slate-400 font-bold uppercase mt-1.5">Bengaluru, India</p>
+                    </div>
+                </div>
+            </div>
+
         </div>
 
     </div>
 </section>
 
 <!-- Beautiful Masonry Travel Gallery Section -->
-<section class="py-20 bg-white">
+<section id="gallery" class="py-20 bg-white">
     <div class="max-w-[1440px] mx-auto px-4">
         
         <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
-            <span class="text-brand-accent font-bold text-xs uppercase tracking-widest bg-brand/10 px-3 py-1.5 rounded-full border border-brand/15">Visions of India</span>
+            <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/15 text-brand-accent text-xs font-bold uppercase tracking-widest">
+                <i class="fa-solid fa-images text-[9px]"></i>
+                <span>Visions of India</span>
+            </span>
             <h2 class="text-3xl md:text-5xl font-extrabold text-obsidian-950 font-display">Our Travel Gallery</h2>
-            <p class="text-slate-600">Visual glimpses from our guests' memorable journeys across gorgeous landscapes and monumental heritage sites.</p>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">Visual glimpses from our guests' memorable journeys across gorgeous landscapes and monumental heritage sites.</p>
         </div>
 
-        <!-- Gallery Grid -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-            <div class="rounded-2xl overflow-hidden aspect-square relative group">
-                <img src="https://images.unsplash.com/photo-1545630526-4ee6296a093b?auto=format&fit=crop&w=500&q=80" alt="Ganges Rishikesh" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="text-white font-bold text-sm bg-obsidian-950/70 border border-white/10 px-4 py-2 rounded-full">Rishikesh Ganga</span>
+        <!-- Gallery Grid (8 Items in Responsive Layout) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <?php
+            $GALLERY = [
+                ['title' => 'Rishikesh Ganga', 'image' => 'https://images.unsplash.com/photo-1545630526-4ee6296a093b?auto=format&fit=crop&w=1000&q=80'],
+                ['title' => 'Hawa Mahal Jaipur', 'image' => 'https://images.unsplash.com/photo-1477584322813-4372685598e4?auto=format&fit=crop&w=1000&q=80'],
+                ['title' => 'Golden Temple Amritsar', 'image' => 'https://images.unsplash.com/photo-1588598130782-690a298573ec?auto=format&fit=crop&w=1000&q=80'],
+                ['title' => 'Vrindavan Holi Celebration', 'image' => 'https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1000&q=80'],
+                ['title' => 'Taj Mahal Agra', 'image' => BASE_URL . 'assets/images/tours/agra.png'],
+                ['title' => 'Himalayan Ridge Shimla', 'image' => BASE_URL . 'assets/images/tours/shimla-manali.png'],
+                ['title' => 'White Water Rafting Rishikesh', 'image' => 'https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?auto=format&fit=crop&w=1000&q=80'],
+                ['title' => 'Amer Fort Jaipur', 'image' => 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80'],
+            ];
+            foreach ($GALLERY as $index => $item):
+            ?>
+            <button data-gallery-item data-index="<?php echo $index; ?>" data-src="<?php echo $item['image']; ?>" data-title="<?php echo $item['title']; ?>" class="group rounded-[28px] overflow-hidden aspect-[4/3] relative z-0 focus:outline-none shadow-sm hover:shadow-lg transition-all duration-300 text-left w-full">
+                <img src="<?php echo $item['image']; ?>" alt="<?php echo $item['title']; ?>" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <!-- Soft Dark Overlay Gradient on Hover -->
+                <div class="absolute inset-0 bg-slate-950/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <span class="text-white font-bold text-xs uppercase tracking-wider bg-obsidian-950/80 backdrop-blur-md border border-white/10 px-4 py-2.5 rounded-full flex items-center space-x-2 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300 shadow-md">
+                        <i class="fa-solid fa-magnifying-glass-plus text-brand text-xs"></i>
+                        <span>View Larger</span>
+                    </span>
                 </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden aspect-square relative group">
-                <img src="https://images.unsplash.com/photo-1477584322813-4372685598e4?auto=format&fit=crop&w=500&q=80" alt="Jaipur Palace" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="text-white font-bold text-sm bg-obsidian-950/70 border border-white/10 px-4 py-2 rounded-full">Hawa Mahal Jaipur</span>
-                </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden aspect-square relative group">
-                <img src="https://images.unsplash.com/photo-1588598130782-690a298573ec?auto=format&fit=crop&w=500&q=80" alt="Golden Temple Amritsar" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="text-white font-bold text-sm bg-obsidian-950/70 border border-white/10 px-4 py-2 rounded-full">Amritsar Shrine</span>
-                </div>
-            </div>
-            <div class="rounded-2xl overflow-hidden aspect-square relative group">
-                <img src="https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=500&q=80" alt="Vrindavan Temple" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
-                <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                    <span class="text-white font-bold text-sm bg-obsidian-950/70 border border-white/10 px-4 py-2 rounded-full">Vrindavan Holi</span>
-                </div>
-            </div>
+            </button>
+            <?php endforeach; ?>
         </div>
 
     </div>
 </section>
 
+<!-- Premium Lightbox Modal -->
+<div id="gallery-lightbox" class="fixed inset-0 bg-slate-950/95 backdrop-blur-md z-[200] hidden flex flex-col justify-center items-center opacity-0 transition-opacity duration-300" role="dialog" aria-modal="true">
+    <!-- Close Button -->
+    <button id="lightbox-close" class="absolute top-6 right-6 w-12 h-12 bg-white/5 border border-white/10 hover:border-brand/40 text-white hover:text-brand rounded-full flex items-center justify-center text-xl transition-all focus:outline-none z-[210]" aria-label="Close Gallery">
+        <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <!-- Main Image & Container -->
+    <div class="relative max-w-5xl max-h-[70vh] w-full px-12 md:px-16 flex items-center justify-center">
+        <!-- Prev Button -->
+        <button id="lightbox-prev" class="absolute left-4 md:left-6 w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand hover:text-obsidian-950 transition-all focus:outline-none z-[210]" aria-label="Previous Image">
+            <i class="fa-solid fa-chevron-left text-base"></i>
+        </button>
+        
+        <!-- Slide Image -->
+        <img id="lightbox-img" src="" alt="Gallery Image" class="max-w-full max-h-[70vh] object-contain rounded-2xl border border-white/5 shadow-2xl transition-all duration-300">
+        
+        <!-- Next Button -->
+        <button id="lightbox-next" class="absolute right-4 md:right-6 w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-brand hover:text-obsidian-950 transition-all focus:outline-none z-[210]" aria-label="Next Image">
+            <i class="fa-solid fa-chevron-right text-base"></i>
+        </button>
+    </div>
+
+    <!-- Image Caption / Title -->
+    <div class="mt-8 text-center px-6">
+        <h4 id="lightbox-caption" class="text-white font-bold font-display text-lg md:text-xl tracking-wide leading-tight"></h4>
+        <p id="lightbox-counter" class="text-slate-400 text-xs font-semibold uppercase tracking-wider mt-1.5"></p>
+    </div>
+</div>
+
 <!-- Frequently Asked Questions (FAQ) Section -->
-<section class="py-20 bg-slate-50">
-    <div class="max-w-4xl mx-auto px-4">
+<section class="py-20 bg-slate-50 relative overflow-hidden">
+    <!-- Subtle Background Ambient Glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-brand/5 rounded-full blur-[100px] pointer-events-none"></div>
+
+    <div class="max-w-4xl mx-auto px-4 relative z-10">
         
         <!-- Header -->
         <div class="text-center mb-16 space-y-4">
-            <span class="text-brand-accent font-bold text-xs uppercase tracking-widest bg-brand/10 px-3 py-1.5 rounded-full border border-brand/15">Got Questions?</span>
-            <h2 class="text-3xl md:text-5xl font-extrabold text-obsidian-950 font-display">FAQ Panel</h2>
-            <p class="text-slate-600">Quick answers to common questions about bookings, rentals, pricing guidelines, and custom itinerary options.</p>
+            <span class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/15 text-brand-accent text-xs font-bold uppercase tracking-widest">
+                <i class="fa-solid fa-star text-[9px]"></i>
+                <span>Got Questions?</span>
+            </span>
+            <h2 class="text-3xl md:text-5xl font-extrabold text-obsidian-950 leading-tight font-display">
+                Frequently Asked Questions
+            </h2>
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed">Quick answers to common questions about bookings, rentals, pricing guidelines, and custom itinerary options.</p>
         </div>
 
         <!-- FAQ List -->
-        <div class="space-y-4">
+        <div class="space-y-5">
             
             <!-- FAQ Item 1 -->
-            <div class="faq-item bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none">
-                    <span class="font-bold text-obsidian-950 md:text-lg">How do I book a tour or a tempo traveller?</span>
-                    <span class="faq-icon text-brand transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+            <div class="faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden shadow-sm hover:shadow-md hover:border-brand/20 transition-all duration-300">
+                <button class="faq-btn w-full px-7 py-6 flex justify-between items-center text-left focus:outline-none gap-4">
+                    <span class="font-bold text-obsidian-950 font-display text-base md:text-lg transition-colors duration-300 group-hover:text-brand-accent">How do I book a tour or a tempo traveller?</span>
+                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent flex-shrink-0">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
                 </button>
-                <div class="accordion-content bg-slate-50/50">
-                    <p class="p-6 text-sm md:text-base text-slate-600 leading-relaxed">
+                <div class="accordion-content bg-slate-50/30 border-t border-slate-100/50">
+                    <div class="p-7 text-sm md:text-base text-slate-600 leading-relaxed border-l-2 border-brand ml-7 my-2">
                         You can easily book by filling out the online quick inquiry form below, sending a direct message via WhatsApp, or calling our helpline at <?php echo CONTACT_PHONE; ?>. Our travel managers will provide a customized quote and itinerary within 30 minutes.
-                    </p>
+                    </div>
                 </div>
             </div>
 
             <!-- FAQ Item 2 -->
-            <div class="faq-item bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none">
-                    <span class="font-bold text-obsidian-950 md:text-lg">Are the rates for Tempo Travellers and Car Rentals inclusive of toll taxes?</span>
-                    <span class="faq-icon text-brand transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+            <div class="faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden shadow-sm hover:shadow-md hover:border-brand/20 transition-all duration-300">
+                <button class="faq-btn w-full px-7 py-6 flex justify-between items-center text-left focus:outline-none gap-4">
+                    <span class="font-bold text-obsidian-950 font-display text-base md:text-lg transition-colors duration-300 group-hover:text-brand-accent">Are the rates for Tempo Travellers and Car Rentals inclusive of toll taxes?</span>
+                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent flex-shrink-0">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
                 </button>
-                <div class="accordion-content bg-slate-50/50">
-                    <p class="p-6 text-sm md:text-base text-slate-600 leading-relaxed">
+                <div class="accordion-content bg-slate-50/30 border-t border-slate-100/50">
+                    <div class="p-7 text-sm md:text-base text-slate-600 leading-relaxed border-l-2 border-brand ml-7 my-2">
                         Our baseline per-kilometer rates exclude state permits, highway toll taxes, parking fees, and driver allowances. However, when we build custom tour packages for you, we can offer an **all-inclusive fixed package price** that covers everything so you don't face unexpected charges.
-                    </p>
+                    </div>
                 </div>
             </div>
 
             <!-- FAQ Item 3 -->
-            <div class="faq-item bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none">
-                    <span class="font-bold text-obsidian-950 md:text-lg">Can I customize the destinations and duration of the tour packages?</span>
-                    <span class="faq-icon text-brand transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+            <div class="faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden shadow-sm hover:shadow-md hover:border-brand/20 transition-all duration-300">
+                <button class="faq-btn w-full px-7 py-6 flex justify-between items-center text-left focus:outline-none gap-4">
+                    <span class="font-bold text-obsidian-950 font-display text-base md:text-lg transition-colors duration-300 group-hover:text-brand-accent">Can I customize the destinations and duration of the tour packages?</span>
+                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent flex-shrink-0">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
                 </button>
-                <div class="accordion-content bg-slate-50/50">
-                    <p class="p-6 text-sm md:text-base text-slate-600 leading-relaxed">
+                <div class="accordion-content bg-slate-50/30 border-t border-slate-100/50">
+                    <div class="p-7 text-sm md:text-base text-slate-600 leading-relaxed border-l-2 border-brand ml-7 my-2">
                         Absolutely! 100% customization is our primary feature. You can modify any preset itinerary (like Agra, Rishikesh, or Shimla), extend or shorten the stay, add specific attractions, and choose your preferred hotels and vehicles.
-                    </p>
+                    </div>
                 </div>
             </div>
 
             <!-- FAQ Item 4 -->
-            <div class="faq-item bg-white border border-slate-100 rounded-2xl overflow-hidden shadow-sm">
-                <button class="faq-btn w-full px-6 py-5 flex justify-between items-center text-left focus:outline-none">
-                    <span class="font-bold text-obsidian-950 md:text-lg">What safety measures are taken during journeys?</span>
-                    <span class="faq-icon text-brand transition-transform duration-300"><i class="fa-solid fa-chevron-down"></i></span>
+            <div class="faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden shadow-sm hover:shadow-md hover:border-brand/20 transition-all duration-300">
+                <button class="faq-btn w-full px-7 py-6 flex justify-between items-center text-left focus:outline-none gap-4">
+                    <span class="font-bold text-obsidian-950 font-display text-base md:text-lg transition-colors duration-300 group-hover:text-brand-accent">What safety measures are taken during journeys?</span>
+                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent flex-shrink-0">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
                 </button>
-                <div class="accordion-content bg-slate-50/50">
-                    <p class="p-6 text-sm md:text-base text-slate-600 leading-relaxed">
+                <div class="accordion-content bg-slate-50/30 border-t border-slate-100/50">
+                    <div class="p-7 text-sm md:text-base text-slate-600 leading-relaxed border-l-2 border-brand ml-7 my-2">
                         All our tempo travellers and cars undergo regular security and mechanical checks before departure. Our vehicles are equipped with first-aid kits, fire extinguishers, GPS tracking, and fully functioning seat belts. All drivers are verified professionals with years of tourist driving experience.
-                    </p>
+                    </div>
                 </div>
             </div>
 

@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initMobileMenu();
     initFAQ();
     initBackToTop();
-    initTestimonialSlider();
+    initGalleryLightbox();
 });
 
 /**
@@ -136,67 +136,117 @@ function initBackToTop() {
 }
 
 /**
- * Simple testimonial text slider / fade-in transitions
+ * Gallery Lightbox Modal logic
  */
-function initTestimonialSlider() {
-    const slides = document.querySelectorAll('.testimonial-slide');
-    const dots = document.querySelectorAll('.testimonial-dot');
-    const prevBtn = document.getElementById('testimonial-prev');
-    const nextBtn = document.getElementById('testimonial-next');
-    
-    if (slides.length === 0) return;
-    
+function initGalleryLightbox() {
+    const lightbox = document.getElementById('gallery-lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const lightboxCaption = document.getElementById('lightbox-caption');
+    const lightboxCounter = document.getElementById('lightbox-counter');
+    const closeBtn = document.getElementById('lightbox-close');
+    const prevBtn = document.getElementById('lightbox-prev');
+    const nextBtn = document.getElementById('lightbox-next');
+    const items = document.querySelectorAll('[data-gallery-item]');
+
+    if (!lightbox || items.length === 0) return;
+
     let currentIdx = 0;
-    
-    function showSlide(index) {
-        // Wrap around
-        if (index >= slides.length) currentIdx = 0;
-        else if (index < 0) currentIdx = slides.length - 1;
-        else currentIdx = index;
+
+    function openLightbox(index) {
+        currentIdx = parseInt(index);
+        updateLightboxContent();
         
-        slides.forEach((slide, idx) => {
-            if (idx === currentIdx) {
-                slide.classList.remove('hidden');
-                slide.classList.add('block', 'opacity-100');
-            } else {
-                slide.classList.add('hidden');
-                slide.classList.remove('block', 'opacity-100');
-            }
+        lightbox.classList.remove('hidden');
+        lightbox.classList.add('flex');
+        
+        // Disable scroll
+        document.body.classList.add('overflow-hidden');
+        
+        // Trigger reflow for transition
+        setTimeout(() => {
+            lightbox.classList.remove('opacity-0');
+            lightbox.classList.add('opacity-100');
+        }, 10);
+    }
+
+    function closeLightbox() {
+        lightbox.classList.remove('opacity-100');
+        lightbox.classList.add('opacity-0');
+        
+        // Enable scroll
+        document.body.classList.remove('overflow-hidden');
+        
+        // Hide after transition finishes
+        setTimeout(() => {
+            lightbox.classList.remove('flex');
+            lightbox.classList.add('hidden');
+        }, 300);
+    }
+
+    function updateLightboxContent() {
+        const item = items[currentIdx];
+        if (!item) return;
+
+        const src = item.getAttribute('data-src');
+        const title = item.getAttribute('data-title');
+
+        // Apply smooth fade/scale transition to the image
+        lightboxImg.classList.add('scale-95', 'opacity-0');
+        
+        setTimeout(() => {
+            lightboxImg.src = src;
+            lightboxImg.alt = title;
+            lightboxCaption.textContent = title;
+            lightboxCounter.textContent = `${currentIdx + 1} / ${items.length}`;
+            
+            lightboxImg.classList.remove('scale-95', 'opacity-0');
+        }, 150);
+    }
+
+    function showNext() {
+        currentIdx = (currentIdx + 1) % items.length;
+        updateLightboxContent();
+    }
+
+    function showPrev() {
+        currentIdx = (currentIdx - 1 + items.length) % items.length;
+        updateLightboxContent();
+    }
+
+    // Attach click events to gallery items
+    items.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const index = item.getAttribute('data-index');
+            openLightbox(index);
         });
-        
-        // Update dots if any
-        if (dots.length > 0) {
-            dots.forEach((dot, idx) => {
-                if (idx === currentIdx) {
-                    dot.classList.add('bg-brand');
-                    dot.classList.remove('bg-gray-400');
-                } else {
-                    dot.classList.remove('bg-brand');
-                    dot.classList.add('bg-gray-400');
-                }
-            });
+    });
+
+    // Close button
+    if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+
+    // Prev/Next buttons
+    if (prevBtn) prevBtn.addEventListener('click', showPrev);
+    if (nextBtn) nextBtn.addEventListener('click', showNext);
+
+    // Close on clicking outside the image container (overlay)
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            closeLightbox();
         }
-    }
-    
-    if (prevBtn) {
-        prevBtn.addEventListener('click', () => showSlide(currentIdx - 1));
-    }
-    
-    if (nextBtn) {
-        nextBtn.addEventListener('click', () => showSlide(currentIdx + 1));
-    }
-    
-    if (dots.length > 0) {
-        dots.forEach((dot, idx) => {
-            dot.addEventListener('click', () => showSlide(idx));
-        });
-    }
-    
-    // Auto-slide every 5 seconds
-    setInterval(() => {
-        showSlide(currentIdx + 1);
-    }, 6000);
-    
-    // Show first slide initially
-    showSlide(0);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+        if (lightbox.classList.contains('hidden')) return;
+
+        if (e.key === 'ArrowRight') {
+            showNext();
+        } else if (e.key === 'ArrowLeft') {
+            showPrev();
+        } else if (e.key === 'Escape') {
+            closeLightbox();
+        }
+    });
 }
+
+
