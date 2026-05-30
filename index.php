@@ -458,8 +458,8 @@ require_once 'includes/header.php';
                 
                 <!-- Card 1: Govt Approved -->
                 <div class="group p-8 bg-slate-900/40 backdrop-blur-md rounded-[32px] border border-white/5 hover:border-brand/25 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(240,210,90,0.05)] space-y-5">
-                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-gradient-gold group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300">
-                        <i class="fa-solid fa-award transition-colors duration-300 group-hover:text-slate-950"></i>
+                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-brand/10 group-hover:text-brand-light group-hover:border-brand/40 transition-all duration-300">
+                        <i class="fa-solid fa-award transition-colors duration-300 group-hover:text-brand-light"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white font-display group-hover:text-brand transition-colors duration-300">Govt. Certified Operator</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">We are fully registered and approved by the Ministry of Tourism, ensuring 100% safety and standards.</p>
@@ -467,8 +467,8 @@ require_once 'includes/header.php';
 
                 <!-- Card 2: Custom Itineraries -->
                 <div class="group p-8 bg-slate-900/40 backdrop-blur-md rounded-[32px] border border-white/5 hover:border-brand/25 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(240,210,90,0.05)] space-y-5">
-                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-gradient-gold group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300">
-                        <i class="fa-solid fa-sliders transition-colors duration-300 group-hover:text-slate-950"></i>
+                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-brand/10 group-hover:text-brand-light group-hover:border-brand/40 transition-all duration-300">
+                        <i class="fa-solid fa-sliders transition-colors duration-300 group-hover:text-brand-light"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white font-display group-hover:text-brand transition-colors duration-300">Fully Customized Tours</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Tailor your trip at your own pace. Add destinations, customize hotels, and pick your choice of cars.</p>
@@ -476,8 +476,8 @@ require_once 'includes/header.php';
 
                 <!-- Card 3: Safe Payments -->
                 <div class="group p-8 bg-slate-900/40 backdrop-blur-md rounded-[32px] border border-white/5 hover:border-brand/25 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(240,210,90,0.05)] space-y-5">
-                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-gradient-gold group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300">
-                        <i class="fa-solid fa-credit-card transition-colors duration-300 group-hover:text-slate-950"></i>
+                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-brand/10 group-hover:text-brand-light group-hover:border-brand/40 transition-all duration-300">
+                        <i class="fa-solid fa-credit-card transition-colors duration-300 group-hover:text-brand-light"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white font-display group-hover:text-brand transition-colors duration-300">Secure Flexible Booking</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Secure your booking with a small token amount and pay the balance during the tour safely.</p>
@@ -485,8 +485,8 @@ require_once 'includes/header.php';
 
                 <!-- Card 4: Veteran Drivers -->
                 <div class="group p-8 bg-slate-900/40 backdrop-blur-md rounded-[32px] border border-white/5 hover:border-brand/25 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_15px_35px_rgba(240,210,90,0.05)] space-y-5">
-                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-gradient-gold group-hover:text-slate-950 group-hover:border-transparent transition-all duration-300">
-                        <i class="fa-solid fa-user-tie transition-colors duration-300 group-hover:text-slate-950"></i>
+                    <div class="w-12 h-12 bg-white/5 text-brand rounded-2xl flex items-center justify-center text-xl border border-white/10 group-hover:bg-brand/10 group-hover:text-brand-light group-hover:border-brand/40 transition-all duration-300">
+                        <i class="fa-solid fa-user-tie transition-colors duration-300 group-hover:text-brand-light"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white font-display group-hover:text-brand transition-colors duration-300">Professional Drivers</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Our drivers are background verified, highly experienced in tourist routes, and strictly professional.</p>
@@ -526,7 +526,7 @@ require_once 'includes/header.php';
             <div class="group bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
                 <div class="space-y-5">
                     <div class="flex justify-between items-center">
-                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent transition-all duration-300">
+                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-brand/10 group-hover:border-brand/30 transition-all duration-300">
                             <i class="fa-solid fa-quote-left"></i>
                         </span>
                         <div class="flex items-center space-x-1 text-brand text-xs">
@@ -550,7 +550,7 @@ require_once 'includes/header.php';
             <div class="group bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
                 <div class="space-y-5">
                     <div class="flex justify-between items-center">
-                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent transition-all duration-300">
+                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-brand/10 group-hover:border-brand/30 transition-all duration-300">
                             <i class="fa-solid fa-quote-left"></i>
                         </span>
                         <div class="flex items-center space-x-1 text-brand text-xs">
@@ -574,7 +574,7 @@ require_once 'includes/header.php';
             <div class="group bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
                 <div class="space-y-5">
                     <div class="flex justify-between items-center">
-                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent transition-all duration-300">
+                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-brand/10 group-hover:border-brand/30 transition-all duration-300">
                             <i class="fa-solid fa-quote-left"></i>
                         </span>
                         <div class="flex items-center space-x-1 text-brand text-xs">
@@ -598,7 +598,7 @@ require_once 'includes/header.php';
             <div class="group bg-white rounded-[32px] border border-slate-100 p-8 shadow-sm hover:shadow-[0_20px_45px_rgba(15,23,42,0.06)] hover:border-brand/35 hover:-translate-y-2 transition-all duration-500 flex flex-col justify-between">
                 <div class="space-y-5">
                     <div class="flex justify-between items-center">
-                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent transition-all duration-300">
+                        <span class="w-10 h-10 rounded-xl bg-brand/5 border border-brand/10 flex items-center justify-center text-brand text-sm group-hover:bg-brand/10 group-hover:border-brand/30 transition-all duration-300">
                             <i class="fa-solid fa-quote-left"></i>
                         </span>
                         <div class="flex items-center space-x-1 text-brand text-xs">
@@ -724,7 +724,7 @@ require_once 'includes/header.php';
             <div class="faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden shadow-sm hover:shadow-md hover:border-brand/20 transition-all duration-300">
                 <button class="faq-btn w-full px-7 py-6 flex justify-between items-center text-left focus:outline-none gap-4">
                     <span class="font-bold text-obsidian-950 font-display text-base md:text-lg transition-colors duration-300 group-hover:text-brand-accent">How do I book a tour or a tempo traveller?</span>
-                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent flex-shrink-0">
+                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-brand/20 group-hover:border-brand/50 flex-shrink-0">
                         <i class="fa-solid fa-chevron-down"></i>
                     </span>
                 </button>
@@ -739,13 +739,13 @@ require_once 'includes/header.php';
             <div class="faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden shadow-sm hover:shadow-md hover:border-brand/20 transition-all duration-300">
                 <button class="faq-btn w-full px-7 py-6 flex justify-between items-center text-left focus:outline-none gap-4">
                     <span class="font-bold text-obsidian-950 font-display text-base md:text-lg transition-colors duration-300 group-hover:text-brand-accent">Are the rates for Tempo Travellers and Car Rentals inclusive of toll taxes?</span>
-                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent flex-shrink-0">
+                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-brand/20 group-hover:border-brand/50 flex-shrink-0">
                         <i class="fa-solid fa-chevron-down"></i>
                     </span>
                 </button>
                 <div class="accordion-content bg-slate-50/30 border-t border-slate-100/50">
                     <div class="p-7 text-sm md:text-base text-slate-600 leading-relaxed border-l-2 border-brand ml-7 my-2">
-                        Our baseline per-kilometer rates exclude state permits, highway toll taxes, parking fees, and driver allowances. However, when we build custom tour packages for you, we can offer an **all-inclusive fixed package price** that covers everything so you don't face unexpected charges.
+                        Our driver per-kilometer rates exclude state permits, highway toll taxes, parking fees, and driver allowances. However, when we build custom tour packages for you, we can offer an **all-inclusive fixed package price** that covers everything so you don't face unexpected charges.
                     </div>
                 </div>
             </div>
@@ -754,7 +754,7 @@ require_once 'includes/header.php';
             <div class="faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden shadow-sm hover:shadow-md hover:border-brand/20 transition-all duration-300">
                 <button class="faq-btn w-full px-7 py-6 flex justify-between items-center text-left focus:outline-none gap-4">
                     <span class="font-bold text-obsidian-950 font-display text-base md:text-lg transition-colors duration-300 group-hover:text-brand-accent">Can I customize the destinations and duration of the tour packages?</span>
-                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent flex-shrink-0">
+                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-brand/20 group-hover:border-brand/50 flex-shrink-0">
                         <i class="fa-solid fa-chevron-down"></i>
                     </span>
                 </button>
@@ -769,7 +769,7 @@ require_once 'includes/header.php';
             <div class="faq-item group bg-white border border-slate-100 rounded-[28px] overflow-hidden shadow-sm hover:shadow-md hover:border-brand/20 transition-all duration-300">
                 <button class="faq-btn w-full px-7 py-6 flex justify-between items-center text-left focus:outline-none gap-4">
                     <span class="font-bold text-obsidian-950 font-display text-base md:text-lg transition-colors duration-300 group-hover:text-brand-accent">What safety measures are taken during journeys?</span>
-                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-gradient-gold group-hover:text-obsidian-950 group-hover:border-transparent flex-shrink-0">
+                    <span class="faq-icon w-8 h-8 rounded-full bg-brand/10 border border-brand/25 text-brand-accent flex items-center justify-center text-xs transition-all duration-300 group-hover:bg-brand/20 group-hover:border-brand/50 flex-shrink-0">
                         <i class="fa-solid fa-chevron-down"></i>
                     </span>
                 </button>
@@ -785,112 +785,7 @@ require_once 'includes/header.php';
     </div>
 </section>
 
-<!-- Direct Lead Generation & Contact Inquiry Form -->
-<section id="inquiry" class="py-20 bg-white relative z-10">
-    <div class="max-w-[1440px] mx-auto px-4">
-        
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-obsidian-950 rounded-[40px] overflow-hidden border border-white/5 shadow-2xl glow-gold/5">
-            
-            <!-- Left Side: Call and Info details -->
-            <div class="lg:col-span-5 p-8 md:p-12 space-y-8 bg-gradient-dark flex flex-col justify-between">
-                <div class="space-y-4">
-                    <span class="text-brand font-bold text-xs uppercase tracking-widest bg-white/5 px-3 py-1.5 rounded-full border border-white/10 inline-block">Direct Booking</span>
-                    <h3 class="text-3xl font-bold font-display text-white">Let's Design Your Dream Tour</h3>
-                    <p class="text-slate-400 text-sm md:text-base leading-relaxed">
-                        Fill out this simple form, and our travel specialists will get back to you with custom itinerary suggestions and direct competitive pricing details.
-                    </p>
-                </div>
-
-                <!-- Specific details -->
-                <div class="space-y-6">
-                    <a href="tel:<?php echo CONTACT_PHONE_RAW; ?>" class="flex items-center space-x-4 group">
-                        <div class="w-12 h-12 rounded-full bg-white/5 group-hover:bg-brand/10 border border-white/10 group-hover:border-brand/20 flex items-center justify-center text-brand text-lg transition-colors">
-                            <i class="fa-solid fa-phone"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-400">Speak With Our Expert</p>
-                            <p class="text-white font-bold text-lg group-hover:text-brand transition-colors"><?php echo CONTACT_PHONE; ?></p>
-                        </div>
-                    </a>
-
-                    <a href="mailto:<?php echo CONTACT_EMAIL; ?>" class="flex items-center space-x-4 group">
-                        <div class="w-12 h-12 rounded-full bg-white/5 group-hover:bg-brand/10 border border-white/10 group-hover:border-brand/20 flex items-center justify-center text-brand text-lg transition-colors">
-                            <i class="fa-solid fa-envelope"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-400">Email Inquiry Desk</p>
-                            <p class="text-white font-bold group-hover:text-brand transition-colors"><?php echo CONTACT_EMAIL; ?></p>
-                        </div>
-                    </a>
-
-                    <a href="<?php echo WHATSAPP_LINK; ?>" target="_blank" class="flex items-center space-x-4 group">
-                        <div class="w-12 h-12 rounded-full bg-emerald-500/10 border border-emerald-500/20 group-hover:bg-emerald-500 group-hover:text-white flex items-center justify-center text-emerald-500 text-xl transition-all">
-                            <i class="fa-brands fa-whatsapp"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-slate-400">Instant Chat Assistance</p>
-                            <p class="text-emerald-500 font-bold group-hover:text-emerald-400 transition-colors">Click to Chat on WhatsApp</p>
-                        </div>
-                    </a>
-                </div>
-
-                <!-- Trust tagline -->
-                <p class="text-xs text-slate-500">
-                    * By submitting this form you consent to our travel operators calling or messaging you to assist with your bookings. We respect your privacy.
-                </p>
-            </div>
-
-            <!-- Right Side: Lead Capture Form -->
-            <div class="lg:col-span-7 p-8 md:p-12 border-t lg:border-t-0 lg:border-l border-white/5">
-                <form action="javascript:void(0);" onsubmit="alert('Thank you for your inquiry! Our travel representative will contact you shortly.');" class="space-y-6">
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Your Full Name *</label>
-                            <input type="text" required placeholder="Enter name" class="w-full bg-white/5 border border-white/10 text-white rounded-xl py-3 px-4 focus:outline-none focus:border-brand transition-colors text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Phone Number *</label>
-                            <input type="tel" required placeholder="Enter mobile number" class="w-full bg-white/5 border border-white/10 text-white rounded-xl py-3 px-4 focus:outline-none focus:border-brand transition-colors text-sm">
-                        </div>
-                    </div>
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Email Address</label>
-                            <input type="email" placeholder="Enter email" class="w-full bg-white/5 border border-white/10 text-white rounded-xl py-3 px-4 focus:outline-none focus:border-brand transition-colors text-sm">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Select Tour / Service</label>
-                            <select class="w-full bg-slate-900 border border-white/10 text-white rounded-xl py-3 px-4 focus:outline-none focus:border-brand transition-colors text-sm appearance-none">
-                                <option value="">Select Option</option>
-                                <optgroup label="Tours" class="bg-slate-950 text-white">
-                                    <?php foreach ($TOURS as $key => $tour): ?>
-                                        <option value="<?php echo $key; ?>"><?php echo $tour['title']; ?></option>
-                                    <?php endforeach; ?>
-                                </optgroup>
-                                <optgroup label="Vehicles" class="bg-slate-950 text-white">
-                                    <option value="tempo-traveller">Luxury Tempo Traveller</option>
-                                    <option value="car-rental">Premium Sedan/SUV Hire</option>
-                                </optgroup>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Tell Us About Your Requirements</label>
-                        <textarea rows="4" placeholder="e.g. Travel dates, number of travelers, budget details, etc." class="w-full bg-white/5 border border-white/10 text-white rounded-xl py-3 px-4 focus:outline-none focus:border-brand transition-colors text-sm resize-none"></textarea>
-                    </div>
-
-                    <button type="submit" class="w-full py-4 bg-gradient-gold text-obsidian-950 font-bold rounded-xl shadow-lg hover:shadow-brand/10 transition-transform active:scale-98 text-center uppercase tracking-wider text-sm pulse-gold-btn">
-                        Submit Custom Request
-                    </button>
-                </form>
-            </div>
-
-        </div>
-
-    </div>
-</section>
+<?php require_once 'includes/cta.php'; ?>
 
 <?php
 require_once 'includes/footer.php';
