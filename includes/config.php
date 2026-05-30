@@ -8,7 +8,7 @@ if (!defined('BASE_URL')) {
     // Check if hosted locally or on server
     $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://";
     $domainName = $_SERVER['HTTP_HOST'];
-    
+
     // For local XAMPP setup: check if directory exists in request URI
     if (strpos($_SERVER['REQUEST_URI'], '/Git/exploreyourdreamtrip.com') !== false) {
         define('BASE_URL', $protocol . $domainName . '/Git/exploreyourdreamtrip.com/');
@@ -23,12 +23,12 @@ define('SITE_TITLE', 'Premium Travel Agency & Luxury Tour Planner in India');
 define('SITE_DESC', 'Discover India with Explore Your Dream Trip. We offer premium luxury tours, tempo traveller rentals, and high-end car rental services for Agra, Shimla, Manali, Rishikesh, and beyond.');
 
 // Contact & Social Information
-define('CONTACT_PHONE', '+91 99999 08888');
-define('CONTACT_PHONE_RAW', '9999908888'); // For tel: links
-define('CONTACT_EMAIL', 'info@exploreyourdreamtrip.com');
-define('CONTACT_ADDRESS', '124, Luxury Travel Hub, Near Connaught Place, New Delhi, India');
+define('CONTACT_PHONE', '+91 8076 341848');
+define('CONTACT_PHONE_RAW', '8076341848'); // For tel: links
+define('CONTACT_EMAIL', 'contact@exploreyourdreamtrip.com');
+define('CONTACT_ADDRESS', 'Street no -8 ,25 foota road , part -2 Mukund pur, near by Jc Gaur public school , Delhi -110042');
 
-define('WHATSAPP_NUMBER', '9999908888');
+define('WHATSAPP_NUMBER', '8448987148');
 define('WHATSAPP_TEXT', 'Hi, I want to book a tour/vehicle with Explore Your Dream Trip. Please share details.');
 define('WHATSAPP_LINK', 'https://wa.me/91' . WHATSAPP_NUMBER . '?text=' . urlencode(WHATSAPP_TEXT));
 
@@ -45,7 +45,7 @@ $TOURS = [
         'subtitle' => 'The Monument of Love',
         'duration' => '1 Day / 1 Night',
         'price' => '₹1,999',
-        'image' => 'assets/images/tours/agra.png',
+        'image' => BASE_URL . 'assets/images/tours/agra.png',
         'link' => 'tours/agra-taj-mahal.php',
         'rating' => '4.9',
         'reviews' => '120',
@@ -56,7 +56,7 @@ $TOURS = [
         'subtitle' => 'The Majestic Himalayas',
         'duration' => '5 Days / 4 Nights',
         'price' => '₹12,499',
-        'image' => 'assets/images/tours/shimla-manali.png',
+        'image' => BASE_URL . 'assets/images/tours/shimla-manali.png',
         'link' => 'tours/shimla-manali.php',
         'rating' => '4.8',
         'reviews' => '245',
@@ -67,7 +67,7 @@ $TOURS = [
         'subtitle' => 'Spiritual & Adventure Capital',
         'duration' => '3 Days / 2 Nights',
         'price' => '₹5,999',
-        'image' => 'https://images.unsplash.com/photo-1545630526-4ee6296a093b?auto=format&fit=crop&w=600&q=80',
+        'image' => 'https://images.unsplash.com/photo-1712510817140-917938f92e5b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'link' => 'tours/rishikesh.php',
         'rating' => '4.7',
         'reviews' => '98',
@@ -89,7 +89,7 @@ $TOURS = [
         'subtitle' => 'The Holy Birthplace',
         'duration' => '2 Days / 1 Night',
         'price' => '₹4,499',
-        'image' => 'https://images.unsplash.com/photo-1707119293883-9b16893e36e3?auto=format&fit=crop&w=600&q=80',
+        'image' => 'https://images.unsplash.com/photo-1710429068963-1f6c853134a4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXlvZGh5YXxlbnwwfHwwfHx8MA%3D%3D',
         'link' => 'tours/ayodhya.php',
         'rating' => '4.9',
         'reviews' => '310',
@@ -100,7 +100,7 @@ $TOURS = [
         'subtitle' => 'The Sacred Jyotirlinga',
         'duration' => '3 Days / 2 Nights',
         'price' => '₹6,499',
-        'image' => 'https://images.unsplash.com/photo-1669046638069-42b781a95e6f?auto=format&fit=crop&w=600&q=80',
+        'image' => 'https://images.unsplash.com/photo-1676029091588-48cc90569541?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dWpqYWlufGVufDB8fDB8fHww',
         'link' => 'tours/mahakaleshwar.php',
         'rating' => '4.8',
         'reviews' => '150',
@@ -111,7 +111,7 @@ $TOURS = [
         'subtitle' => 'Spiritual Peace & Patriotism',
         'duration' => '3 Days / 2 Nights',
         'price' => '₹5,499',
-        'image' => 'https://images.unsplash.com/photo-1588598130782-690a298573ec?auto=format&fit=crop&w=600&q=80',
+        'image' => 'https://images.unsplash.com/photo-1599840309126-7ece88628ded?q=80&w=1190&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
         'link' => 'tours/golden-temple.php',
         'rating' => '4.8',
         'reviews' => '115',
@@ -122,7 +122,7 @@ $TOURS = [
         'subtitle' => 'The Royal Heritage of Rajasthan',
         'duration' => '3 Days / 2 Nights',
         'price' => '₹5,999',
-        'image' => 'https://images.unsplash.com/photo-1477584322813-4372685598e4?auto=format&fit=crop&w=600&q=80',
+        'image' => 'https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFpcHVyfGVufDB8fDB8fHww',
         'link' => 'tours/jaipur.php',
         'rating' => '4.7',
         'reviews' => '142',

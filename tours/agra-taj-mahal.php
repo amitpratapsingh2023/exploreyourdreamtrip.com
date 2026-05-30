@@ -354,9 +354,12 @@ require_once '../includes/header.php';
                  ═══════════════════════════════════════════════════════════════ -->
             <div class="lg:col-span-7 xl:col-span-8">
 
-                <!-- ── Tab Navigation Bar ── -->
-                <div class="premium-tabs-wrapper mb-8 md:mb-10">
-                    <nav class="premium-tabs-nav" id="tourTabsNav" role="tablist" aria-label="Tour Details Tabs">
+                <!-- ── Unified Tab Card Box ── -->
+                <div class="bg-white rounded-[32px] border border-slate-100 shadow-[0_8px_40px_rgba(15,23,42,0.06)] overflow-hidden border-luxury-gold">
+
+                    <!-- ── Tab Navigation Bar ── -->
+                    <div class="premium-tabs-wrapper">
+                        <nav class="premium-tabs-nav" id="tourTabsNav" role="tablist" aria-label="Tour Details Tabs">
                         <button class="premium-tab active" data-tab="overview" role="tab" aria-selected="true"
                             aria-controls="panel-overview" id="tab-overview">
                             <i class="fa-solid fa-binoculars"></i>
@@ -384,11 +387,11 @@ require_once '../includes/header.php';
                         </button>
                         <!-- Animated active indicator -->
                         <div class="premium-tab-indicator" id="tabIndicator"></div>
-                    </nav>
-                </div>
+                        </nav>
+                    </div><!-- /tabs-wrapper -->
 
-                <!-- ── Tab Panels ── -->
-                <div class="premium-tab-panels" id="tourTabPanels">
+                    <!-- ── Tab Panels ── -->
+                    <div class="premium-tab-panels p-6 md:p-8" id="tourTabPanels">
 
                     <!-- ╌╌╌╌╌╌╌╌╌ OVERVIEW PANEL ╌╌╌╌╌╌╌╌╌ -->
                     <div class="premium-tab-panel active" id="panel-overview" role="tabpanel"
@@ -736,7 +739,8 @@ require_once '../includes/header.php';
                         </div>
                     </div>
 
-                </div><!-- /tab-panels -->
+                    </div><!-- /tab-panels -->
+                </div><!-- /tab-card-box -->
             </div><!-- /left column -->
 
             <!-- ═══════════════════════════════════════════════════════════════
