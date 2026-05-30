@@ -3,7 +3,7 @@ require_once __DIR__ . '/config.php';
 ?>
 <!-- Premium Footer Section -->
 <footer class="bg-obsidian-950 text-slate-300 pt-16 pb-24 md:pb-12 border-t border-white/5 relative z-10">
-    <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+    <div class="max-w-[1440px] mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
 
         <!-- Column 1: Company Profile -->
         <div class="space-y-6">
@@ -156,7 +156,7 @@ require_once __DIR__ . '/config.php';
 
     <!-- Trust Badges & Certification -->
     <div
-        class="max-w-7xl mx-auto px-4 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        class="max-w-[1440px] mx-auto px-4 mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex flex-wrap justify-center md:justify-start gap-4">
             <div class="flex items-center bg-white/5 border border-white/10 rounded px-3 py-1.5 text-xs text-slate-300">
                 <i class="fa-solid fa-shield-halved text-brand mr-2"></i> Secured Payments
@@ -196,7 +196,7 @@ require_once __DIR__ . '/config.php';
 
 <!-- Mobile Sticky Quick CTA Bar (Only visible on Mobile viewports) -->
 <div
-    class="fixed bottom-0 left-0 w-full grid grid-cols-2 bg-obsidian-950 border-t border-white/10 z-35 md:hidden shadow-2xl">
+    class="fixed bottom-0 left-0 w-full grid grid-cols-2 bg-obsidian-950 border-t border-white/10 z-40 md:hidden shadow-2xl">
     <a href="tel:<?php echo CONTACT_PHONE_RAW; ?>"
         class="flex justify-center items-center py-4 bg-obsidian-950 text-white border-r border-white/10 font-bold hover:bg-slate-900 transition-colors">
         <i class="fa-solid fa-phone text-brand mr-2"></i> Call Now

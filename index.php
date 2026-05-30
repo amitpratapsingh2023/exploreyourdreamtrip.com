@@ -19,7 +19,7 @@ require_once 'includes/header.php';
     <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-brand-dark/10 rounded-full blur-3xl animate-pulse pointer-events-none" style="animation-delay: 2s;"></div>
 
     <!-- Hero Content & Search Widget -->
-    <div class="max-w-7xl mx-auto px-4 z-10 w-full pt-12 pb-16 relative">
+    <div class="max-w-[1440px] mx-auto px-4 z-10 w-full pt-12 pb-16 relative">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <!-- Left Side: Copy and Headline -->
@@ -120,7 +120,7 @@ require_once 'includes/header.php';
 
 <!-- Trust badging section -->
 <section class="bg-obsidian-950 py-8 border-y border-white/5 relative z-10">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto px-4">
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             <div class="p-4 border-r border-white/5 last:border-0">
                 <h4 class="text-brand font-bold text-3xl font-display">15,000+</h4>
@@ -144,7 +144,7 @@ require_once 'includes/header.php';
 
 <!-- Popular Destinations Section -->
 <section id="destinations" class="py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto px-4">
         
         <!-- Section Header -->
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -208,7 +208,7 @@ require_once 'includes/header.php';
     <!-- Glow Effect in Background -->
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-brand/5 rounded-full blur-3xl pointer-events-none"></div>
 
-    <div class="max-w-7xl mx-auto px-4 relative z-10">
+    <div class="max-w-[1440px] mx-auto px-4 relative z-10">
         
         <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -265,7 +265,7 @@ require_once 'includes/header.php';
 
 <!-- Executive Car Rental Section -->
 <section id="fleet" class="py-20 bg-slate-50">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto px-4">
         
         <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -318,7 +318,7 @@ require_once 'includes/header.php';
 
 <!-- Why Choose Us & Trust Badges Section -->
 <section class="py-20 bg-obsidian-950 text-white relative border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto px-4">
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <!-- Left: Description and Image (Taj Mahal/Scenic) -->
@@ -473,7 +473,7 @@ require_once 'includes/header.php';
 
 <!-- Beautiful Masonry Travel Gallery Section -->
 <section class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto px-4">
         
         <!-- Header -->
         <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
@@ -586,7 +586,7 @@ require_once 'includes/header.php';
 
 <!-- Direct Lead Generation & Contact Inquiry Form -->
 <section id="inquiry" class="py-20 bg-white relative z-10">
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-[1440px] mx-auto px-4">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 bg-obsidian-950 rounded-[40px] overflow-hidden border border-white/5 shadow-2xl glow-gold/5">
             

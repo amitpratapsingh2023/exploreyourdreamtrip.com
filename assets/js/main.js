@@ -17,15 +17,20 @@ function initHeaderScroll() {
     const header = document.getElementById('main-header');
     if (!header) return;
 
-    window.addEventListener('scroll', () => {
+    function adjustHeader() {
         if (window.scrollY > 50) {
-            header.classList.add('glass-nav', 'shadow-lg');
-            header.classList.remove('bg-transparent');
+            header.classList.add('glass-nav', 'shadow-lg', 'md:top-0');
+            header.classList.remove('bg-transparent', 'md:top-9');
         } else {
-            header.classList.remove('glass-nav', 'shadow-lg');
-            header.classList.add('bg-transparent');
+            header.classList.remove('glass-nav', 'shadow-lg', 'md:top-0');
+            header.classList.add('bg-transparent', 'md:top-9');
         }
-    });
+    }
+
+    // Run on initial load to handle direct hash loads (e.g. #fleet)
+    adjustHeader();
+
+    window.addEventListener('scroll', adjustHeader);
 }
 
 /**

@@ -12,6 +12,32 @@
 
 html {
     scroll-behavior: smooth;
+    font-size: 16px; /* default browser font size */
+}
+
+/* Scaling up the layout proportionally for large screens (Ultra-wide, 4K, 1080p full desktop) */
+@media (min-width: 1440px) {
+    html {
+        font-size: 16.5px;
+    }
+}
+
+@media (min-width: 1680px) {
+    html {
+        font-size: 17.5px;
+    }
+}
+
+@media (min-width: 1920px) {
+    html {
+        font-size: 18.5px;
+    }
+}
+
+@media (min-width: 2560px) {
+    html {
+        font-size: 20px;
+    }
 }
 
 body {

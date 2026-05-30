@@ -1,5 +1,7 @@
 <?php
 require_once __DIR__ . '/config.php';
+$current_page = basename($_SERVER['PHP_SELF']);
+$current_dir = basename(dirname($_SERVER['PHP_SELF']));
 ?>
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
@@ -55,7 +57,7 @@ require_once __DIR__ . '/config.php';
 
     <!-- Top Utility Bar (Hidden on Mobile) -->
     <div class="bg-obsidian-950 text-slate-300 py-2 px-4 border-b border-white/5 text-sm hidden md:block z-50 relative">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div class="w-full max-w-[1440px] mx-auto flex justify-between items-center">
             <div class="flex items-center space-x-6">
                 <a href="tel:<?php echo CONTACT_PHONE_RAW; ?>" class="hover:text-brand transition-colors">
                     <i class="fa-solid fa-phone text-brand mr-2"></i><?php echo CONTACT_PHONE; ?>
@@ -81,8 +83,8 @@ require_once __DIR__ . '/config.php';
 
     <!-- Main Navigation Header -->
     <header id="main-header"
-        class="fixed top-0 md:top-9 left-0 w-full z-45 transition-all duration-300 bg-transparent py-4 px-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
+        class="fixed top-0 md:top-9 left-0 w-full z-40 transition-all duration-300 bg-transparent py-4 px-4">
+        <div class="w-full max-w-[1440px] mx-auto flex justify-between items-center">
 
             <!-- Brand Logo -->
             <a href="<?php echo BASE_URL; ?>" class="flex items-center">
@@ -94,19 +96,19 @@ require_once __DIR__ . '/config.php';
             <!-- Desktop Menu Links -->
             <nav class="hidden lg:flex items-center space-x-8 text-white font-medium">
                 <a href="<?php echo BASE_URL; ?>"
-                    class="hover:text-brand transition-colors duration-200 border-b-2 border-transparent hover:border-brand py-1">Home</a>
+                    class="<?php echo ($current_page === 'index.php' && $current_dir !== 'tours') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Home</a>
                 <a href="<?php echo BASE_URL; ?>#destinations"
-                    class="hover:text-brand transition-colors duration-200 border-b-2 border-transparent hover:border-brand py-1">Tours</a>
+                    class="<?php echo ($current_dir === 'tours') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Tours</a>
                 <a href="<?php echo BASE_URL; ?>tempo-traveller.php"
-                    class="hover:text-brand transition-colors duration-200 border-b-2 border-transparent hover:border-brand py-1">Tempo
+                    class="<?php echo ($current_page === 'tempo-traveller.php') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Tempo
                     Traveller</a>
                 <a href="<?php echo BASE_URL; ?>car-rental.php"
-                    class="hover:text-brand transition-colors duration-200 border-b-2 border-transparent hover:border-brand py-1">Car
+                    class="<?php echo ($current_page === 'car-rental.php') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Car
                     Rental</a>
                 <a href="<?php echo BASE_URL; ?>about.php"
-                    class="hover:text-brand transition-colors duration-200 border-b-2 border-transparent hover:border-brand py-1">About</a>
+                    class="<?php echo ($current_page === 'about.php') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">About</a>
                 <a href="<?php echo BASE_URL; ?>contact.php"
-                    class="hover:text-brand transition-colors duration-200 border-b-2 border-transparent hover:border-brand py-1">Contact</a>
+                    class="<?php echo ($current_page === 'contact.php') ? 'text-brand border-brand' : 'text-white border-transparent'; ?> hover:text-brand transition-colors duration-200 border-b-2 hover:border-brand py-1">Contact</a>
             </nav>
 
             <!-- Navigation Actions (Desktop Only) -->
@@ -133,11 +135,11 @@ require_once __DIR__ . '/config.php';
 
     <!-- Mobile Drawer Overlay -->
     <div id="mobile-menu-overlay"
-        class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-50 hidden transition-opacity duration-300"></div>
+        class="fixed inset-0 bg-slate-950/70 backdrop-blur-sm z-[100] hidden transition-opacity duration-300"></div>
 
     <!-- Mobile Navigation Drawer -->
     <div id="mobile-menu-drawer"
-        class="fixed top-0 right-0 w-80 h-full bg-obsidian-950 text-white z-55 transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col border-l border-white/10">
+        class="fixed top-0 right-0 w-80 h-full bg-obsidian-950 text-white z-[110] transform translate-x-full transition-transform duration-300 ease-in-out shadow-2xl flex flex-col border-l border-white/10">
         <!-- Close & Header -->
         <div class="p-5 flex justify-between items-center border-b border-white/10">
             <img src="<?php echo BASE_URL; ?>assets/images/brand/header-logo.png" alt="Explore Your Dream Trip"
@@ -152,21 +154,21 @@ require_once __DIR__ . '/config.php';
         <!-- Navigation Links -->
         <div class="flex-grow py-6 overflow-y-auto px-6 space-y-4">
             <a href="<?php echo BASE_URL; ?>"
-                class="block py-3 text-lg font-semibold border-b border-white/5 hover:text-brand transition-colors">Home</a>
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'index.php' && $current_dir !== 'tours') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Home</a>
             <a href="<?php echo BASE_URL; ?>#destinations"
-                class="block py-3 text-lg font-semibold border-b border-white/5 hover:text-brand transition-colors">Popular
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_dir === 'tours') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Popular
                 Tours</a>
             <a href="<?php echo BASE_URL; ?>tempo-traveller.php"
-                class="block py-3 text-lg font-semibold border-b border-white/5 hover:text-brand transition-colors">Tempo
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'tempo-traveller.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Tempo
                 Traveller</a>
             <a href="<?php echo BASE_URL; ?>car-rental.php"
-                class="block py-3 text-lg font-semibold border-b border-white/5 hover:text-brand transition-colors">Car
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'car-rental.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Car
                 Rental</a>
             <a href="<?php echo BASE_URL; ?>about.php"
-                class="block py-3 text-lg font-semibold border-b border-white/5 hover:text-brand transition-colors">About
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'about.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">About
                 Us</a>
             <a href="<?php echo BASE_URL; ?>contact.php"
-                class="block py-3 text-lg font-semibold border-b border-white/5 hover:text-brand transition-colors">Contact
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'contact.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Contact
                 Us</a>
 
             <!-- Quick Contact info inside mobile menu -->
