@@ -1,0 +1,120 @@
+/* Custom CSS for Explore Your Dream Trip */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --brand-gold: #f0d25a;
+    --brand-gold-dark: #e1b44b;
+    --brand-gold-light: #fbe66e;
+    --dark-bg: #0B0F17;
+    --card-bg: rgba(255, 255, 255, 0.03);
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    color: #0B0F17;
+}
+
+/* Font styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #0B0F17;
+}
+::-webkit-scrollbar-thumb {
+    background: #e1b44b;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #f0d25a;
+}
+
+/* Glassmorphism elements */
+.glass-card {
+    background: rgba(11, 15, 23, 0.65);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card-light {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+.glass-nav {
+    background: rgba(11, 15, 23, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+}
+
+/* Glow effects */
+.glow-gold {
+    box-shadow: 0 0 25px rgba(240, 210, 90, 0.15);
+}
+
+.glow-gold-lg {
+    box-shadow: 0 0 45px rgba(240, 210, 90, 0.25);
+}
+
+.text-gradient-gold {
+    background: linear-gradient(135deg, #fff078 0%, #fad264 50%, #e1b44b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bg-gradient-gold {
+    background: linear-gradient(135deg, #fad264 0%, #e1b44b 100%);
+}
+
+.bg-gradient-dark {
+    background: linear-gradient(180deg, #0f172a 0%, #0B0F17 100%);
+}
+
+.border-gold-gradient {
+    border-image: linear-gradient(to right, #fad264, #e1b44b) 1;
+}
+
+/* Keyframe Animations */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes pulse-gold {
+    0%, 100% { box-shadow: 0 0 15px rgba(240, 210, 90, 0.3); }
+    50% { box-shadow: 0 0 30px rgba(240, 210, 90, 0.6); }
+}
+
+.pulse-gold-btn {
+    animation: pulse-gold 2.5s infinite;
+}
+
+/* Accordion transition utility */
+.accordion-content {
+    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.accordion-content.active {
+    max-height: 500px; /* arbitrary height to fit content */
+}
