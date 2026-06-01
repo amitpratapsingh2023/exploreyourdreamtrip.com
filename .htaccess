@@ -1,0 +1,25 @@
+# ═══════════════════════════════════════════════════════════════════════
+# Explore Your Dream Trip — Apache URL Rewrite Rules
+# ═══════════════════════════════════════════════════════════════════════
+
+RewriteEngine On
+
+# ─── RewriteBase ───────────────────────────────────────────────────────
+# For LOCAL XAMPP development (uncomment the line below):
+RewriteBase /Git/exploreyourdreamtrip.com/
+
+# For PRODUCTION server (uncomment and use this instead):
+# RewriteBase /
+
+# ─── Tour Detail Pages ────────────────────────────────────────────────
+# Clean URL: /tours/{slug} → tours/details.php?slug={slug}
+# Matches slugs containing lowercase letters, numbers, and hyphens
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^tours/([a-z0-9\-]+)/?$ tours/details.php?slug=$1 [L,QSA]
+
+# ─── Custom Error Pages ───────────────────────────────────────────────
+ErrorDocument 404 /Git/exploreyourdreamtrip.com/404.php
+
+# For PRODUCTION, use:
+# ErrorDocument 404 /404.php
