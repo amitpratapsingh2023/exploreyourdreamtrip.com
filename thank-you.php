@@ -58,7 +58,7 @@ require_once 'includes/header.php';
                     <div class="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
                     <span class="relative z-10 group-hover:text-obsidian-950 transition-colors duration-300">Back To Home</span>
                 </a>
-                <a href="<?php echo BASE_URL; ?>tours.php" 
+                <a href="<?php echo BASE_URL; ?>tours" 
                     class="w-full sm:w-auto relative group overflow-hidden px-6 py-3 bg-white/5 hover:bg-white/10 text-white/90 hover:text-white border border-white/10 hover:border-white/20 rounded-xl text-xs uppercase tracking-wider font-extrabold shadow-sm inline-flex items-center justify-center transition-all duration-300">
                     <span>Explore Packages</span>
                 </a>

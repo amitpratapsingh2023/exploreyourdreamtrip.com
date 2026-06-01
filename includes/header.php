@@ -168,17 +168,17 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
             <nav class="hidden lg:flex items-center space-x-10 text-white">
                 <a href="<?php echo BASE_URL; ?>"
                     class="nav-link-premium <?php echo ($current_page === 'index.php' && $current_dir !== 'tours') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Home</a>
-                <a href="<?php echo BASE_URL; ?>tours.php"
+                <a href="<?php echo BASE_URL; ?>tours"
                     class="nav-link-premium <?php echo ($current_page === 'tours.php' || $current_dir === 'tours') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Tours</a>
-                <a href="<?php echo BASE_URL; ?>tempo-traveller.php"
+                <a href="<?php echo BASE_URL; ?>tempo-traveller"
                     class="nav-link-premium <?php echo ($current_page === 'tempo-traveller.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Tempo
                     Traveller</a>
-                <a href="<?php echo BASE_URL; ?>car-rental.php"
+                <a href="<?php echo BASE_URL; ?>car-rental"
                     class="nav-link-premium <?php echo ($current_page === 'car-rental.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Car
                     Rental</a>
-                <a href="<?php echo BASE_URL; ?>about.php"
+                <a href="<?php echo BASE_URL; ?>about"
                     class="nav-link-premium <?php echo ($current_page === 'about.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">About</a>
-                <a href="<?php echo BASE_URL; ?>contact.php"
+                <a href="<?php echo BASE_URL; ?>contact"
                     class="nav-link-premium <?php echo ($current_page === 'contact.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Contact</a>
             </nav>
 
@@ -230,19 +230,19 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
         <div class="flex-grow py-6 overflow-y-auto px-6 space-y-4">
             <a href="<?php echo BASE_URL; ?>"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'index.php' && $current_dir !== 'tours') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Home</a>
-            <a href="<?php echo BASE_URL; ?>tours.php"
+            <a href="<?php echo BASE_URL; ?>tours"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'tours.php' || $current_dir === 'tours') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Popular
                 Tours</a>
-            <a href="<?php echo BASE_URL; ?>tempo-traveller.php"
+            <a href="<?php echo BASE_URL; ?>tempo-traveller"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'tempo-traveller.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Tempo
                 Traveller</a>
-            <a href="<?php echo BASE_URL; ?>car-rental.php"
+            <a href="<?php echo BASE_URL; ?>car-rental"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'car-rental.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Car
                 Rental</a>
-            <a href="<?php echo BASE_URL; ?>about.php"
+            <a href="<?php echo BASE_URL; ?>about"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'about.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">About
                 Us</a>
-            <a href="<?php echo BASE_URL; ?>contact.php"
+            <a href="<?php echo BASE_URL; ?>contact"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'contact.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Contact
                 Us</a>
 

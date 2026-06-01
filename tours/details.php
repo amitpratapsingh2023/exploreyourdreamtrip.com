@@ -840,7 +840,7 @@ require_once __DIR__ . '/../includes/header.php';
 
         <!-- View All Button -->
         <div class="text-center mt-14">
-            <a href="<?php echo BASE_URL; ?>tours.php"
+            <a href="<?php echo BASE_URL; ?>tours"
                 class="relative group overflow-hidden px-8 py-4 bg-slate-950 text-white border border-slate-800 text-xs uppercase tracking-widest font-extrabold rounded-full inline-flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-brand/10 hover:-translate-y-0.5 active:translate-y-0">
                 <div
                     class="absolute inset-0 bg-gradient-gold opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0">

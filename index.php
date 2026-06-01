@@ -298,7 +298,7 @@ require_once 'includes/header.php';
 
         <!-- Explore All Destinations Button -->
         <div class="text-center mt-16">
-            <a href="<?php echo BASE_URL; ?>tours.php"
+            <a href="<?php echo BASE_URL; ?>tours"
                 class="relative group overflow-hidden px-8 py-4 bg-slate-950 text-white border border-slate-800 text-xs uppercase tracking-widest font-extrabold rounded-full inline-flex items-center justify-center transition-all duration-300 shadow-md hover:shadow-xl hover:shadow-brand/10 hover:-translate-y-0.5 active:translate-y-0">
                 <!-- Smooth gradient fade-in overlay -->
                 <div
@@ -403,7 +403,7 @@ require_once 'includes/header.php';
                                 </p>
                             </div>
 
-                            <a href="<?php echo BASE_URL; ?>tempo-traveller.php"
+                            <a href="<?php echo BASE_URL; ?>tempo-traveller"
                                 class="relative group/btn overflow-hidden px-5 py-2.5 bg-slate-950 text-white rounded-xl text-xs uppercase tracking-wider font-extrabold shadow-md whitespace-nowrap inline-flex items-center justify-center transition-all duration-300 border border-white/10">
                                 <!-- Smooth gradient fade-in overlay -->
                                 <div
@@ -504,7 +504,7 @@ require_once 'includes/header.php';
                                 </p>
                             </div>
 
-                            <a href="<?php echo BASE_URL; ?>car-rental.php"
+                            <a href="<?php echo BASE_URL; ?>car-rental"
                                 class="relative group/btn overflow-hidden w-10 h-10 bg-slate-950 text-white rounded-xl inline-flex items-center justify-center transition-all duration-300 shadow-md flex-shrink-0">
                                 <!-- Smooth gradient fade-in overlay -->
                                 <div

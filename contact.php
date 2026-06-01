@@ -168,7 +168,7 @@ require_once 'includes/header.php';
                     <p class="text-slate-400 text-xs uppercase tracking-wider font-semibold">Let us know your travel plans for a free custom quote</p>
                 </div>
 
-                <form action="<?php echo BASE_URL; ?>thank-you.php" method="POST" class="space-y-6">
+                <form action="<?php echo BASE_URL; ?>thank-you" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Full Name -->
                         <div>

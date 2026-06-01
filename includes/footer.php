@@ -58,17 +58,17 @@ require_once __DIR__ . '/config.php';
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>tours.php" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                        <a href="<?php echo BASE_URL; ?>tours" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
                             <i class="fa-solid fa-chevron-right text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:translate-x-1 transition-all duration-300"></i> Our Tour Packages
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>tempo-traveller.php" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                        <a href="<?php echo BASE_URL; ?>tempo-traveller" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
                             <i class="fa-solid fa-chevron-right text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:translate-x-1 transition-all duration-300"></i> Tempo Traveller Rental
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>car-rental.php" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                        <a href="<?php echo BASE_URL; ?>car-rental" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
                             <i class="fa-solid fa-chevron-right text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:translate-x-1 transition-all duration-300"></i> Premium Car Hire
                         </a>
                     </li>
@@ -82,27 +82,27 @@ require_once __DIR__ . '/config.php';
                 </h4>
                 <ul class="space-y-4 text-sm">
                     <li>
-                        <a href="<?php echo BASE_URL; ?>tempo-traveller.php" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                        <a href="<?php echo BASE_URL; ?>tempo-traveller" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
                             <i class="fa-solid fa-crown text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:scale-110 transition-all duration-300"></i> 12 Seater Luxury Coach
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>tempo-traveller.php" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                        <a href="<?php echo BASE_URL; ?>tempo-traveller" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
                             <i class="fa-solid fa-crown text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:scale-110 transition-all duration-300"></i> 16 Seater Executive Coach
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>tempo-traveller.php" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                        <a href="<?php echo BASE_URL; ?>tempo-traveller" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
                             <i class="fa-solid fa-crown text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:scale-110 transition-all duration-300"></i> 20 Seater Luxury Liner
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>car-rental.php" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                        <a href="<?php echo BASE_URL; ?>car-rental" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
                             <i class="fa-solid fa-gem text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:scale-110 transition-all duration-300"></i> Force Urbania Premium
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo BASE_URL; ?>car-rental.php" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                        <a href="<?php echo BASE_URL; ?>car-rental" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
                             <i class="fa-solid fa-car text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:scale-110 transition-all duration-300"></i> Toyota Innova Crysta
                         </a>
                     </li>

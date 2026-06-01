@@ -58,7 +58,7 @@
 
             <!-- Right Side: Lead Capture Form -->
             <div class="lg:col-span-7 p-8 md:p-12 border-t lg:border-t-0 lg:border-l border-white/5">
-                <form action="<?php echo BASE_URL; ?>thank-you.php" method="POST" class="space-y-6">
+                <form action="<?php echo BASE_URL; ?>thank-you" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <div>
                             <label for="cta-name" class="block text-xs font-bold text-brand uppercase tracking-wider mb-2">Your Full Name *</label>

@@ -1,6 +1,8 @@
-# ═══════════════════════════════════════════════════════════════════════
-# Explore Your Dream Trip — Apache URL Rewrite Rules
-# ═══════════════════════════════════════════════════════════════════════
+# Disable directory listing for security
+Options -Indexes
+
+# Prevent Apache from automatically adding a trailing slash to directory paths
+DirectorySlash Off
 
 RewriteEngine On
 
@@ -11,12 +13,27 @@ RewriteBase /Git/exploreyourdreamtrip.com/
 # For PRODUCTION server (uncomment and use this instead):
 # RewriteBase /
 
+# ─── Tours Listing Directory Override ──────────────────────────────────
+# Since "tours" is a physical directory, override it to load tours.php
+RewriteRule ^tours/?$ tours.php [L,QSA]
+
 # ─── Tour Detail Pages ────────────────────────────────────────────────
 # Clean URL: /tours/{slug} → tours/details.php?slug={slug}
 # Matches slugs containing lowercase letters, numbers, and hyphens
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^tours/([a-z0-9\-]+)/?$ tours/details.php?slug=$1 [L,QSA]
+
+# ─── Remove .php Extension ────────────────────────────────────────────
+# Redirect external requests for *.php files to extensionless URLs (exclude internal rewrites)
+RewriteCond %{THE_REQUEST} \s/+(.+)\.php[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally rewrite extensionless requests to actual .php files
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
 
 # ─── Custom Error Pages ───────────────────────────────────────────────
 ErrorDocument 404 /Git/exploreyourdreamtrip.com/404.php
