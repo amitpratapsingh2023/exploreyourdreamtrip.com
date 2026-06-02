@@ -400,7 +400,7 @@ function initAjaxInquiries() {
             
             const formData = new FormData(form);
             const actionUrl = form.getAttribute('action');
-            const submitUrl = actionUrl.replace(/thank-you\/?$/, 'submit-inquiry.php');
+            const submitUrl = actionUrl.replace(/thank-you\/?$/, 'submit-inquiry');
             
             fetch(submitUrl, {
                 method: 'POST',

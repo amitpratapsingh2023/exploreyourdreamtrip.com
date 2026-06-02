@@ -117,7 +117,7 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/custom.css">
+    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/custom.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/custom.css'); ?>">
 </head>
 
 <body class="bg-slate-50 text-obsidian-950 flex flex-col min-h-screen">
