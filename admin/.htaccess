@@ -1,0 +1,24 @@
+# ----------------------------------------------------------------------
+# Veda Webtech Admin - .htaccess Configuration
+# ----------------------------------------------------------------------
+
+# 1. Disable Directory Indexing (Security)
+Options -Indexes
+
+# 2. Enable Rewrite Engine
+RewriteEngine On
+
+# 3. Remove .php extension from URLs
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*)$ $1.php [L]
+
+# 4. Prevent direct access to sensitive folders/files
+<FilesMatch "\.(sql|bak|config|env|md|gitignore|json)$">
+    Require all denied
+</FilesMatch>
+
+# 5. Block direct access to 'core' folder logic
+RewriteCond %{REQUEST_URI} ^/core/ [NC]
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /+core/ [NC]
+RewriteRule ^ - [F,L]
