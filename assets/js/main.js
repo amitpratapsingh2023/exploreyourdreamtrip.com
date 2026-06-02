@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initBackToTop();
     initGalleryLightbox();
     initPremiumTabs();
+    initAjaxInquiries();
 });
 
 /**
@@ -373,5 +374,66 @@ function initPremiumTabs() {
             const active = nav.querySelector('.premium-tab.active');
             if (active) moveIndicator(active);
         }, 150);
+    });
+}
+
+/**
+ * Handle AJAX submissions for Contact Page & Global CTA forms
+ */
+function initAjaxInquiries() {
+    const forms = [
+        document.getElementById('contact-page-form'),
+        document.getElementById('cta-global-form')
+    ].filter(form => form !== null);
+
+    forms.forEach(form => {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Prevent double submission
+            const submitBtn = form.querySelector('button[type="submit"]');
+            if (submitBtn.disabled) return;
+            
+            const originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch animate-spin mr-2"></i> Submitting Request...';
+            
+            const formData = new FormData(form);
+            const actionUrl = form.getAttribute('action');
+            const submitUrl = actionUrl.replace(/thank-you\/?$/, 'submit-inquiry.php');
+            
+            fetch(submitUrl, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    // Redirect user to thank you page
+                    window.location.href = actionUrl;
+                } else {
+                    throw new Error(data.error || 'Something went wrong. Please try again.');
+                }
+            })
+            .catch(error => {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = originalText;
+                
+                // Premium alert overlay
+                const alertDiv = document.createElement('div');
+                alertDiv.className = 'fixed bottom-5 right-5 z-50 bg-rose-500 text-white px-6 py-3.5 rounded-2xl shadow-2xl border border-rose-600/20 text-xs font-bold uppercase tracking-wider flex items-center space-x-2.5 animate-bounce';
+                alertDiv.innerHTML = `<i class="fa-solid fa-circle-exclamation text-sm"></i> <span>${error.message}</span>`;
+                document.body.appendChild(alertDiv);
+                
+                setTimeout(() => {
+                    alertDiv.remove();
+                }, 4000);
+            });
+        });
     });
 }

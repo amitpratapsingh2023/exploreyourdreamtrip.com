@@ -168,7 +168,7 @@ require_once 'includes/header.php';
                     <p class="text-slate-400 text-xs uppercase tracking-wider font-semibold">Let us know your travel plans for a free custom quote</p>
                 </div>
 
-                <form action="<?php echo BASE_URL; ?>thank-you" method="POST" class="space-y-6">
+                <form id="contact-page-form" action="<?php echo BASE_URL; ?>thank-you" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                         <!-- Full Name -->
                         <div>
@@ -177,7 +177,7 @@ require_once 'includes/header.php';
                                 <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                     <i class="fa-solid fa-user text-brand/80 text-xs"></i>
                                 </span>
-                                <input id="contact-name" type="text" required placeholder="Enter name" 
+                                <input id="contact-name" name="name" type="text" required placeholder="Enter name" 
                                     class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
                             </div>
                         </div>
@@ -189,7 +189,7 @@ require_once 'includes/header.php';
                                 <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                     <i class="fa-solid fa-phone text-brand/80 text-xs"></i>
                                 </span>
-                                <input id="contact-phone" type="tel" required placeholder="Enter mobile number" 
+                                <input id="contact-phone" name="phone" type="tel" required placeholder="Enter mobile number" 
                                     class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
                             </div>
                         </div>
@@ -203,7 +203,7 @@ require_once 'includes/header.php';
                                 <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                     <i class="fa-solid fa-envelope text-brand/80 text-xs"></i>
                                 </span>
-                                <input id="contact-email" type="email" placeholder="Enter email" 
+                                <input id="contact-email" name="email" type="email" placeholder="Enter email" 
                                     class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
                             </div>
                         </div>
@@ -215,18 +215,12 @@ require_once 'includes/header.php';
                                 <span class="absolute inset-y-0 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                     <i class="fa-solid fa-map-location-dot text-brand/80 text-xs"></i>
                                 </span>
-                                <select id="contact-service" 
+                                <select id="contact-service" name="service"
                                     class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-10 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)] appearance-none font-medium">
                                     <option value="" class="bg-slate-950 text-white/80">Select Option</option>
-                                    <optgroup label="Tours" class="bg-slate-950 text-white">
-                                        <?php foreach ($TOURS as $key => $tour): ?>
-                                            <option value="<?php echo $key; ?>"><?php echo $tour['title']; ?></option>
-                                        <?php endforeach; ?>
-                                    </optgroup>
-                                    <optgroup label="Vehicles" class="bg-slate-950 text-white">
-                                        <option value="tempo-traveller">Luxury Tempo Traveller</option>
-                                        <option value="car-rental">Premium Sedan/SUV Hire</option>
-                                    </optgroup>
+                                    <option value="tour" class="bg-slate-950 text-white">All-Inclusive Tour</option>
+                                    <option value="tempo" class="bg-slate-950 text-white">Tempo Traveller Hire</option>
+                                    <option value="car" class="bg-slate-950 text-white">Premium Car Hire</option>
                                 </select>
                                 <span class="absolute inset-y-0 right-0 pr-4 flex items-center text-brand pointer-events-none">
                                     <i class="fa-solid fa-chevron-down text-xs"></i>
@@ -242,18 +236,17 @@ require_once 'includes/header.php';
                             <span class="absolute top-4 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                 <i class="fa-solid fa-pen-to-square text-brand/80 text-xs"></i>
                             </span>
-                            <textarea id="contact-requirements" rows="5" placeholder="e.g. Travel dates, routes, guest count, or rental duration details..." 
+                            <textarea id="contact-requirements" name="requirements" rows="5" placeholder="e.g. Travel dates, routes, guest count, or rental duration details..." 
                                 class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm resize-none focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]"></textarea>
                         </div>
                     </div>
 
                     <!-- Submit Button -->
-                    <button type="submit" class="w-full py-4 bg-gradient-gold text-obsidian-950 font-bold rounded-xl shadow-lg hover:shadow-brand/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 pulse-gold-btn uppercase tracking-widest text-xs font-extrabold">
+                    <button type="submit" class="w-full py-4 bg-gradient-gold text-obsidian-950 font-bold rounded-xl shadow-lg hover:shadow-brand/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 pulse-gold-btn btn-shimmer uppercase tracking-widest text-xs font-extrabold">
                         Submit Inquiry Message
                     </button>
                 </form>
             </div>
-
         </div>
     </div>
 </section>
