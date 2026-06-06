@@ -16,7 +16,7 @@ class Database
     private string $charset = 'utf8mb4';
 
     // Local XAMPP fallback
-    private string $localDbname = 'vedawebtech';
+    private string $localDbname = 'exploreyourdreamtrip';
     private string $localUsername = 'root';
     private string $localPassword = '';
 

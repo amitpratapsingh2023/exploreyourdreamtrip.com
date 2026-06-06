@@ -1,11 +1,11 @@
 <?php
 /**
- * Leads — View, Update Status, Delete (no create from admin)
+ * Leads & Inquiries — View, Update Status, Delete (no create from admin)
  */
 require_once __DIR__ . '/bootstrap.php';
 Auth::requireLogin();
 
-$pageTitle = 'Leads';
+$pageTitle = 'Leads & Inquiries';
 $model = new LeadModel();
 $action = $_GET['action'] ?? 'list';
 $id = (int)($_GET['id'] ?? 0);
@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if ($leadId && in_array($status, $validStatuses)) {
             $model->updateStatus($leadId, $status, $notes ?: null);
-            Session::flash('success', 'Lead status updated.');
+            Session::flash('success', 'Status updated successfully.');
         } else {
             Session::flash('error', 'Invalid data.');
         }
@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($action === 'delete' && $id) {
     CSRF::validateOrDie();
     $model->delete($id);
-    Session::flash('success', 'Lead deleted successfully.');
+    Session::flash('success', 'Record deleted successfully.');
     redirect('leads');
 }
 
@@ -48,8 +48,8 @@ $statusCounts = $model->getCountByStatus();
 $viewLead = null;
 if ($action === 'view' && $id) {
     $viewLead = $model->find($id);
-    if (!$viewLead) { Session::flash('error', 'Lead not found.'); redirect('leads'); }
-    $pageTitle = 'Lead Details';
+    if (!$viewLead) { Session::flash('error', 'Record not found.'); redirect('leads'); }
+    $pageTitle = 'Details';
 }
 
 include 'partials/header.php';
@@ -65,7 +65,7 @@ if ($action === 'view' && $viewLead):
             <i class="fa-solid fa-arrow-left text-sm"></i>
         </a>
         <div>
-            <h1 class="font-heading text-gray-900 dark:text-white">Lead Details</h1>
+            <h1 class="font-heading text-gray-900 dark:text-white"><?= $viewLead['service'] ? 'Inquiry Details' : 'Lead Details' ?></h1>
             <p class="text-sm text-gray-500 mt-0.5">Received <?= timeAgo($viewLead['created_at']) ?></p>
         </div>
     </div>
@@ -82,7 +82,14 @@ if ($action === 'view' && $viewLead):
                 <h3 class="text-lg font-bold text-gray-900 dark:text-white"><?= e($viewLead['name']) ?></h3>
                 <p class="text-sm text-gray-500"><?= formatDate($viewLead['created_at'], 'd M Y, h:i A') ?></p>
             </div>
-            <div class="ml-auto"><?= statusBadge($viewLead['status'], 'lead') ?></div>
+            <div class="ml-auto flex flex-col items-end gap-1.5">
+                <?= statusBadge($viewLead['status'], 'lead') ?>
+                <?php if ($viewLead['service']): ?>
+                    <span class="px-2 py-0.5 rounded-md text-[9px] font-bold uppercase tracking-wider bg-amber-500/10 text-amber-500 dark:text-amber-400">Booking Inquiry</span>
+                <?php else: ?>
+                    <span class="px-2 py-0.5 rounded-md text-[9px] font-bold uppercase tracking-wider bg-blue-500/10 text-blue-500 dark:text-blue-400">Contact Form</span>
+                <?php endif; ?>
+            </div>
         </div>
 
         <div class="space-y-5">
@@ -90,7 +97,11 @@ if ($action === 'view' && $viewLead):
                 <div class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-500 shrink-0"><i class="fa-solid fa-envelope text-sm"></i></div>
                 <div>
                     <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Email</p>
-                    <a href="mailto:<?= e($viewLead['email']) ?>" class="text-sm font-medium text-gray-900 dark:text-white hover:text-gold-500"><?= e($viewLead['email']) ?></a>
+                    <?php if ($viewLead['email']): ?>
+                        <a href="mailto:<?= e($viewLead['email']) ?>" class="text-sm font-medium text-gray-900 dark:text-white hover:text-gold-500"><?= e($viewLead['email']) ?></a>
+                    <?php else: ?>
+                        <span class="text-sm font-medium text-gray-400 italic">Not provided</span>
+                    <?php endif; ?>
                 </div>
             </div>
             <div class="flex items-start gap-4">
@@ -100,10 +111,27 @@ if ($action === 'view' && $viewLead):
                     <a href="tel:<?= e($viewLead['phone']) ?>" class="text-sm font-medium text-gray-900 dark:text-white hover:text-gold-500"><?= e($viewLead['phone']) ?></a>
                 </div>
             </div>
+            <?php if ($viewLead['service']): ?>
+            <div class="flex items-start gap-4">
+                <div class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-500 shrink-0"><i class="fa-solid fa-car-side text-sm"></i></div>
+                <div>
+                    <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wider">Service Requested</p>
+                    <span class="text-sm font-semibold text-gray-900 dark:text-white">
+                        <?php 
+                        $svc = $viewLead['service'];
+                        if ($svc === 'tour') echo 'All-Inclusive Tour';
+                        elseif ($svc === 'tempo') echo 'Tempo Traveller Hire';
+                        elseif ($svc === 'car') echo 'Premium Car Hire';
+                        else echo e(ucfirst($svc));
+                        ?>
+                    </span>
+                </div>
+            </div>
+            <?php endif; ?>
             <div class="flex items-start gap-4">
                 <div class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-white/5 flex items-center justify-center text-gray-500 shrink-0"><i class="fa-solid fa-message text-sm"></i></div>
                 <div>
-                    <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Message</p>
+                    <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2"><?= $viewLead['service'] ? 'Requirements' : 'Message' ?></p>
                     <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed bg-gray-50 dark:bg-white/[0.02] p-4 rounded-xl"><?= nl2br(e($viewLead['message'])) ?></p>
                 </div>
             </div>
@@ -112,7 +140,7 @@ if ($action === 'view' && $viewLead):
                 <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-500/5 flex items-center justify-center text-amber-500 shrink-0"><i class="fa-solid fa-note-sticky text-sm"></i></div>
                 <div>
                     <p class="text-[11px] font-bold text-gray-400 uppercase tracking-wider mb-2">Internal Notes</p>
-                    <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed"><?= nl2br(e($viewLead['notes'])) ?></p>
+                    <p class="text-sm text-gray-700 dark:text-gray-300 leading-relaxed bg-amber-500/5 p-4 rounded-xl border border-amber-500/10"><?= nl2br(e($viewLead['notes'])) ?></p>
                 </div>
             </div>
             <?php endif; ?>
@@ -143,8 +171,8 @@ if ($action === 'view' && $viewLead):
 
         <hr class="my-5 border-gray-100 dark:border-white/5">
 
-        <button onclick="confirmDelete('leads?action=delete&id=<?= $viewLead['id'] ?>&_csrf_token=<?= CSRF::token() ?>', 'Lead')" class="btn btn-danger w-full">
-            <i class="fa-solid fa-trash-can text-xs"></i> Delete Lead
+        <button onclick="confirmDelete('leads?action=delete&id=<?= $viewLead['id'] ?>&_csrf_token=<?= CSRF::token() ?>', 'Record')" class="btn btn-danger w-full">
+            <i class="fa-solid fa-trash-can text-xs"></i> Delete Record
         </button>
     </div>
 </div>
@@ -155,8 +183,8 @@ else: ?>
 
 <div class="page-header">
     <div>
-        <h1 class="font-heading text-gray-900 dark:text-white">Leads</h1>
-        <p class="text-sm text-gray-500 mt-0.5"><?= $statusCounts['total'] ?> total leads</p>
+        <h1 class="font-heading text-gray-900 dark:text-white">Leads & Inquiries</h1>
+        <p class="text-sm text-gray-500 mt-0.5"><?= $statusCounts['total'] ?> total records</p>
     </div>
 </div>
 
@@ -195,13 +223,13 @@ else: ?>
     <?php if (empty($leads)): ?>
     <div class="empty-state">
         <div class="empty-icon bg-blue-50 dark:bg-blue-500/5 text-blue-500"><i class="fa-solid fa-inbox"></i></div>
-        <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-2">No Leads Found</h3>
-        <p class="text-sm text-gray-500 mt-1">Leads from your contact form will appear here.</p>
+        <h3 class="text-lg font-bold text-gray-900 dark:text-white mt-2">No Records Found</h3>
+        <p class="text-sm text-gray-500 mt-1">Leads and inquiries will appear here.</p>
     </div>
     <?php else: ?>
     <div class="table-wrapper">
         <table class="admin-table" id="leadsTable">
-            <thead><tr><th>Contact</th><th>Phone</th><th>Message</th><th>Status</th><th>Received</th><th class="text-right">Actions</th></tr></thead>
+            <thead><tr><th>Contact</th><th>Phone</th><th>Source Type</th><th>Message / Requirements</th><th>Status</th><th>Received</th><th class="text-right">Actions</th></tr></thead>
             <tbody>
             <?php foreach ($leads as $lead): ?>
                 <tr>
@@ -212,18 +240,25 @@ else: ?>
                             </div>
                             <div>
                                 <p class="font-semibold text-gray-900 dark:text-white text-sm"><?= e($lead['name']) ?></p>
-                                <p class="text-[11px] text-gray-400"><?= e($lead['email']) ?></p>
+                                <p class="text-[11px] text-gray-400"><?= e($lead['email'] ?: 'No email') ?></p>
                             </div>
                         </div>
                     </td>
                     <td class="text-sm"><?= e($lead['phone']) ?></td>
+                    <td>
+                        <?php if ($lead['service']): ?>
+                            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-amber-500/10 text-amber-500 dark:text-amber-400">Booking Inquiry</span>
+                        <?php else: ?>
+                            <span class="px-2 py-0.5 rounded-md text-[10px] font-bold bg-blue-500/10 text-blue-500 dark:text-blue-400">Contact Form</span>
+                        <?php endif; ?>
+                    </td>
                     <td class="text-sm text-gray-500 max-w-[200px]"><p class="truncate"><?= e($lead['message']) ?></p></td>
                     <td><?= statusBadge($lead['status'], 'lead') ?></td>
                     <td class="text-sm text-gray-500 whitespace-nowrap"><?= timeAgo($lead['created_at']) ?></td>
                     <td>
                         <div class="flex items-center justify-end gap-2">
                             <a href="leads?action=view&id=<?= $lead['id'] ?>" class="btn btn-secondary btn-icon" title="View"><i class="fa-solid fa-eye text-xs"></i></a>
-                            <button onclick="confirmDelete('leads?action=delete&id=<?= $lead['id'] ?>&_csrf_token=<?= CSRF::token() ?>', 'Lead')" class="btn btn-danger btn-icon" title="Delete"><i class="fa-solid fa-trash-can text-xs"></i></button>
+                            <button onclick="confirmDelete('leads?action=delete&id=<?= $lead['id'] ?>&_csrf_token=<?= CSRF::token() ?>', 'Record')" class="btn btn-danger btn-icon" title="Delete"><i class="fa-solid fa-trash-can text-xs"></i></button>
                         </div>
                     </td>
                 </tr>

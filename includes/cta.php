@@ -147,7 +147,7 @@
                                 class="absolute top-4 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                 <i class="fa-solid fa-pen-to-square text-brand/80 text-xs"></i>
                             </span>
-                            <textarea id="cta-requirements" name="requirements" rows="4"
+                            <textarea id="cta-requirements" name="requirements" required rows="4"
                                 placeholder="e.g. Travel dates, number of travelers, budget details, etc."
                                 class="w-full bg-slate-900/50 hover:bg-slate-900/80 focus:bg-slate-950 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm resize-none focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]"><?php 
                             if (isset($_GET['destination']) || isset($_GET['travel_date'])) {

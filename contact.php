@@ -236,7 +236,7 @@ require_once 'includes/header.php';
                             <span class="absolute top-4 left-0 pl-4 flex items-center text-slate-400 pointer-events-none">
                                 <i class="fa-solid fa-pen-to-square text-brand/80 text-xs"></i>
                             </span>
-                            <textarea id="contact-requirements" name="requirements" rows="5" placeholder="e.g. Travel dates, routes, guest count, or rental duration details..." 
+                            <textarea id="contact-requirements" name="requirements" required rows="5" placeholder="e.g. Travel dates, routes, guest count, or rental duration details..." 
                                 class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm resize-none focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]"></textarea>
                         </div>
                     </div>

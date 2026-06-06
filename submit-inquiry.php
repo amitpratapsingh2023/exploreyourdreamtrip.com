@@ -44,6 +44,14 @@ if (empty($phone)) {
     exit;
 }
 
+if (empty($requirements)) {
+    echo json_encode([
+        'success' => false,
+        'error' => 'Requirements / Message is a required field.'
+    ]);
+    exit;
+}
+
 try {
     // Set local timezone for accurate creation datetime
     date_default_timezone_set('Asia/Kolkata');
@@ -51,8 +59,8 @@ try {
 
     // Insert inquiry into table
     $stmt = $pdo->prepare("
-        INSERT INTO `inquiries` (`name`, `phone`, `email`, `service`, `requirements`, `created_at`)
-        VALUES (:name, :phone, :email, :service, :requirements, :created_at)
+        INSERT INTO `leads` (`name`, `phone`, `email`, `service`, `message`, `created_at`)
+        VALUES (:name, :phone, :email, :service, :message, :created_at)
     ");
     
     $stmt->execute([
@@ -60,7 +68,7 @@ try {
         ':phone' => $phone,
         ':email' => !empty($email) ? $email : null,
         ':service' => !empty($service) ? $service : null,
-        ':requirements' => !empty($requirements) ? $requirements : null,
+        ':message' => !empty($requirements) ? $requirements : null,
         ':created_at' => $created_at
     ]);
     

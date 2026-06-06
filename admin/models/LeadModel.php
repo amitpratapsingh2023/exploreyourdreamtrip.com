@@ -13,7 +13,9 @@ class LeadModel extends Model
         $conditions = [];
 
         if ($search) {
-            $conditions[] = "(name LIKE ? OR email LIKE ? OR phone LIKE ?)";
+            $conditions[] = "(name LIKE ? OR email LIKE ? OR phone LIKE ? OR message LIKE ? OR service LIKE ?)";
+            $params[] = "%{$search}%";
+            $params[] = "%{$search}%";
             $params[] = "%{$search}%";
             $params[] = "%{$search}%";
             $params[] = "%{$search}%";

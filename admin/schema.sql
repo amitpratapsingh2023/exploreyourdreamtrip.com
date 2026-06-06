@@ -114,7 +114,8 @@ CREATE TABLE IF NOT EXISTS leads (
     id         INT AUTO_INCREMENT PRIMARY KEY,
     name       VARCHAR(255)  NOT NULL,
     phone      VARCHAR(20)   NOT NULL,
-    email      VARCHAR(255)  NOT NULL,
+    email      VARCHAR(255)  DEFAULT NULL,
+    service    VARCHAR(100)  DEFAULT NULL,
     message    TEXT          NOT NULL,
     status     ENUM('new','contacted','qualified','converted','closed') NOT NULL DEFAULT 'new',
     notes      TEXT          DEFAULT NULL,
@@ -127,14 +128,14 @@ CREATE TABLE IF NOT EXISTS leads (
 -- Generate hash:  php -r "echo password_hash('Admin@123', PASSWORD_BCRYPT);"
 -- -----------------------------------------------------------
 INSERT INTO admins (name, email, password, status) VALUES
-('Super Admin', 'admin@vedawebtech.com',
- '$2y$10$LsrbipAh/o.ceYOftJSSQ.o5rLy/ij.sSfgMHs.34AAvfd34Bfcw2', 1)
-ON DUPLICATE KEY UPDATE name=name;
+('Super Admin', 'admin@exploreyourdreamtrip.com',
+ '$2y$10$nrWL1fElxL9tY9eiVmKaBekuQKuYeuTKYqpFeAwD/UZssPpM9OXZq', 1)
+ON DUPLICATE KEY UPDATE name=VALUES(name), password=VALUES(password);
 
 -- -----------------------------------------------------------
 -- Seed: Default author
 INSERT INTO authors (name, slug, email, designation, status) VALUES
-('Veda Webtech', 'veda-webtech', 'vedaawebtech@gmail.com', 'Digital Strategist', 1)
+('Admin', 'admin', 'admin@exploreyourdreamtrip.com', 'Founder and CEO of Explore your dream trip', 1)
 ON DUPLICATE KEY UPDATE name=name;
 
 -- -----------------------------------------------------------
@@ -146,15 +147,4 @@ CREATE TABLE IF NOT EXISTS newsletters (
     created_at TIMESTAMP     DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- -----------------------------------------------------------
--- 9. Inquiries
--- -----------------------------------------------------------
-CREATE TABLE IF NOT EXISTS inquiries (
-    id           INT AUTO_INCREMENT PRIMARY KEY,
-    name         VARCHAR(255)  NOT NULL,
-    phone        VARCHAR(50)   NOT NULL,
-    email        VARCHAR(255)  DEFAULT NULL,
-    service      VARCHAR(100)  DEFAULT NULL,
-    requirements TEXT          DEFAULT NULL,
-    created_at   TIMESTAMP     DEFAULT CURRENT_TIMESTAMP
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
