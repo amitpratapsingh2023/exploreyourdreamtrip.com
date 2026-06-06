@@ -57,7 +57,7 @@ require_once 'includes/header.php';
 <section class="relative min-h-[50vh] md:min-h-[55vh] flex items-end bg-obsidian-950 overflow-hidden pt-36 pb-16 md:pb-20">
     <!-- Background Image with vignette and gradient overlays -->
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1534536281715-e28d76689b4d?auto=format&fit=crop&q=80&w=1200" alt="Contact Explore Your Dream Trip"
+        <img src="<?php echo BASE_URL; ?>assets/images/blog/travel-comfort.webp" alt="Contact Explore Your Dream Trip"
             class="w-full h-full object-cover object-center opacity-20 scale-105 transition-transform duration-1000">
         <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/70 to-obsidian-950/20"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-obsidian-950/85 via-transparent to-obsidian-950/20"></div>

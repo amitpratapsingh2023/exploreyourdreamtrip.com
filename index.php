@@ -10,7 +10,7 @@ require_once 'includes/header.php';
     class="relative min-h-[90vh] md:min-h-screen flex items-center justify-center bg-obsidian-950 overflow-hidden pt-20">
     <!-- Hero Background Image with Premium Dark Overlay -->
     <div class="absolute inset-0 z-0">
-        <img src="<?php echo BASE_URL; ?>assets/images/hero.png" alt="Explore Your Dream Trip Hero"
+        <img src="<?php echo BASE_URL; ?>assets/images/hero.webp" alt="Explore Your Dream Trip Hero"
             class="w-full h-full object-cover object-center opacity-40">
         <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/60 to-transparent"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-obsidian-950/80 via-transparent to-obsidian-950/20"></div>
@@ -801,17 +801,17 @@ require_once 'includes/header.php';
         </div>
 
         <!-- Gallery Grid (8 Items in Responsive Layout) -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
             <?php
             $GALLERY = [
-                ['title' => 'Rishikesh Ganga', 'image' => 'https://images.unsplash.com/photo-1719581827279-e9a8d8fce924?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmlzaGlrZXNoJTIwZ2FuZ2F8ZW58MHx8MHx8fDA%3D'],
-                ['title' => 'Hawa Mahal Jaipur', 'image' => 'https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFpcHVyfGVufDB8fDB8fHww'],
-                ['title' => 'Golden Temple Amritsar', 'image' => 'https://images.unsplash.com/photo-1599840309126-7ece88628ded?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8Z29sZGVuJTIwdGVtcGxlfGVufDB8fDB8fHww'],
-                ['title' => 'Vrindavan Holi Celebration', 'image' => 'https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=1000&q=80'],
-                ['title' => 'Taj Mahal Agra', 'image' => BASE_URL . 'assets/images/tours/agra.png'],
-                ['title' => 'Himalayan Ridge Shimla', 'image' => BASE_URL . 'assets/images/tours/shimla-manali.png'],
-                ['title' => 'White Water Rafting Rishikesh', 'image' => 'https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?auto=format&fit=crop&w=1000&q=80'],
-                ['title' => 'Amer Fort Jaipur', 'image' => 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1000&q=80'],
+                ['title' => 'Rishikesh Ganga', 'image' => BASE_URL . 'assets/images/tours/rishikesh-hero.webp'],
+                ['title' => 'Hawa Mahal Jaipur', 'image' => BASE_URL . 'assets/images/tours/jaipur-hero.webp'],
+                ['title' => 'Golden Temple Amritsar', 'image' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp'],
+                ['title' => 'Vrindavan Holi Celebration', 'image' => BASE_URL . 'assets/images/tours/vrindavan-hero.webp'],
+                ['title' => 'Taj Mahal Agra', 'image' => BASE_URL . 'assets/images/tours/agra-hero.webp'],
+                ['title' => 'Himalayan Ridge Shimla', 'image' => BASE_URL . 'assets/images/tours/shimla-hero.webp'],
+                ['title' => 'White Water Rafting Rishikesh', 'image' => BASE_URL . 'assets/images/tours/rishikesh-hero.webp'],
+                ['title' => 'Amer Fort Jaipur', 'image' => BASE_URL . 'assets/images/tours/jaipur-hero.webp'],
             ];
             foreach ($GALLERY as $index => $item):
                 ?>

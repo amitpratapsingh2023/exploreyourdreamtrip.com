@@ -71,7 +71,7 @@ require_once 'includes/header.php';
 <section class="relative min-h-[50vh] md:min-h-[55vh] flex items-end bg-obsidian-950 overflow-hidden pt-36 pb-16 md:pb-20">
     <!-- Background Image with vignette and gradient overlays -->
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200" alt="About Explore Your Dream Trip"
+        <img src="<?php echo BASE_URL; ?>assets/images/blog/travel-comfort.webp" alt="About Explore Your Dream Trip"
             class="w-full h-full object-cover object-center opacity-25 scale-105 transition-transform duration-1000">
         <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/70 to-obsidian-950/20"></div>
         <div class="absolute inset-0 bg-gradient-to-r from-obsidian-950/85 via-transparent to-obsidian-950/20"></div>
@@ -138,7 +138,7 @@ require_once 'includes/header.php';
             <div class="lg:col-span-5 relative">
                 <div class="absolute inset-0 bg-gradient-gold rounded-[40px] rotate-3 opacity-20 pointer-events-none scale-102"></div>
                 <div class="relative overflow-hidden rounded-[36px] aspect-[4/3] sm:aspect-[16/11] border border-slate-100 shadow-xl z-10">
-                    <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&q=80&w=600" alt="Traveler exploring Taj Mahal"
+                    <img src="<?php echo BASE_URL; ?>assets/images/tours/agra-hero.webp" alt="Traveler exploring Taj Mahal"
                         class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
                 </div>
             </div>

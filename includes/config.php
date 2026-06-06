@@ -74,27 +74,27 @@ $CARS = [
         'capacity' => '10-17 Seater Options',
         'price' => '₹28 / km',
         'features' => ['Ultra-Luxury Captain Seats', 'Individual AC Vents & USB Ports', 'High Ceiling & Wide Aisle', 'Panoramic Windows'],
-        'image' => 'assets/images/fleet/force-urbania.png'
+        'image' => 'assets/images/fleet/force-urbania.jpg'
     ],
     'swift-dzire' => [
         'title' => 'Swift Dzire (Sedan)',
         'capacity' => '4 Passengers + 1 Driver',
         'price' => '₹12 / km',
         'features' => ['Comfortable Seating', 'Air Conditioner', 'Bluetooth Music System', 'Best for Small Families'],
-        'image' => 'https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=600&q=80'
+        'image' => 'assets/images/fleet/dzire.png'
     ],
     'innova-crysta' => [
         'title' => 'Toyota Innova Crysta (SUV)',
         'capacity' => '6-7 Passengers + 1 Driver',
         'price' => '₹18 / km',
         'features' => ['Plush Captain Seats', 'Premium Air Conditioning', 'Dual Airbags & ABS', 'Highly Safe & Comfortable'],
-        'image' => 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=80'
+        'image' => 'assets/images/fleet/innova-crysta.jpg'
     ],
     'ertiga' => [
         'title' => 'Maruti Suzuki Ertiga (MUV)',
         'capacity' => '6 Passengers + 1 Driver',
         'price' => '₹14 / km',
         'features' => ['Spacious 3-Row Cabin', 'Roof Mounted AC Vents', 'Excellent Fuel Efficiency', 'Budget Luxury Option'],
-        'image' => 'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?auto=format&fit=crop&w=600&q=80'
+        'image' => 'assets/images/fleet/ertiga.png'
     ]
 ];

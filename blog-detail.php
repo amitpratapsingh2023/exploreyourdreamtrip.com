@@ -234,7 +234,7 @@ require_once 'includes/header.php';
 
                 <!-- Author Details Profile Box -->
                 <div class="p-8 bg-slate-50 rounded-[32px] border border-slate-200/60 flex flex-col md:flex-row items-center md:items-start gap-6">
-                    <img src="<?php echo e($blog['author_avatar'] ?: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80'); ?>" 
+                    <img src="<?php echo e($blog['author_avatar'] ?: BASE_URL . 'assets/images/authors/amit.webp'); ?>" 
                          alt="<?php echo e($blog['author_name']); ?>"
                          class="w-20 h-20 rounded-2xl object-cover border border-white shadow-md flex-shrink-0">
                     <div class="space-y-3 text-center md:text-left">

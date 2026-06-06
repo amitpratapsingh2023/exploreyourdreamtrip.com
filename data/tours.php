@@ -19,7 +19,7 @@ $TOURS = [
         'subtitle' => 'The Monument of Love',
         'duration' => '1 Day / 1 Night',
         'price' => '₹1,999',
-        'image' => BASE_URL . 'assets/images/tours/agra.png',
+        'image' => BASE_URL . 'assets/images/tours/agra-hero.webp',
         'link' => 'tours/agra-taj-mahal',
         'rating' => '4.9',
         'reviews' => '120',
@@ -102,27 +102,27 @@ $TOURS = [
         ],
         'gallery' => [
             [
-                'src' => 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/agra-hero.webp',
                 'title' => 'Taj Mahal — The Monument of Love'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1585135497273-1a86d9d9e2e3?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/agra-gallery-2.webp',
                 'title' => 'Taj Mahal Reflection Pool'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/agra-gallery-3.webp',
                 'title' => 'Agra Fort — Red Sandstone Fortress'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1515091943-9d5c0ad475af?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/agra-hero.webp',
                 'title' => 'Mehtab Bagh Panoramic View'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1524492412937-b28074a5d7da?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/agra-hero.webp',
                 'title' => 'Taj Mahal at Golden Hour'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1587474260584-136574528ed5?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/agra-hero.webp',
                 'title' => 'Heritage Architecture of Agra'
             ]
         ],
@@ -186,7 +186,7 @@ $TOURS = [
         'subtitle' => 'The Majestic Himalayas',
         'duration' => '5 Days / 4 Nights',
         'price' => '₹12,499',
-        'image' => BASE_URL . 'assets/images/tours/shimla-manali.png',
+        'image' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
         'link' => 'tours/shimla-manali',
         'rating' => '4.8',
         'reviews' => '245',
@@ -264,27 +264,27 @@ $TOURS = [
         ],
         'gallery' => [
             [
-                'src' => 'https://images.unsplash.com/photo-1597074866923-dc0589150a81?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
                 'title' => 'Shimla — Queen of Hills'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
                 'title' => 'Mall Road Colonial Charm'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1593181629936-11c tried-4ed3-9d87-c3153e8dce78?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
                 'title' => 'Snow-Capped Himalayan Peaks'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1585136917228-c5a75fec5b84?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
                 'title' => 'Solang Valley Adventures'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1573756285822-ae tried-44c6-abde-0e5c1c1f8e1e?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
                 'title' => 'Hadimba Temple in Manali'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1590766940554-634ae3e0e1e5?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
                 'title' => 'Kullu Valley Panorama'
             ]
         ],
@@ -348,7 +348,7 @@ $TOURS = [
         'subtitle' => 'Spiritual & Adventure Capital',
         'duration' => '3 Days / 2 Nights',
         'price' => '₹5,999',
-        'image' => 'https://images.unsplash.com/photo-1712510817140-917938f92e5b?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'image' => BASE_URL . 'assets/images/tours/rishikesh-hero.webp',
         'link' => 'tours/rishikesh',
         'rating' => '4.7',
         'reviews' => '98',
@@ -413,27 +413,27 @@ $TOURS = [
         ],
         'gallery' => [
             [
-                'src' => 'https://images.unsplash.com/photo-1712510817140-917938f92e5b?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/rishikesh-hero.webp',
                 'title' => 'Rishikesh — Yoga Capital of the World'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1588668214407-6ea9a6d8c272?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/rishikesh-gallery-1.webp',
                 'title' => 'White-Water Rafting on the Ganges'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1583309219338-a582f1f9ca6b?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/rishikesh-hero.webp',
                 'title' => 'Laxman Jhula Suspension Bridge'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1602508876364-840184ef5e47?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/rishikesh-hero.webp',
                 'title' => 'Sacred Ganga Aarti Ceremony'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/rishikesh-hero.webp',
                 'title' => 'Beatles Ashram Graffiti Art'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/rishikesh-gallery-3.webp',
                 'title' => 'Riverside Camping Experience'
             ]
         ],
@@ -497,7 +497,7 @@ $TOURS = [
         'subtitle' => 'The Land of Lord Krishna',
         'duration' => '2 Days / 1 Night',
         'price' => '₹3,499',
-        'image' => 'https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=600&q=80',
+        'image' => BASE_URL . 'assets/images/tours/vrindavan-card.jpg',
         'link' => 'tours/vrindavan',
         'rating' => '4.9',
         'reviews' => '180',
@@ -555,27 +555,27 @@ $TOURS = [
         ],
         'gallery' => [
             [
-                'src' => 'https://images.unsplash.com/photo-1627894483216-2138af692e32?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/vrindavan-hero.webp',
                 'title' => 'Vrindavan — Land of Lord Krishna'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1609947017136-9daa5f0c6fca?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/vrindavan-hero.webp',
                 'title' => 'Prem Mandir White Marble Temple'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/vrindavan-hero.webp',
                 'title' => 'ISKCON Temple Vrindavan'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1636559072523-4fdb20adf25a?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/vrindavan-hero.webp',
                 'title' => 'Yamuna Aarti at Vishram Ghat'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1590766940554-634ae3e0e1e5?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/vrindavan-hero.webp',
                 'title' => 'Colorful Lanes of Vrindavan'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/vrindavan-hero.webp',
                 'title' => 'Krishna Janmabhoomi Temple'
             ]
         ],
@@ -639,7 +639,7 @@ $TOURS = [
         'subtitle' => 'The Holy Birthplace',
         'duration' => '2 Days / 1 Night',
         'price' => '₹4,499',
-        'image' => 'https://images.unsplash.com/photo-1710429068963-1f6c853134a4?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YXlvZGh5YXxlbnwwfHwwfHx8MA%3D%3D',
+        'image' => BASE_URL . 'assets/images/tours/ayodhya-hero.webp',
         'link' => 'tours/ayodhya',
         'rating' => '4.9',
         'reviews' => '310',
@@ -698,27 +698,27 @@ $TOURS = [
         ],
         'gallery' => [
             [
-                'src' => 'https://images.unsplash.com/photo-1710429068963-1f6c853134a4?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/ayodhya-hero.webp',
                 'title' => 'Shri Ram Janmabhoomi Mandir'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1710429068832-1a82a30260c0?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/ayodhya-hero.webp',
                 'title' => 'Ram Mandir Architecture Detail'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1697976382711-9e4d4e7c0a58?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/ayodhya-hero.webp',
                 'title' => 'Saryu River Evening Aarti'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/ayodhya-hero.webp',
                 'title' => 'Hanuman Garhi Hilltop Temple'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/ayodhya-hero.webp',
                 'title' => 'Sacred Ayodhya Heritage Walk'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1636559072523-4fdb20adf25a?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/ayodhya-hero.webp',
                 'title' => 'Illuminated Ram Path at Night'
             ]
         ],
@@ -782,7 +782,7 @@ $TOURS = [
         'subtitle' => 'The Sacred Jyotirlinga',
         'duration' => '3 Days / 2 Nights',
         'price' => '₹6,499',
-        'image' => 'https://images.unsplash.com/photo-1676029091588-48cc90569541?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8dWpqYWlufGVufDB8fDB8fHww',
+        'image' => BASE_URL . 'assets/images/tours/mahakaleshwar-hero.webp',
         'link' => 'tours/mahakaleshwar',
         'rating' => '4.8',
         'reviews' => '150',
@@ -848,27 +848,27 @@ $TOURS = [
         ],
         'gallery' => [
             [
-                'src' => 'https://images.unsplash.com/photo-1676029091588-48cc90569541?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/mahakaleshwar-hero.webp',
                 'title' => 'Mahakaleshwar Temple — Sacred Jyotirlinga'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1609947017136-9daa5f0c6fca?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/mahakaleshwar-hero.webp',
                 'title' => 'Bhasma Aarti Spiritual Ceremony'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/mahakaleshwar-hero.webp',
                 'title' => 'Ram Ghat on Shipra River'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1636559072523-4fdb20adf25a?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/mahakaleshwar-hero.webp',
                 'title' => 'Evening Aarti at Ram Ghat'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/mahakaleshwar-hero.webp',
                 'title' => 'Kal Bhairav Temple Ancient Shrine'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1590766940554-634ae3e0e1e5?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/mahakaleshwar-hero.webp',
                 'title' => 'Ujjain Heritage Architecture'
             ]
         ],
@@ -932,7 +932,7 @@ $TOURS = [
         'subtitle' => 'Spiritual Peace & Patriotism',
         'duration' => '3 Days / 2 Nights',
         'price' => '₹5,499',
-        'image' => 'https://images.unsplash.com/photo-1599840309126-7ece88628ded?q=80&w=1190&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+        'image' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp',
         'link' => 'tours/golden-temple',
         'rating' => '4.8',
         'reviews' => '115',
@@ -998,27 +998,27 @@ $TOURS = [
         ],
         'gallery' => [
             [
-                'src' => 'https://images.unsplash.com/photo-1599840309126-7ece88628ded?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp',
                 'title' => 'Golden Temple — Harmandir Sahib'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1609947017136-9daa5f0c6fca?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp',
                 'title' => 'Golden Temple Night Illumination'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1589308078059-be1415eab4c3?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp',
                 'title' => 'Wagah Border Ceremony'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1590766940554-634ae3e0e1e5?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp',
                 'title' => 'Jallianwala Bagh Memorial'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp',
                 'title' => 'Amritsar Heritage Architecture'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1636559072523-4fdb20adf25a?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp',
                 'title' => 'Amritsari Culinary Delights'
             ]
         ],
@@ -1082,7 +1082,7 @@ $TOURS = [
         'subtitle' => 'The Royal Heritage of Rajasthan',
         'duration' => '3 Days / 2 Nights',
         'price' => '₹5,999',
-        'image' => 'https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8amFpcHVyfGVufDB8fDB8fHww',
+        'image' => BASE_URL . 'assets/images/tours/jaipur-hero.webp',
         'link' => 'tours/jaipur',
         'rating' => '4.7',
         'reviews' => '142',
@@ -1148,27 +1148,27 @@ $TOURS = [
         ],
         'gallery' => [
             [
-                'src' => 'https://images.unsplash.com/photo-1603262110263-fb0112e7cc33?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/jaipur-hero.webp',
                 'title' => 'Jaipur — The Pink City Skyline'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/jaipur-hero.webp',
                 'title' => 'Amber Fort Majestic Architecture'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/jaipur-hero.webp',
                 'title' => 'Hawa Mahal — Palace of Winds'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/jaipur-hero.webp',
                 'title' => 'City Palace Royal Courtyard'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1590766940554-634ae3e0e1e5?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/jaipur-hero.webp',
                 'title' => 'Nahargarh Fort Sunset View'
             ],
             [
-                'src' => 'https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=800&q=80',
+                'src' => BASE_URL . 'assets/images/tours/jaipur-hero.webp',
                 'title' => 'Rajasthani Heritage & Crafts'
             ]
         ],

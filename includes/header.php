@@ -20,14 +20,14 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
     <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
     <meta property="og:title" content="<?php echo isset($page_title) ? $page_title . ' | ' . SITE_NAME : SITE_TITLE . ' | ' . SITE_NAME; ?>">
     <meta property="og:description" content="<?php echo isset($page_desc) ? $page_desc : SITE_DESC; ?>">
-    <meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/hero.png">
+    <meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/hero.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
     <meta property="twitter:title" content="<?php echo isset($page_title) ? $page_title . ' | ' . SITE_NAME : SITE_TITLE . ' | ' . SITE_NAME; ?>">
     <meta property="twitter:description" content="<?php echo isset($page_desc) ? $page_desc : SITE_DESC; ?>">
-    <meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/hero.png">
+    <meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/hero.webp">
 
     <!-- Structured Data (JSON-LD) - Local Business Details -->
     <script type="application/ld+json">

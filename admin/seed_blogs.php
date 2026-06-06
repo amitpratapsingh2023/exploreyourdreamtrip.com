@@ -33,7 +33,7 @@ $authors = [
         'email' => 'amit@exploreyourdreamtrip.com',
         'designation' => 'Founder & Luxury Tour Specialist',
         'bio' => 'Amit is the founder of Explore Your Dream Trip, with over 12 years of crafting curated heritage and adventure tours across North India.',
-        'avatar' => 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80',
+        'avatar' => 'assets/images/authors/amit.webp',
         'status' => 1,
         'created_at' => date('Y-m-d H:i:s')
     ],
@@ -43,7 +43,7 @@ $authors = [
         'email' => 'priya@exploreyourdreamtrip.com',
         'designation' => 'Destination Experience Designer',
         'bio' => 'Priya designs immersive travel experiences, specializing in luxury stays, local culinary guides, and hidden cultural pathways.',
-        'avatar' => 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&q=80',
+        'avatar' => 'assets/images/authors/priya.webp',
         'status' => 1,
         'created_at' => date('Y-m-d H:i:s')
     ]
@@ -128,7 +128,7 @@ $blogs = [
         
         <h2>3. Seamless Transit in a Chauffeur-Driven SUV</h2>
         <p>The journey from Delhi to Agra via the Yamuna Expressway is smooth and fast, but it is best enjoyed from the plush leather cabin of a luxury SUV like the Toyota Innova Crysta or a private sedan. Having a dedicated professional driver ensures you can relax, enjoy the rural scenery, and transit between locations like the Agra Fort and Fatehpur Sikri with absolute comfort.</p>',
-        'image' => 'https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1200&q=80',
+        'image' => 'assets/images/blog/agra-luxury.webp',
         'image_alt' => 'The iconic Taj Mahal at sunrise during a luxury tour',
         'image_title' => 'Taj Mahal Luxury Tour',
         'meta_title' => 'Agra Luxury Tour: A Private Guide to the Taj Mahal',
@@ -161,7 +161,7 @@ $blogs = [
         
         <h2>3. Planning Your Hill Station Route</h2>
         <p>Long mountain drives require experienced chauffeurs who know the terrain. When you hire a premium vehicle, ensure your agency provides certified, verified drivers trained specifically in high-altitude routes. This guarantees both safety and a smooth, stress-free ride.</p>',
-        'image' => 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&w=1200&q=80',
+        'image' => 'assets/images/blog/travel-comfort.webp',
         'image_alt' => 'A luxury cruiser driving along a beautiful scenic highway',
         'image_title' => 'Premium Tempo Traveller Ride',
         'meta_title' => 'Luxury Tempo Traveller & Force Urbania Rental Guide',
@@ -194,7 +194,7 @@ $blogs = [
         
         <h2>5. Custom Crafted Travel Routes</h2>
         <p>To tie these experiences together, skip standard buses or trains. Book a custom private tour with a professional chauffeur who can adapt to your pace. This allows you to stop at ancient stepwells, explore village craft shops, and enjoy the journey without rigid timetables.</p>',
-        'image' => 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=1200&q=80',
+        'image' => 'assets/images/blog/rajasthan-luxury.webp',
         'image_alt' => 'A luxury heritage palace in Jaipur, Rajasthan',
         'image_title' => 'Rajasthan Heritage Palace',
         'meta_title' => 'Top 5 Luxury Experiences in Rajasthan | Golden Triangle Tour',

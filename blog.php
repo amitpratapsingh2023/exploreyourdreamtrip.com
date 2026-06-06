@@ -87,7 +87,7 @@ require_once 'includes/header.php';
      ═══════════════════════════════════════════════════════════════════════ -->
 <section class="relative min-h-[45vh] md:min-h-[50vh] flex items-end bg-obsidian-950 overflow-hidden pt-36 pb-16 md:pb-20">
     <div class="absolute inset-0 z-0">
-        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=1200" alt="Travel Blog Banner"
+        <img src="<?php echo BASE_URL; ?>assets/images/blog/travel-comfort.webp" alt="Travel Blog Banner"
             class="w-full h-full object-cover object-center opacity-20 scale-105 transition-transform duration-1000">
         <div class="absolute inset-0 bg-gradient-to-t from-obsidian-950 via-obsidian-950/70 to-obsidian-950/20"></div>
         <div class="absolute inset-0 luxury-vignette opacity-70"></div>
@@ -246,7 +246,7 @@ require_once 'includes/header.php';
                         <div class="flex items-center justify-between border-t border-slate-100 pt-6">
                             <!-- Author Profile -->
                             <div class="flex items-center space-x-3">
-                                <img src="<?php echo e($featured['author_avatar'] ?: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80'); ?>" 
+                                <img src="<?php echo e($featured['author_avatar'] ?: BASE_URL . 'assets/images/authors/amit.webp'); ?>" 
                                      alt="<?php echo e($featured['author_name']); ?>"
                                      class="w-10 h-10 rounded-full object-cover border border-slate-100 shadow-sm">
                                 <div>
@@ -314,7 +314,7 @@ require_once 'includes/header.php';
                         <!-- Card Footer -->
                         <div class="px-6 md:px-8 pb-6 pt-4 border-t border-slate-100/80 flex items-center justify-between">
                             <div class="flex items-center space-x-2">
-                                <img src="<?php echo e($blog['author_avatar'] ?: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=80&q=80'); ?>" 
+                                <img src="<?php echo e($blog['author_avatar'] ?: BASE_URL . 'assets/images/authors/amit.webp'); ?>" 
                                      alt="<?php echo e($blog['author_name']); ?>"
                                      class="w-8 h-8 rounded-full object-cover shadow-sm">
                                 <span class="text-xs font-semibold text-slate-700"><?php echo e($blog['author_name']); ?></span>
