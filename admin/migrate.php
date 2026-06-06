@@ -82,7 +82,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <ul class="text-sm text-gray-600 dark:text-gray-400 space-y-2 list-disc list-inside">
                 <li>Reads from <code>admin/schema.sql</code></li>
                 <li>Uses <strong>IF NOT EXISTS</strong> logic (100% safe for existing data).</li>
-                <li>Instantly creates the <code>newsletters</code> table.</li>
+                <li>Instantly creates the <code>newsletters</code> and <code>inquiries</code> tables.</li>
             </ul>
         </div>
 

@@ -67,89 +67,77 @@ require_once 'includes/header.php';
                     <p class="text-xs text-slate-400 mb-6 uppercase tracking-wider font-semibold">Let us know your
                         travel plans for a free custom quote</p>
 
-                    <form action="#inquiry" method="GET" class="space-y-5">
-                        <!-- Destination Input -->
+                    <form id="hero-booking-form" action="<?php echo BASE_URL; ?>thank-you" method="POST" class="space-y-4">
+                        <!-- Name Input -->
                         <div>
-                            <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-2">Where
-                                To?</label>
+                            <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-1.5">Your Full Name *</label>
                             <div class="relative">
-                                <span
-                                    class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
-                                    <i class="fa-solid fa-location-dot text-brand/80"></i>
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
+                                    <i class="fa-solid fa-user text-brand/80 text-xs"></i>
                                 </span>
-                                <select name="destination"
-                                    class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-10 focus:outline-none transition-all duration-300 appearance-none font-medium text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
-                                    <option value="" class="bg-slate-950 text-white/80">Select Destination</option>
-                                    <?php foreach ($TOURS as $key => $tour): ?>
-                                        <option value="<?php echo $key; ?>" class="bg-slate-950 text-white">
-                                            <?php echo $tour['title']; ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                    <option value="other" class="bg-slate-950 text-white">Custom Tour Plan</option>
+                                <input type="text" name="name" required placeholder="Enter name"
+                                    class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                            </div>
+                        </div>
+
+                        <!-- Phone & Email Row -->
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-1.5">Phone Number *</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
+                                        <i class="fa-solid fa-phone text-brand/80 text-xs"></i>
+                                    </span>
+                                    <input type="tel" name="phone" required placeholder="Enter mobile number"
+                                        class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-1.5">Email Address</label>
+                                <div class="relative">
+                                    <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
+                                        <i class="fa-solid fa-envelope text-brand/80 text-xs"></i>
+                                    </span>
+                                    <input type="email" name="email" placeholder="Enter email"
+                                        class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Service Select -->
+                        <div>
+                            <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-1.5">Select Tour / Service</label>
+                            <div class="relative">
+                                <span class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
+                                    <i class="fa-solid fa-map-location-dot text-brand/80 text-xs"></i>
+                                </span>
+                                <select name="service"
+                                    class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-10 focus:outline-none transition-all duration-300 appearance-none text-sm font-medium focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                    <option value="tour">All-Inclusive Tour</option>
+                                    <option value="tempo">Tempo Traveller Hire</option>
+                                    <option value="car">Premium Car Hire</option>
                                 </select>
-                                <span
-                                    class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-brand pointer-events-none">
+                                <span class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-brand pointer-events-none">
                                     <i class="fa-solid fa-chevron-down text-xs"></i>
                                 </span>
                             </div>
                         </div>
 
-                        <!-- Date & Traveler Row -->
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
-                            <div>
-                                <label
-                                    class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-2">Departure
-                                    Date</label>
-                                <div class="relative">
-                                    <span
-                                        class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
-                                        <i class="fa-solid fa-calendar-days text-brand/80"></i>
-                                    </span>
-                                    <input type="date" name="travel_date"
-                                        class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
-                                </div>
-                            </div>
-                            <div>
-                                <label
-                                    class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-2">Service
-                                    Type</label>
-                                <div class="relative">
-                                    <span
-                                        class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
-                                        <i class="fa-solid fa-car-side text-brand/80"></i>
-                                    </span>
-                                    <select name="service"
-                                        class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-10 focus:outline-none transition-all duration-300 appearance-none text-sm font-medium focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
-                                        <option value="tour" class="bg-slate-950 text-white">All-Inclusive Tour</option>
-                                        <option value="tempo" class="bg-slate-950 text-white">Tempo Traveller Hire
-                                        </option>
-                                        <option value="car" class="bg-slate-950 text-white">Premium Car Hire</option>
-                                    </select>
-                                    <span
-                                        class="absolute inset-y-0 right-0 pr-3.5 flex items-center text-brand pointer-events-none">
-                                        <i class="fa-solid fa-chevron-down text-xs"></i>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Phone Number -->
+                        <!-- Requirements Textarea -->
                         <div>
-                            <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-2">Mobile
-                                Number</label>
+                            <label class="block text-[10px] font-bold text-brand uppercase tracking-widest mb-1.5">Your Travel Plans / Requirements</label>
                             <div class="relative">
-                                <span
-                                    class="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
-                                    <i class="fa-solid fa-phone text-brand/80"></i>
+                                <span class="absolute top-3.5 left-0 pl-3.5 flex items-center text-slate-400 pointer-events-none">
+                                    <i class="fa-solid fa-pen-to-square text-brand/80 text-xs"></i>
                                 </span>
-                                <input type="tel" name="phone" placeholder="Enter your contact number" required
-                                    class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]">
+                                <textarea name="requirements" rows="3" placeholder="e.g. Travel dates, destination, number of travelers, budget details, etc."
+                                    class="w-full bg-slate-900/40 hover:bg-slate-900/60 focus:bg-slate-950/80 border border-white/10 focus:border-brand text-white rounded-xl py-3.5 pl-10 pr-4 focus:outline-none transition-all duration-300 text-sm resize-none focus:shadow-[0_0_15px_rgba(240,210,90,0.15)]"></textarea>
                             </div>
                         </div>
 
                         <!-- Submit Button -->
                         <button type="submit"
-                            class="w-full py-4 mt-3 bg-gradient-gold hover:bg-gradient-gold text-obsidian-950 text-xs uppercase tracking-widest font-extrabold rounded-xl shadow-lg hover:shadow-brand/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 pulse-gold-btn">
+                            class="w-full py-4 mt-2 bg-gradient-gold hover:bg-gradient-gold text-obsidian-950 text-xs uppercase tracking-widest font-extrabold rounded-xl shadow-lg hover:shadow-brand/25 transition-all duration-300 hover:-translate-y-0.5 active:translate-y-0 pulse-gold-btn btn-shimmer">
                             Get Custom Price Quote
                         </button>
                     </form>

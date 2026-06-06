@@ -383,7 +383,8 @@ function initPremiumTabs() {
 function initAjaxInquiries() {
     const forms = [
         document.getElementById('contact-page-form'),
-        document.getElementById('cta-global-form')
+        document.getElementById('cta-global-form'),
+        document.getElementById('hero-booking-form')
     ].filter(form => form !== null);
 
     forms.forEach(form => {
@@ -437,3 +438,5 @@ function initAjaxInquiries() {
         });
     });
 }
+
+
