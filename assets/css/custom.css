@@ -219,12 +219,12 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     gap: 4px;
     padding: 5px;
-    background: rgba(255,255,255, 0.85);
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border: 1px solid rgba(15, 23, 42, 0.06);
+    border: 1px solid rgba(225, 180, 75, 0.16);
     border-radius: 20px;
-    box-shadow: 0 4px 24px rgba(15, 23, 42, 0.04), 0 1px 3px rgba(15, 23, 42, 0.03);
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03), 0 1px 3px rgba(15, 23, 42, 0.02);
     overflow-x: auto;
     scrollbar-width: none;           /* Firefox */
     -ms-overflow-style: none;        /* IE/Edge */
@@ -240,41 +240,46 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
     display: inline-flex;
     align-items: center;
-    gap: 7px;
-    padding: 12px 20px;
-    font-size: 0.72rem;
+    gap: 8px;
+    padding: 12px 22px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.74rem;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.12em;
     color: #64748b;
     white-space: nowrap;
     border: none;
     background: transparent;
     border-radius: 16px;
     cursor: pointer;
-    transition: color 0.35s ease, background 0.35s ease, transform 0.2s ease;
+    transition: color 0.3s cubic-bezier(0.25, 1, 0.5, 1), background-color 0.3s ease;
     flex-shrink: 0;
 }
 .premium-tab i {
-    font-size: 0.7rem;
-    transition: color 0.35s ease, transform 0.35s ease;
+    font-size: 0.75rem;
+    color: #94a3b8;
+    transition: color 0.3s ease, transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 /* Hover state */
 .premium-tab:hover {
     color: #0f172a;
-    background: rgba(15, 23, 42, 0.04);
+    background: rgba(240, 210, 90, 0.05);
+}
+.premium-tab:hover i {
+    color: #475569;
 }
 
 /* Active state */
 .premium-tab.active {
-    color: #0B0F17;
-    background: linear-gradient(135deg, rgba(240, 210, 90, 0.15) 0%, rgba(225, 180, 75, 0.08) 100%);
-    box-shadow: 0 2px 12px rgba(240, 210, 90, 0.12), inset 0 1px 0 rgba(255,255,255,0.6);
+    color: #0B0F17 !important;
+    background: transparent !important; /* Managed by sliding indicator behind it */
+    box-shadow: none !important;
 }
 .premium-tab.active i {
-    color: var(--brand-gold-dark);
-    transform: scale(1.15);
+    color: #0B0F17 !important;
+    transform: scale(1.1);
 }
 
 /* Animated sliding indicator */
@@ -283,9 +288,10 @@ h1, h2, h3, h4, h5, h6 {
     bottom: 5px;
     height: calc(100% - 10px);
     border-radius: 16px;
-    background: linear-gradient(135deg, rgba(240, 210, 90, 0.12) 0%, rgba(225, 180, 75, 0.06) 100%);
-    border: 1px solid rgba(240, 210, 90, 0.18);
-    transition: left 0.4s cubic-bezier(0.4, 0, 0.2, 1), width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    background: linear-gradient(135deg, #fff078 0%, #fad264 50%, #e1b44b 100%);
+    border: 1px solid rgba(225, 180, 75, 0.45);
+    box-shadow: 0 4px 15px rgba(225, 180, 75, 0.3);
+    transition: left 0.35s cubic-bezier(0.25, 1, 0.5, 1), width 0.35s cubic-bezier(0.25, 1, 0.5, 1);
     pointer-events: none;
     z-index: 0;
     display: none; /* hidden — JS positions & shows it */
