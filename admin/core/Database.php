@@ -10,9 +10,9 @@ class Database
 
     // Production credentials
     private string $host = 'localhost';
-    private string $dbname = 'u683808212_veda_webtech';
-    private string $username = 'u683808212_amit';
-    private string $password = '=/3K9qPJx0eH';
+    private string $dbname = 'u683808212_explore_trip';
+    private string $username = 'u683808212_amit_';
+    private string $password = 'l^C;q3u1';
     private string $charset = 'utf8mb4';
 
     // Local XAMPP fallback
