@@ -176,6 +176,8 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
                 <a href="<?php echo BASE_URL; ?>car-rental"
                     class="nav-link-premium <?php echo ($current_page === 'car-rental.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Car
                     Rental</a>
+                <a href="<?php echo BASE_URL; ?>blog"
+                    class="nav-link-premium <?php echo ($current_page === 'blog.php' || $current_page === 'blog-detail.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">Blog</a>
                 <a href="<?php echo BASE_URL; ?>about"
                     class="nav-link-premium <?php echo ($current_page === 'about.php') ? 'active-link' : 'text-white/80 hover:text-brand'; ?>">About</a>
                 <a href="<?php echo BASE_URL; ?>contact"
@@ -239,6 +241,8 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
             <a href="<?php echo BASE_URL; ?>car-rental"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'car-rental.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Car
                 Rental</a>
+            <a href="<?php echo BASE_URL; ?>blog"
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'blog.php' || $current_page === 'blog-detail.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Travel Blog</a>
             <a href="<?php echo BASE_URL; ?>about"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'about.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">About
                 Us</a>

@@ -72,6 +72,11 @@ require_once __DIR__ . '/config.php';
                             <i class="fa-solid fa-chevron-right text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:translate-x-1 transition-all duration-300"></i> Premium Car Hire
                         </a>
                     </li>
+                    <li>
+                        <a href="<?php echo BASE_URL; ?>blog" class="group flex items-center text-slate-400 hover:text-brand transition-colors">
+                            <i class="fa-solid fa-chevron-right text-[10px] mr-2.5 text-brand/40 group-hover:text-brand group-hover:translate-x-1 transition-all duration-300"></i> Travel Blog
+                        </a>
+                    </li>
                 </ul>
             </div>
 

@@ -475,4 +475,71 @@ input[type="date"]::-webkit-calendar-picker-indicator:hover {
     opacity: 1;
 }
 
+/* ─── Luxury Blog Article Content Styling ───────────────────────────── */
+.luxury-article-content {
+    font-family: 'Inter', sans-serif;
+    color: #334155;
+    line-height: 1.8;
+}
+
+.luxury-article-content h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #0B0F17;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.luxury-article-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2.5rem;
+    height: 3px;
+    background: linear-gradient(135deg, #fad264 0%, #e1b44b 100%);
+    border-radius: 2px;
+}
+
+.luxury-article-content h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #0B0F17;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.luxury-article-content p {
+    margin-bottom: 1.5rem;
+}
+
+.luxury-article-content blockquote {
+    border-left: 4px solid #e1b44b;
+    padding: 1.25rem 1.5rem;
+    background-color: #f8fafc;
+    border-radius: 0 16px 16px 0;
+    font-style: italic;
+    color: #1e293b;
+    margin: 2rem 0;
+}
+
+.luxury-article-content ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.luxury-article-content li {
+    margin-bottom: 0.5rem;
+}
+
+.luxury-article-content strong {
+    color: #0B0F17;
+    font-weight: 700;
+}
+
 

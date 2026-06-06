@@ -24,6 +24,13 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^tours/([a-z0-9\-]+)/?$ tours/details.php?slug=$1 [L,QSA]
 
+# ─── Blog Detail Pages ────────────────────────────────────────────────
+# Clean URL: /blog/{slug} → blog-detail.php?slug={slug}
+# Matches slugs containing lowercase letters, numbers, and hyphens
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([a-z0-9\-]+)/?$ blog-detail.php?slug=$1 [L,QSA]
+
 # ─── Remove .php Extension ────────────────────────────────────────────
 # Redirect external requests for *.php files to extensionless URLs (exclude internal rewrites)
 RewriteCond %{THE_REQUEST} \s/+(.+)\.php[\s?] [NC]
