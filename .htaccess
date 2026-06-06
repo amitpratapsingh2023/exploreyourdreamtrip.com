@@ -8,10 +8,10 @@ RewriteEngine On
 
 # ─── RewriteBase ───────────────────────────────────────────────────────
 # For LOCAL XAMPP development (uncomment the line below):
-RewriteBase /Git/exploreyourdreamtrip.com/
+# RewriteBase /Git/exploreyourdreamtrip.com/
 
 # For PRODUCTION server (uncomment and use this instead):
-# RewriteBase /
+RewriteBase /
 
 # ─── Tours Listing Directory Override ──────────────────────────────────
 # Since "tours" is a physical directory, override it to load tours.php
@@ -43,7 +43,7 @@ RewriteCond %{REQUEST_FILENAME}.php -f
 RewriteRule ^([^/]+)/?$ $1.php [L,QSA]
 
 # ─── Custom Error Pages ───────────────────────────────────────────────
-ErrorDocument 404 /Git/exploreyourdreamtrip.com/404.php
+# ErrorDocument 404 /Git/exploreyourdreamtrip.com/404.php
 
 # For PRODUCTION, use:
-# ErrorDocument 404 /404.php
+ErrorDocument 404 /404.php
