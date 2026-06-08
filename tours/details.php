@@ -570,8 +570,13 @@ require_once __DIR__ . '/../includes/header.php';
                                             </div>
 
                                             <div class="pt-4 border-t border-slate-100">
-                                                <p class="text-2xl font-black text-obsidian-950 font-display">
-                                                    <?php echo $plan['price']; ?></p>
+                                                <?php if (empty($plan['price']) || $plan['price'] == '0'): ?>
+                                                    <p class="text-sm font-bold text-brand-accent font-display leading-none">
+                                                        Contact Us for Best Price</p>
+                                                <?php else: ?>
+                                                    <p class="text-2xl font-black text-obsidian-950 font-display">
+                                                        <?php echo $plan['price']; ?></p>
+                                                <?php endif; ?>
                                                 <p class="text-xs text-slate-400 font-semibold mt-1">
                                                     <?php echo $plan['per']; ?></p>
                                             </div>
@@ -625,10 +630,16 @@ require_once __DIR__ . '/../includes/header.php';
                             <div>
                                 <p class="text-[10px] text-slate-400 uppercase tracking-widest font-extrabold">Starting
                                     From</p>
-                                <p class="text-3xl font-black text-white font-display mt-1.5">
-                                    <?php echo $tour['price']; ?> <span class="text-xs text-slate-400 font-normal">/
-                                        person</span>
-                                </p>
+                                <?php if (empty($tour['price']) || $tour['price'] == '0'): ?>
+                                    <p class="text-lg font-extrabold text-brand font-display mt-2 leading-none">
+                                        Contact Us for Best Price
+                                    </p>
+                                <?php else: ?>
+                                    <p class="text-3xl font-black text-white font-display mt-1.5">
+                                        <?php echo $tour['price']; ?> <span class="text-xs text-slate-400 font-normal">/
+                                            person</span>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                             <div
                                 class="flex items-center space-x-1.5 bg-white/10 border border-white/15 px-3.5 py-2 rounded-full shadow-sm">
@@ -817,10 +828,16 @@ require_once __DIR__ . '/../includes/header.php';
                             <div>
                                 <p class="text-[9px] text-slate-400 uppercase tracking-widest font-bold leading-none">
                                     Starting From</p>
-                                <p class="text-xl font-black text-slate-900 leading-none mt-1.5 font-display">
-                                    <?php echo $related_tour['price']; ?> <span
-                                        class="text-[10px] text-slate-400 font-normal lowercase">/ guest</span>
-                                </p>
+                                <?php if (empty($related_tour['price']) || $related_tour['price'] == '0'): ?>
+                                    <p class="text-xs font-bold text-brand-accent leading-none mt-2 font-display">
+                                        Contact Us for Best Price
+                                    </p>
+                                <?php else: ?>
+                                    <p class="text-xl font-black text-slate-900 leading-none mt-1.5 font-display">
+                                        <?php echo $related_tour['price']; ?> <span
+                                            class="text-[10px] text-slate-400 font-normal lowercase">/ guest</span>
+                                    </p>
+                                <?php endif; ?>
                             </div>
                             <a href="<?php echo BASE_URL . $related_tour['link']; ?>"
                                 class="relative group/btn overflow-hidden px-5 py-2.5 bg-slate-950 text-white rounded-xl text-xs uppercase tracking-wider font-extrabold shadow-md whitespace-nowrap inline-flex items-center justify-center transition-all duration-300">

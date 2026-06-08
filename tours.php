@@ -142,7 +142,11 @@ require_once 'includes/header.php';
                     <div class="pt-5 border-t border-slate-100 flex justify-between items-center">
                         <div>
                             <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Starting From</p>
-                            <p class="text-xl font-black text-slate-900 leading-none mt-1 font-display"><?php echo $tour['price']; ?> <span class="text-[10px] text-slate-400 font-normal lowercase">/ guest</span></p>
+                            <?php if (empty($tour['price']) || $tour['price'] == '0'): ?>
+                                <p class="text-xs font-bold text-brand-accent leading-none mt-1.5 font-display">Contact Us for Best Price</p>
+                            <?php else: ?>
+                                <p class="text-xl font-black text-slate-900 leading-none mt-1 font-display"><?php echo $tour['price']; ?> <span class="text-[10px] text-slate-400 font-normal lowercase">/ guest</span></p>
+                            <?php endif; ?>
                         </div>
                         <a href="<?php echo BASE_URL . $tour['link']; ?>" class="relative group/btn overflow-hidden px-5 py-2.5 bg-slate-950 text-white rounded-xl text-xs uppercase tracking-wider font-extrabold shadow-md whitespace-nowrap inline-flex items-center justify-center transition-all duration-300">
                             <!-- Smooth gradient fade-in overlay -->

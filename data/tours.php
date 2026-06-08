@@ -18,14 +18,14 @@ $TOURS = [
         'title' => 'Agra (Taj Mahal) Tour',
         'subtitle' => 'The Monument of Love',
         'duration' => '1 Day / 1 Night',
-        'price' => '₹1,999',
+        'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/agra-hero.webp',
         'link' => 'tours/agra-taj-mahal',
         'rating' => '4.9',
         'reviews' => '120',
         'featured' => true,
         'page_title' => 'Agra (Taj Mahal) Tour – Premium Day Trip Package',
-        'page_desc' => 'Book our premium Agra Taj Mahal day trip from Delhi. Experience the iconic monument of love with private luxury transport, expert guide, Agra Fort, Mehtab Bagh, and more. Starting ₹1,999/person.',
+        'page_desc' => 'Book our premium Agra Taj Mahal day trip from Delhi. Experience the iconic monument of love with private luxury transport, expert guide, Agra Fort, Mehtab Bagh, and more. Contact us for the best price.',
         'overview_heading' => 'Discover the Eternal <span class="text-gradient-gold">Mughal Grandeur</span>',
         'overview' => 'Experience the timeless grandeur of the Taj Mahal — one of the Seven Wonders of the World — on this meticulously curated premium day trip from Delhi. Our luxury Agra tour takes you on a journey through Mughal splendor, from the breathtaking ivory-white marble mausoleum to the imposing red sandstone Agra Fort and the serene Mehtab Bagh gardens. Travel in air-conditioned comfort with a professional chauffeur and licensed heritage guide, enjoying VIP skip-the-line entry and personalized attention throughout. Whether you\'re a solo traveler, a couple seeking romance, or a family creating lifelong memories — this tour is designed to deliver an unforgettable, hassle-free experience of India\'s most iconic landmark.',
         'highlights' => [
@@ -130,7 +130,7 @@ $TOURS = [
             [
                 'vehicle' => 'Swift Dzire (Sedan)',
                 'capacity' => '1–4 Guests',
-                'price' => '₹1,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-car',
                 'popular' => false
@@ -138,7 +138,7 @@ $TOURS = [
             [
                 'vehicle' => 'Toyota Innova Crysta (SUV)',
                 'capacity' => '1–6 Guests',
-                'price' => '₹2,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-truck-pickup',
                 'popular' => true
@@ -146,7 +146,7 @@ $TOURS = [
             [
                 'vehicle' => 'Tempo Traveller (12-Seater)',
                 'capacity' => '7–12 Guests',
-                'price' => '₹1,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-van-shuttle',
                 'popular' => false
@@ -179,20 +179,20 @@ $TOURS = [
             'Cultural',
             'Heritage'
         ],
-        'schema_price' => '1999'
+        'schema_price' => '0'
     ],
     'shimla-manali' => [
         'title' => 'Shimla & Manali Tour',
         'subtitle' => 'The Majestic Himalayas',
         'duration' => '5 Days / 4 Nights',
-        'price' => '₹12,499',
+        'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
         'link' => 'tours/shimla-manali',
         'rating' => '4.8',
         'reviews' => '245',
         'featured' => true,
         'page_title' => 'Shimla & Manali Tour – 5 Day Premium Himalayan Package',
-        'page_desc' => 'Discover the majestic Himalayas with our 5-day premium Shimla & Manali tour from Delhi. Snow-capped peaks, lush valleys, adventure activities, and luxury stays. Starting ₹12,499/person.',
+        'page_desc' => 'Discover the majestic Himalayas with our 5-day premium Shimla & Manali tour from Delhi. Snow-capped peaks, lush valleys, adventure activities, and luxury stays. Best rates guaranteed.',
         'overview_heading' => 'Experience the Majestic <span class="text-gradient-gold">Himalayan Beauty</span>',
         'overview' => 'Embark on a breathtaking 5-day journey through the crown jewels of Himachal Pradesh — Shimla and Manali. From the colonial charm of Shimla\'s Mall Road and the panoramic vistas at Kufri to the snow-capped splendor of Solang Valley and the ancient Hadimba Temple in Manali, this tour weaves together adventure, culture, and relaxation in the most stunning mountain setting. Travel in luxury vehicles through winding mountain roads with dramatic valley views, stay in premium hillside hotels, and create memories that last a lifetime. Perfect for families, couples, and friend groups seeking the ultimate Himalayan escape.',
         'highlights' => [
@@ -292,7 +292,7 @@ $TOURS = [
             [
                 'vehicle' => 'Swift Dzire (Sedan)',
                 'capacity' => '1–3 Guests',
-                'price' => '₹12,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-car',
                 'popular' => false
@@ -300,7 +300,7 @@ $TOURS = [
             [
                 'vehicle' => 'Toyota Innova Crysta (SUV)',
                 'capacity' => '1–6 Guests',
-                'price' => '₹14,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-truck-pickup',
                 'popular' => true
@@ -308,7 +308,7 @@ $TOURS = [
             [
                 'vehicle' => 'Tempo Traveller (12-Seater)',
                 'capacity' => '7–12 Guests',
-                'price' => '₹10,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-van-shuttle',
                 'popular' => false
@@ -341,20 +341,20 @@ $TOURS = [
             'Adventure',
             'Nature'
         ],
-        'schema_price' => '12499'
+        'schema_price' => '0'
     ],
     'rishikesh' => [
         'title' => 'Rishikesh Adventure Tour',
         'subtitle' => 'Spiritual & Adventure Capital',
         'duration' => '3 Days / 2 Nights',
-        'price' => '₹5,999',
+        'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/rishikesh-hero.webp',
         'link' => 'tours/rishikesh',
         'rating' => '4.7',
         'reviews' => '98',
         'featured' => true,
         'page_title' => 'Rishikesh Adventure Tour – 3 Day Spiritual & Rafting Package',
-        'page_desc' => 'Experience the thrill of white-water rafting, bungee jumping, and spiritual serenity in Rishikesh. 3-day premium adventure tour from Delhi with luxury transport. Starting ₹5,999/person.',
+        'page_desc' => 'Experience the thrill of white-water rafting, bungee jumping, and spiritual serenity in Rishikesh. 3-day premium adventure tour from Delhi with luxury transport. Best rates guaranteed.',
         'overview_heading' => 'Adventure Meets <span class="text-gradient-gold">Spiritual Serenity</span>',
         'overview' => 'Rishikesh, the Yoga Capital of the World, offers the perfect blend of adrenaline-pumping adventure and soul-soothing spirituality. Nestled in the foothills of the Himalayas along the sacred Ganges, this 3-day tour immerses you in thrilling white-water rafting, cliff jumping, and optional bungee jumping while also offering the peace of the iconic Ganga Aarti at Triveni Ghat, meditation at ashrams, and the mystical Beatles Ashram. Travel from Delhi in luxury comfort and experience Rishikesh\'s duality — where ancient temples stand alongside world-class adventure sports.',
         'highlights' => [
@@ -441,7 +441,7 @@ $TOURS = [
             [
                 'vehicle' => 'Swift Dzire (Sedan)',
                 'capacity' => '1–3 Guests',
-                'price' => '₹5,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-car',
                 'popular' => false
@@ -449,7 +449,7 @@ $TOURS = [
             [
                 'vehicle' => 'Toyota Innova Crysta (SUV)',
                 'capacity' => '1–6 Guests',
-                'price' => '₹7,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-truck-pickup',
                 'popular' => true
@@ -457,7 +457,7 @@ $TOURS = [
             [
                 'vehicle' => 'Tempo Traveller (12-Seater)',
                 'capacity' => '7–12 Guests',
-                'price' => '₹4,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-van-shuttle',
                 'popular' => false
@@ -490,20 +490,20 @@ $TOURS = [
             'Spiritual',
             'Nature'
         ],
-        'schema_price' => '5999'
+        'schema_price' => '0'
     ],
     'vrindavan' => [
         'title' => 'Vrindavan & Mathura Tour',
         'subtitle' => 'The Land of Lord Krishna',
         'duration' => '2 Days / 1 Night',
-        'price' => '₹3,499',
+        'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/vrindavan-card.jpg',
         'link' => 'tours/vrindavan',
         'rating' => '4.9',
         'reviews' => '180',
         'featured' => false,
         'page_title' => 'Vrindavan & Mathura Tour – 2 Day Divine Pilgrimage Package',
-        'page_desc' => 'Visit the sacred land of Lord Krishna. Premium 2-day Vrindavan & Mathura tour from Delhi with temple visits, Yamuna Aarti, and luxury transport. Starting ₹3,499/person.',
+        'page_desc' => 'Visit the sacred land of Lord Krishna. Premium 2-day Vrindavan & Mathura tour from Delhi with temple visits, Yamuna Aarti, and luxury transport. Best rates guaranteed.',
         'overview_heading' => 'Walk Through the <span class="text-gradient-gold">Land of Lord Krishna</span>',
         'overview' => 'Step into the divine realm of Lord Krishna with this carefully curated 2-day pilgrimage to Vrindavan and Mathura. Visit the birthplace of Lord Krishna at the Shri Krishna Janmabhoomi Temple, witness the grandeur of the ISKCON Temple, explore the vibrant Banke Bihari Temple, and experience the enchanting Yamuna Aarti. From the colorful lanes of Vrindavan filled with devotional music to the ancient ghats of Mathura, every moment of this journey is steeped in devotion, history, and spiritual upliftment. Travel from Delhi in luxury comfort with an experienced guide who brings the legends to life.',
         'highlights' => [
@@ -583,7 +583,7 @@ $TOURS = [
             [
                 'vehicle' => 'Swift Dzire (Sedan)',
                 'capacity' => '1–4 Guests',
-                'price' => '₹3,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-car',
                 'popular' => false
@@ -591,7 +591,7 @@ $TOURS = [
             [
                 'vehicle' => 'Toyota Innova Crysta (SUV)',
                 'capacity' => '1–6 Guests',
-                'price' => '₹4,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-truck-pickup',
                 'popular' => true
@@ -599,7 +599,7 @@ $TOURS = [
             [
                 'vehicle' => 'Tempo Traveller (12-Seater)',
                 'capacity' => '7–12 Guests',
-                'price' => '₹2,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-van-shuttle',
                 'popular' => false
@@ -632,20 +632,20 @@ $TOURS = [
             'Cultural',
             'Spiritual'
         ],
-        'schema_price' => '3499'
+        'schema_price' => '0'
     ],
     'ayodhya' => [
         'title' => 'Ayodhya Ram Mandir Tour',
         'subtitle' => 'The Holy Birthplace',
         'duration' => '2 Days / 1 Night',
-        'price' => '₹4,499',
+        'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/ayodhya-hero.webp',
         'link' => 'tours/ayodhya',
         'rating' => '4.9',
         'reviews' => '310',
         'featured' => true,
         'page_title' => 'Ayodhya Ram Mandir Tour – 2 Day Divine Pilgrimage Package',
-        'page_desc' => 'Visit the magnificent Ram Mandir in Ayodhya. Premium 2-day pilgrimage tour from Delhi with temple visits, Saryu Aarti, and luxury transport. Starting ₹4,499/person.',
+        'page_desc' => 'Visit the magnificent Ram Mandir in Ayodhya. Premium 2-day pilgrimage tour from Delhi with temple visits, Saryu Aarti, and luxury transport. Best rates guaranteed.',
         'overview_heading' => 'Experience the Divine <span class="text-gradient-gold">Ram Janmabhoomi</span>',
         'overview' => 'Witness the grandeur of the newly built Shri Ram Janmabhoomi Mandir — India\'s most anticipated and revered temple — on this meticulously planned 2-day pilgrimage from Delhi. Ayodhya, the ancient capital of Lord Rama\'s kingdom, is experiencing a magnificent transformation. Beyond the iconic Ram Mandir, explore the serene Saryu River ghats, the ancient Hanuman Garhi temple, Kanak Bhawan, and the vibrant Dashrath Mahal. Experience the soul-stirring Saryu Aarti and walk through the sacred streets where the Ramayana comes alive. Travel in luxury comfort with an experienced guide who brings the epic history to life.',
         'highlights' => [
@@ -726,7 +726,7 @@ $TOURS = [
             [
                 'vehicle' => 'Swift Dzire (Sedan)',
                 'capacity' => '1–4 Guests',
-                'price' => '₹4,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-car',
                 'popular' => false
@@ -734,7 +734,7 @@ $TOURS = [
             [
                 'vehicle' => 'Toyota Innova Crysta (SUV)',
                 'capacity' => '1–6 Guests',
-                'price' => '₹5,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-truck-pickup',
                 'popular' => true
@@ -742,7 +742,7 @@ $TOURS = [
             [
                 'vehicle' => 'Tempo Traveller (12-Seater)',
                 'capacity' => '7–12 Guests',
-                'price' => '₹3,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-van-shuttle',
                 'popular' => false
@@ -775,20 +775,20 @@ $TOURS = [
             'Cultural',
             'Heritage'
         ],
-        'schema_price' => '4499'
+        'schema_price' => '0'
     ],
     'mahakaleshwar' => [
         'title' => 'Ujjain Mahakaleshwar Tour',
         'subtitle' => 'The Sacred Jyotirlinga',
         'duration' => '3 Days / 2 Nights',
-        'price' => '₹6,499',
+        'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/mahakaleshwar-hero.webp',
         'link' => 'tours/mahakaleshwar',
         'rating' => '4.8',
         'reviews' => '150',
         'featured' => false,
         'page_title' => 'Ujjain Mahakaleshwar Tour – 3 Day Sacred Jyotirlinga Package',
-        'page_desc' => 'Visit the sacred Mahakaleshwar Jyotirlinga in Ujjain. Premium 3-day spiritual tour with Bhasma Aarti, temple visits, and luxury transport from Delhi. Starting ₹6,499/person.',
+        'page_desc' => 'Visit the sacred Mahakaleshwar Jyotirlinga in Ujjain. Premium 3-day spiritual tour with Bhasma Aarti, temple visits, and luxury transport from Delhi. Best rates guaranteed.',
         'overview_heading' => 'Seek Blessings at the <span class="text-gradient-gold">Sacred Jyotirlinga</span>',
         'overview' => 'Embark on a deeply spiritual 3-day pilgrimage to Ujjain — one of India\'s seven sacred cities and home to the revered Mahakaleshwar Jyotirlinga, one of the twelve Jyotirlingas of Lord Shiva. Witness the extraordinary Bhasma Aarti — a unique pre-dawn ritual performed with sacred ash. Explore the ancient Kal Bhairav Temple, the historic Ram Ghat on the Shipra River, and the astronomical marvel of Vedha Shala (Jantar Mantar of Ujjain). This holy city, which hosts the legendary Kumbh Mela, offers a profound spiritual experience that transcends time. Travel from Delhi via comfortable overnight train or flight to Indore with luxury ground transport throughout.',
         'highlights' => [
@@ -876,7 +876,7 @@ $TOURS = [
             [
                 'vehicle' => 'Swift Dzire (Sedan)',
                 'capacity' => '1–4 Guests',
-                'price' => '₹6,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-car',
                 'popular' => false
@@ -884,7 +884,7 @@ $TOURS = [
             [
                 'vehicle' => 'Toyota Innova Crysta (SUV)',
                 'capacity' => '1–6 Guests',
-                'price' => '₹8,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-truck-pickup',
                 'popular' => true
@@ -892,7 +892,7 @@ $TOURS = [
             [
                 'vehicle' => 'Tempo Traveller (12-Seater)',
                 'capacity' => '7–12 Guests',
-                'price' => '₹5,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-van-shuttle',
                 'popular' => false
@@ -925,20 +925,20 @@ $TOURS = [
             'Spiritual',
             'Cultural'
         ],
-        'schema_price' => '6499'
+        'schema_price' => '0'
     ],
     'golden-temple' => [
         'title' => 'Amritsar Golden Temple Tour',
         'subtitle' => 'Spiritual Peace & Patriotism',
         'duration' => '3 Days / 2 Nights',
-        'price' => '₹5,499',
+        'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/golden-temple-hero.webp',
         'link' => 'tours/golden-temple',
         'rating' => '4.8',
         'reviews' => '115',
         'featured' => false,
         'page_title' => 'Amritsar Golden Temple Tour – 3 Day Spiritual & Heritage Package',
-        'page_desc' => 'Visit the magnificent Golden Temple in Amritsar. Premium 3-day tour with Wagah Border ceremony, Jallianwala Bagh, Langar experience, and luxury transport. Starting ₹5,499/person.',
+        'page_desc' => 'Visit the magnificent Golden Temple in Amritsar. Premium 3-day tour with Wagah Border ceremony, Jallianwala Bagh, Langar experience, and luxury transport. Best rates guaranteed.',
         'overview_heading' => 'Discover the Golden <span class="text-gradient-gold">City of Punjab</span>',
         'overview' => 'Amritsar — the spiritual and cultural heart of Sikhism — welcomes you with open arms and the shimmering golden reflection of the Harmandir Sahib (Golden Temple). This 3-day premium tour immerses you in the divine atmosphere of the world\'s most visited religious site, the patriotic fervor of the Wagah Border flag-lowering ceremony, and the poignant history of Jallianwala Bagh. Experience the world\'s largest free community kitchen (Langar) serving over 100,000 meals daily, explore the vibrant Hall Bazaar, and savor authentic Punjabi cuisine — from butter chicken to kulcha-chole at legendary eateries. A journey of faith, flavor, and unforgettable memories.',
         'highlights' => [
@@ -1026,7 +1026,7 @@ $TOURS = [
             [
                 'vehicle' => 'Swift Dzire (Sedan)',
                 'capacity' => '1–3 Guests',
-                'price' => '₹5,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-car',
                 'popular' => false
@@ -1034,7 +1034,7 @@ $TOURS = [
             [
                 'vehicle' => 'Toyota Innova Crysta (SUV)',
                 'capacity' => '1–6 Guests',
-                'price' => '₹7,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-truck-pickup',
                 'popular' => true
@@ -1042,7 +1042,7 @@ $TOURS = [
             [
                 'vehicle' => 'Tempo Traveller (12-Seater)',
                 'capacity' => '7–12 Guests',
-                'price' => '₹4,499',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-van-shuttle',
                 'popular' => false
@@ -1075,20 +1075,20 @@ $TOURS = [
             'Cultural',
             'Heritage'
         ],
-        'schema_price' => '5499'
+        'schema_price' => '0'
     ],
     'jaipur' => [
         'title' => 'Jaipur (Pink City) Tour',
         'subtitle' => 'The Royal Heritage of Rajasthan',
         'duration' => '3 Days / 2 Nights',
-        'price' => '₹5,999',
+        'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/jaipur-hero.webp',
         'link' => 'tours/jaipur',
         'rating' => '4.7',
         'reviews' => '142',
         'featured' => true,
         'page_title' => 'Jaipur (Pink City) Tour – 3 Day Royal Heritage Package',
-        'page_desc' => 'Explore the royal heritage of Jaipur Pink City. Premium 3-day tour with Amber Fort, Hawa Mahal, City Palace, elephant rides, and luxury transport from Delhi. Starting ₹5,999/person.',
+        'page_desc' => 'Explore the royal heritage of Jaipur Pink City. Premium 3-day tour with Amber Fort, Hawa Mahal, City Palace, elephant rides, and luxury transport from Delhi. Best rates guaranteed.',
         'overview_heading' => 'Royal Heritage of <span class="text-gradient-gold">The Pink City</span>',
         'overview' => 'Step into the regal world of Rajputana grandeur with this immersive 3-day tour of Jaipur — the magnificent Pink City and capital of Rajasthan. From the imposing Amber Fort perched on hilltops to the iconic wind-catching façade of Hawa Mahal, from the opulent City Palace to the astronomical precision of Jantar Mantar, every corner of Jaipur tells a story of royal ambition and artistic mastery. Experience the vibrant bazaars of Johari Bazaar and Bapu Bazaar, savor authentic Rajasthani thali meals, and witness the magical sunset from Nahargarh Fort. This tour is a feast for history lovers, photographers, and anyone who wants to experience India\'s royal heritage at its finest.',
         'highlights' => [
@@ -1176,7 +1176,7 @@ $TOURS = [
             [
                 'vehicle' => 'Swift Dzire (Sedan)',
                 'capacity' => '1–3 Guests',
-                'price' => '₹5,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-car',
                 'popular' => false
@@ -1184,7 +1184,7 @@ $TOURS = [
             [
                 'vehicle' => 'Toyota Innova Crysta (SUV)',
                 'capacity' => '1–6 Guests',
-                'price' => '₹7,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-truck-pickup',
                 'popular' => true
@@ -1192,7 +1192,7 @@ $TOURS = [
             [
                 'vehicle' => 'Tempo Traveller (12-Seater)',
                 'capacity' => '7–12 Guests',
-                'price' => '₹4,999',
+                'price' => 0,
                 'per' => 'per person',
                 'icon' => 'fa-solid fa-van-shuttle',
                 'popular' => false
@@ -1225,6 +1225,6 @@ $TOURS = [
             'Cultural',
             'Heritage'
         ],
-        'schema_price' => '5999'
+        'schema_price' => '0'
     ]
 ];

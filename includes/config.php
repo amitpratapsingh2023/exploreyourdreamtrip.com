@@ -48,21 +48,21 @@ $TEMPO_TRAVELLERS = [
         'title' => 'Luxury 12 Seater Tempo Traveller',
         'capacity' => '12 Passengers + 1 Driver',
         'features' => ['Pushback Luxury Seats', 'Ample Luggage Space', 'Premium Music System', 'Ice Box & Charging Points', 'AC with Individual Vents'],
-        'price' => '₹18 / km',
+        'price' => 0,
         'image' => 'assets/images/fleet/tempo-12.png'
     ],
     '16-seater' => [
         'title' => 'Luxury 16 Seater Tempo Traveller',
         'capacity' => '16 Passengers + 1 Driver',
         'features' => ['Premium Leather Seating', 'Individual LED Screen (Optional)', 'Wi-Fi Enabled', 'Spacious Cabin & Boot Space', 'Top-tier Suspension'],
-        'price' => '₹22 / km',
+        'price' => 0,
         'image' => 'assets/images/fleet/tempo-16.png'
     ],
     '20-seater' => [
         'title' => 'Luxury 20 Seater Tempo Traveller',
         'capacity' => '20 Passengers + 1 Driver',
         'features' => ['Extra Legroom Premium Seats', 'Microphone for Tour Guide', 'Mood Lighting', 'Surround Sound System', 'Large Glass Windows for Sightseeing'],
-        'price' => '₹26 / km',
+        'price' => 0,
         'image' => 'assets/images/fleet/tempo-20.png'
     ]
 ];
@@ -72,28 +72,28 @@ $CARS = [
     'force-urbania' => [
         'title' => 'Force Urbania Premium Cruiser',
         'capacity' => '10-17 Seater Options',
-        'price' => '₹28 / km',
+        'price' => 0,
         'features' => ['Ultra-Luxury Captain Seats', 'Individual AC Vents & USB Ports', 'High Ceiling & Wide Aisle', 'Panoramic Windows'],
         'image' => 'assets/images/fleet/force-urbania.jpg'
     ],
     'swift-dzire' => [
         'title' => 'Swift Dzire (Sedan)',
         'capacity' => '4 Passengers + 1 Driver',
-        'price' => '₹12 / km',
+        'price' => 0,
         'features' => ['Comfortable Seating', 'Air Conditioner', 'Bluetooth Music System', 'Best for Small Families'],
         'image' => 'assets/images/fleet/dzire.png'
     ],
     'innova-crysta' => [
         'title' => 'Toyota Innova Crysta (SUV)',
         'capacity' => '6-7 Passengers + 1 Driver',
-        'price' => '₹18 / km',
+        'price' => 0,
         'features' => ['Plush Captain Seats', 'Premium Air Conditioning', 'Dual Airbags & ABS', 'Highly Safe & Comfortable'],
         'image' => 'assets/images/fleet/innova-crysta.jpg'
     ],
     'ertiga' => [
         'title' => 'Maruti Suzuki Ertiga (MUV)',
         'capacity' => '6 Passengers + 1 Driver',
-        'price' => '₹14 / km',
+        'price' => 0,
         'features' => ['Spacious 3-Row Cabin', 'Roof Mounted AC Vents', 'Excellent Fuel Efficiency', 'Budget Luxury Option'],
         'image' => 'assets/images/fleet/ertiga.png'
     ]

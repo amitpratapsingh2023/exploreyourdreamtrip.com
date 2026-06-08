@@ -1,6 +1,6 @@
 <?php
 $page_title = "Premium Car Rental Service in Delhi – Luxury Sedan & SUV Hire";
-$page_desc = "Hire premium chauffeur-driven cars in Delhi. Book Innova Crysta, Swift Dzire, Ertiga, and Force Urbania for outstation tours and local corporate travel. Affordable luxury car rental starting from ₹12/km.";
+$page_desc = "Hire premium chauffeur-driven cars in Delhi. Book Innova Crysta, Swift Dzire, Ertiga, and Force Urbania for outstation tours and local corporate travel. Affordable luxury car rental at the best prices.";
 require_once 'includes/config.php';
 
 // Custom breadcrumb for this page
@@ -291,9 +291,15 @@ require_once 'includes/header.php';
                         <div class="pt-6 border-t border-slate-100 flex justify-between items-center mt-auto">
                             <div>
                                 <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Starting Rate</p>
-                                <p class="text-xl font-black text-obsidian-950 font-display leading-none mt-1">
-                                    <?php echo $car['price']; ?>
-                                </p>
+                                <?php if (empty($car['price']) || $car['price'] == '0'): ?>
+                                    <p class="text-xs font-bold text-brand-accent font-display leading-none mt-1.5">
+                                        Contact Us for Best Price
+                                    </p>
+                                <?php else: ?>
+                                    <p class="text-xl font-black text-obsidian-950 font-display leading-none mt-1">
+                                        <?php echo $car['price']; ?>
+                                    </p>
+                                <?php endif; ?>
                             </div>
 
                             <a href="#inquiry"
