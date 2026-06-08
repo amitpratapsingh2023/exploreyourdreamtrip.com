@@ -25,7 +25,7 @@ define('SITE_DESC', 'Discover India with Explore Your Dream Trip. We offer premi
 // Contact & Social Information
 define('CONTACT_PHONE', '+91 8076 341848');
 define('CONTACT_PHONE_RAW', '8076341848'); // For tel: links
-define('CONTACT_EMAIL', 'contact@exploreyourdreamtrip.com');
+define('CONTACT_EMAIL', 'exploreyourdreamtrip@gmail.com');
 define('CONTACT_ADDRESS', 'Street no -8 ,25 foota road , part -2 Mukund pur, near by Jc Gaur public school , Delhi -110042');
 
 define('WHATSAPP_NUMBER', '8448987148');
