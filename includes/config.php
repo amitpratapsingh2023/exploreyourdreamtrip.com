@@ -49,14 +49,14 @@ $TEMPO_TRAVELLERS = [
         'capacity' => '12 Passengers + 1 Driver',
         'features' => ['Pushback Luxury Seats', 'Ample Luggage Space', 'Premium Music System', 'Ice Box & Charging Points', 'AC with Individual Vents'],
         'price' => 0,
-        'image' => 'assets/images/fleet/tempo-12.png'
+        'image' => 'assets/images/fleet/tempo-12.jpg'
     ],
     '16-seater' => [
         'title' => 'Luxury 16 Seater Tempo Traveller',
         'capacity' => '16 Passengers + 1 Driver',
         'features' => ['Premium Leather Seating', 'Individual LED Screen (Optional)', 'Wi-Fi Enabled', 'Spacious Cabin & Boot Space', 'Top-tier Suspension'],
         'price' => 0,
-        'image' => 'assets/images/fleet/tempo-16.png'
+        'image' => 'assets/images/fleet/tempo-16.jpeg'
     ],
     '20-seater' => [
         'title' => 'Luxury 20 Seater Tempo Traveller',
@@ -96,5 +96,12 @@ $CARS = [
         'price' => 0,
         'features' => ['Spacious 3-Row Cabin', 'Roof Mounted AC Vents', 'Excellent Fuel Efficiency', 'Budget Luxury Option'],
         'image' => 'assets/images/fleet/ertiga.png'
-    ]
+    ],
+    'innova-hycross' => [
+        'title' => 'Toyota Innova Hycross',
+        'capacity' => '6 Passengers + 1 Driver',
+        'price' => 0,
+        'features' => ['Spacious 3-Row Cabin', 'Roof Mounted AC Vents', 'Excellent Fuel Efficiency', 'Budget Luxury Option'],
+        'image' => 'assets/images/fleet/innova-hycross.jpg'
+    ],
 ];
