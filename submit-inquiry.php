@@ -1,25 +1,21 @@
 <?php
 /**
  * Submit Inquiry Handler - AJAX Endpoint
- * Saves inquiry to database AND sends email notification to admin.
+ * Saves inquiry to database AND sends email via Gmail SMTP (PHPMailer).
  */
+
+use PHPMailer\PHPMailer\Exception;
 
 // Define AJAX request flag to format PDO errors as JSON
 define('AJAX_REQUEST', true);
 
 header('Content-Type: application/json');
 
-// ─── Config ──────────────────────────────────────────────────────────────────
 // Recipients who will receive inquiry notification emails
 $admin_emails = [
     'exploreyourdreamtrip@gmail.com',
     'apssmj@gmail.com'
 ];
-
-// "From" address used in the email header
-$from_email = 'noreply@exploreyourdreamtrip.com';
-$from_name = 'Explore Your Dream Trip';
-// ─────────────────────────────────────────────────────────────────────────────
 
 // Only allow POST requests
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
@@ -30,8 +26,9 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// Require database connection
+// Require database connection and mailer helper
 $pdo = require_once 'includes/db.php';
+require_once 'includes/mailer.php';
 
 // Get and sanitize POST inputs
 $name = isset($_POST['name']) ? trim($_POST['name']) : '';
@@ -77,32 +74,38 @@ try {
         ':created_at' => $created_at,
     ]);
 
-    // ── Send email notification ───────────────────────────────────────────────
+    // ── Send email via PHPMailer (Gmail SMTP) ─────────────────────────────────
     $display_email = !empty($email) ? $email : 'Not provided';
     $display_service = !empty($service) ? $service : 'Not specified';
 
-    $subject = "New Inquiry from {$name} - Explore Your Dream Trip";
+    $mail = createMailer();
+    $mail->Subject = "New Inquiry from {$name} - Explore Your Dream Trip";
 
-    $body = "You have received a new travel inquiry.\n";
-    $body .= "=========================================\n\n";
-    $body .= "Name     : {$name}\n";
-    $body .= "Phone    : {$phone}\n";
-    $body .= "Email    : {$display_email}\n";
-    $body .= "Service  : {$display_service}\n";
-    $body .= "Message  :\n{$requirements}\n\n";
-    $body .= "=========================================\n";
-    $body .= "Received : {$created_at} (IST)\n";
-    $body .= "Source   : Explore Your Dream Trip Website\n";
+    // Add all admin recipients
+    foreach ($admin_emails as $admin) {
+        $mail->addAddress($admin);
+    }
 
-    $headers = "From: {$from_name} <{$from_email}>\r\n";
-    $headers .= "Reply-To: {$display_email}\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
-    $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
+    // Set Reply-To as the visitor's email (so you can reply directly to them)
+    if (!empty($email)) {
+        $mail->addReplyTo($email, $name);
+    }
 
-    // Send to all admin recipients
-    $to = implode(', ', $admin_emails);
-    mail($to, $subject, $body, $headers);
+    // Plain text email body
+    $mail->isHTML(false);
+    $mail->Body =
+        "You have received a new travel inquiry.\n" .
+        "=========================================\n\n" .
+        "Name     : {$name}\n" .
+        "Phone    : {$phone}\n" .
+        "Email    : {$display_email}\n" .
+        "Service  : {$display_service}\n" .
+        "Message  :\n{$requirements}\n\n" .
+        "=========================================\n" .
+        "Received : {$created_at} (IST)\n" .
+        "Source   : Explore Your Dream Trip Website\n";
+
+    $mail->send();
     // ─────────────────────────────────────────────────────────────────────────
 
     echo json_encode([
@@ -115,6 +118,13 @@ try {
     echo json_encode([
         'success' => false,
         'error' => 'Database error: ' . $e->getMessage()
+    ]);
+    exit;
+} catch (Exception $e) {
+    // Email failed — inquiry is already saved in DB, so don't block the user
+    echo json_encode([
+        'success' => true,
+        'message' => 'Inquiry submitted successfully. We will contact you soon!'
     ]);
     exit;
 }

@@ -1,16 +1,25 @@
 <?php
 /**
- * Quick mail test — DELETE this file before going live!
+ * Quick mail test using PHPMailer — DELETE this file before going live!
  * Access: http://localhost/Git/exploreyourdreamtrip.com/test-mail.php
+ *         OR https://exploreyourdreamtrip.com/test-mail.php
  */
 
-$to = 'apssmj@gmail.com';
-$subject = 'Test Email from Explore Your Dream Trip (Local)';
-$body = "This is a test email.\n\nIf you see this, mail() is working correctly!";
-$headers = "From: noreply@exploreyourdreamtrip.com\r\nContent-Type: text/plain; charset=UTF-8\r\n";
+use PHPMailer\PHPMailer\Exception;
 
-if (mail($to, $subject, $body, $headers)) {
-    echo '<p style="color:green;font-family:sans-serif;font-size:18px;">✅ mail() called successfully! Check your Mailtrap inbox.</p>';
-} else {
-    echo '<p style="color:red;font-family:sans-serif;font-size:18px;">❌ mail() failed. Check php.ini SMTP settings and restart Apache.</p>';
+require_once __DIR__ . '/includes/mailer.php';
+
+try {
+    $mail = createMailer();
+    $mail->addAddress('apssmj@gmail.com');
+    $mail->Subject = 'Test Email - Explore Your Dream Trip';
+    $mail->isHTML(false);
+    $mail->Body = "This is a test email.\n\nIf you see this, PHPMailer + Gmail SMTP is working correctly!";
+    $mail->send();
+
+    echo '<p style="color:green;font-family:sans-serif;font-size:18px;">✅ Email sent successfully! Check your inbox.</p>';
+
+} catch (Exception $e) {
+    echo '<p style="color:red;font-family:sans-serif;font-size:18px;">❌ Email failed: ' . htmlspecialchars($e->getMessage()) . '</p>';
+    echo '<p style="font-family:sans-serif;font-size:14px;color:#555;">Make sure you set your Gmail App Password in <strong>includes/mailer.php</strong></p>';
 }
