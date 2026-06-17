@@ -184,27 +184,28 @@ $TOURS = [
     'shimla-manali' => [
         'title' => 'Shimla & Manali Tour',
         'subtitle' => 'The Majestic Himalayas',
-        'duration' => '5 Days / 4 Nights',
+        'duration' => '6 Days / 5 Nights',
         'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/shimla-hero.webp',
         'link' => 'tours/shimla-manali',
         'rating' => '4.8',
         'reviews' => '245',
         'featured' => true,
-        'page_title' => 'Shimla & Manali Tour – 5 Day Premium Himalayan Package',
-        'page_desc' => 'Discover the majestic Himalayas with our 5-day premium Shimla & Manali tour from Delhi. Snow-capped peaks, lush valleys, adventure activities, and luxury stays. Best rates guaranteed.',
+        'page_title' => 'Shimla & Manali Tour – 6 Day Premium Himalayan Package',
+        'page_desc' => 'Discover the majestic Himalayas with our 6-day premium Shimla & Manali tour from Delhi. Snow-capped peaks, lush valleys, adventure activities, and luxury stays. Best rates guaranteed.',
         'overview_heading' => 'Experience the Majestic <span class="text-gradient-gold">Himalayan Beauty</span>',
-        'overview' => 'Embark on a breathtaking 5-day journey through the crown jewels of Himachal Pradesh — Shimla and Manali. From the colonial charm of Shimla\'s Mall Road and the panoramic vistas at Kufri to the snow-capped splendor of Solang Valley and the ancient Hadimba Temple in Manali, this tour weaves together adventure, culture, and relaxation in the most stunning mountain setting. Travel in luxury vehicles through winding mountain roads with dramatic valley views, stay in premium hillside hotels, and create memories that last a lifetime. Perfect for families, couples, and friend groups seeking the ultimate Himalayan escape.',
+        'overview' => 'Embark on a breathtaking 6-day journey through the crown jewels of Himachal Pradesh — Shimla and Manali. From the colonial charm of Shimla\'s Mall Road and the panoramic vistas at Kufri to the snow-capped splendor of Solang Valley and the ancient Hadimba Temple in Manali, this tour weaves together adventure, culture, and relaxation in the most stunning mountain setting. Travel in luxury vehicles through winding mountain roads with dramatic valley views, stay in premium hillside hotels, and create memories that last a lifetime. Perfect for families, couples, and friend groups seeking the ultimate Himalayan escape.',
         'highlights' => [
-            'Mall Road & Ridge Walk in Shimla',
-            'Kufri snow point & adventure activities',
-            'Solang Valley paragliding & skiing',
-            'Ancient Hadimba Devi Temple visit',
-            'Rohtang Pass excursion (seasonal)',
-            'Premium hillside hotel accommodation'
+            'Shimla Sightseeing & Mall Road Walk',
+            'Kufri Excursion & Panoramic Vistas',
+            'Kullu Valley Visit & River Crossing',
+            'Solang Valley Adventure & Activities',
+            'Manali Local Sightseeing & Temples',
+            'Private Cab / Tempo Traveller Transport',
+            'Premium Hotel Stays with Breakfast & Dinner'
         ],
         'key_facts' => [
-            'duration' => '5 Days / 4 Nights',
+            'duration' => '6 Days / 5 Nights',
             'group_size' => '2–12 Persons',
             'best_season' => 'Oct – Mar (Snow), Apr – Jun (Pleasant)',
             'difficulty' => 'Easy to Moderate',
@@ -214,51 +215,57 @@ $TOURS = [
         'itinerary' => [
             [
                 'time' => 'Day 1',
-                'title' => 'Delhi to Shimla — Scenic Mountain Drive',
-                'desc' => 'Early morning pickup from your Delhi hotel in a luxury AC vehicle. Drive through the lush Shivalik foothills via Chandigarh. Enjoy the winding mountain roads and misty valleys as you ascend to Shimla (approx. 8-9 hours). Check in to your premium hillside hotel, freshen up, and enjoy an evening stroll on the iconic Mall Road. Overnight stay in Shimla.',
+                'title' => 'Delhi to Shimla — Scenic Himalayan Drive',
+                'desc' => 'Morning pickup from Delhi (airport, railway station, or hotel). Embark on a scenic drive to Shimla, enjoying the winding roads and mountain views. Upon arrival, check in to your hotel. Savor a delicious dinner and enjoy a comfortable overnight stay in Shimla.',
                 'icon' => 'fa-solid fa-mountain-sun'
             ],
             [
                 'time' => 'Day 2',
-                'title' => 'Shimla Sightseeing — Ridge, Kufri & Temples',
-                'desc' => 'After a hearty breakfast, explore Shimla\'s highlights: visit The Ridge for panoramic Himalayan views, the Christ Church (one of North India\'s oldest churches), Jakhoo Temple dedicated to Lord Hanuman, and the charming Lakkar Bazaar. Post-lunch, drive to Kufri for snow activities, yak rides, and stunning photography. Return to Shimla for an evening at leisure. Overnight in Shimla.',
+                'title' => 'Shimla & Kufri Sightseeing — Pine Valleys & Heritage Walks',
+                'desc' => 'After breakfast, enjoy an excursion to Kufri, famous for its scenic beauty, pine forests, and adventure activities. En route, visit the beautiful Green Valley. In the afternoon, return to Shimla to explore the iconic Mall Road, The Ridge, historic Christ Church, and Lakkar Bazaar for local woodcraft shopping. Dinner and overnight stay in Shimla.',
                 'icon' => 'fa-solid fa-church'
             ],
             [
                 'time' => 'Day 3',
-                'title' => 'Shimla to Manali — Valley of the Gods',
-                'desc' => 'After breakfast, check out and begin the spectacular 7-8 hour drive to Manali through the Kullu Valley. Stop at the Sundernagar Lake and the confluence of Beas and Parvati rivers. Arrive in Manali by evening and check in to your premium hotel. Enjoy the cool mountain air and a relaxed dinner. Overnight in Manali.',
+                'title' => 'Shimla to Manali — Journey via Kullu Valley & Pandoh Dam',
+                'desc' => 'Check out from the Shimla hotel after breakfast. Depart for Manali, a spectacular drive passing through Kullu Valley, Pandoh Dam, and Hanogi Mata Temple. Upon arriving in Manali, check in at your hotel. Enjoy a warm dinner and rest overnight in Manali.',
                 'icon' => 'fa-solid fa-road'
             ],
             [
                 'time' => 'Day 4',
-                'title' => 'Manali Exploration — Solang Valley & Temples',
-                'desc' => 'Full day exploring Manali\'s treasures. Morning visit to the ancient Hadimba Devi Temple set amidst towering cedar forests, followed by Vashisht Hot Springs and the Tibetan Monastery. After lunch, head to Solang Valley for adventure activities — paragliding, zorbing, skiing (seasonal), or simply enjoy the dramatic mountain vistas. Return for an evening bonfire (seasonal). Overnight in Manali.',
+                'title' => 'Solang Valley Excursion — Adventure & Panoramas',
+                'desc' => 'After breakfast, head out for a thrilling excursion to Solang Valley. Renowned for its stunning mountain views and glaciers, it is the perfect spot for optional adventure activities like paragliding, zorbing, quad biking, and cable car rides. Return to Manali in the evening for dinner and overnight stay.',
                 'icon' => 'fa-solid fa-person-skiing'
             ],
             [
                 'time' => 'Day 5',
+                'title' => 'Manali Local Sightseeing — Historic Temples & Nature Trails',
+                'desc' => 'Spend the day exploring local sights in Manali. Visit the ancient wooden Hadimba Devi Temple built in 1553, the hot sulfur springs and temple of Vashisht, the Club House, and the peaceful Van Vihar. In the evening, take a leisurely walk along Mall Road. Dinner and overnight stay in Manali.',
+                'icon' => 'fa-solid fa-tree'
+            ],
+            [
+                'time' => 'Day 6',
                 'title' => 'Manali to Delhi — Return Journey',
-                'desc' => 'After breakfast, check out and begin your comfortable return journey to Delhi. The drive takes approximately 10-12 hours via the Chandigarh-Delhi highway. Stop for lunch en route at a handpicked restaurant. Arrive in Delhi by late evening with a treasure trove of Himalayan memories. Drop-off at your Delhi hotel/airport.',
+                'desc' => 'After breakfast, check out from the hotel and begin the return journey to Delhi. Travel back with wonderful memories of your Himalayan holiday. Drop-off at your designated location in Delhi.',
                 'icon' => 'fa-solid fa-house-chimney'
             ]
         ],
         'inclusions' => [
-            'Luxury AC sedan/SUV (Delhi ↔ Shimla ↔ Manali roundtrip)',
-            'Professional chauffeur experienced in mountain driving',
-            '4 nights premium hotel accommodation (2N Shimla + 2N Manali)',
-            'Daily breakfast at hotel',
+            'Private Vehicle / Cab / Tempo Traveller (Delhi ↔ Shimla ↔ Manali roundtrip)',
+            'Professional chauffeur experienced in mountain driving & driver charges',
+            '5 nights premium hotel accommodation (2N Shimla + 3N Manali)',
+            'Daily Breakfast & Dinner included at the hotels',
             'All highway tolls, parking & fuel charges',
-            'Sightseeing as per itinerary',
+            'Sightseeing as per the itinerary',
             'All applicable taxes (GST)',
             '24/7 on-call travel support'
         ],
         'exclusions' => [
-            'Lunch, dinner, and personal meals',
+            'Airfare / Train Tickets to/from Delhi',
             'Adventure activity charges (paragliding, skiing, etc.)',
-            'Rohtang Pass permit & Atal Tunnel fees',
-            'Entry fees to monuments and temples',
-            'Personal shopping & souvenirs',
+            'Rohtang Pass/Rohtang charges & Atal Tunnel permit fees',
+            'Personal expenses, shopping & souvenirs',
+            'Lunch and any extra meals not specified in inclusions',
             'Travel insurance',
             'Tips and gratuities'
         ],
