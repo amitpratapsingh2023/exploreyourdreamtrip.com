@@ -1,18 +1,19 @@
 <!-- ═══════════════════════════════════════════════════════════
      SIDEBAR NAVIGATION — Premium Dark Design
      ═══════════════════════════════════════════════════════════ -->
-<aside id="sidebar"
-    class="fixed top-0 left-0 z-50 h-full w-[280px] bg-gradient-to-b from-sidebar to-[#0c1425]
+<aside id="sidebar" class="fixed top-0 left-0 z-50 h-full w-[280px] bg-gradient-to-b from-sidebar to-[#0c1425]
            border-r border-white/[0.04] flex flex-col
            transform -translate-x-full lg:translate-x-0 transition-transform duration-300 ease-out">
 
     <!-- ── Brand Header ── -->
     <div class="flex items-center justify-between px-7 h-20 border-b border-white/[0.06] shrink-0">
         <a href="dashboard" class="flex-shrink-0">
-            <img src="<?= SITE_URL ?>/assets/images/brand/logo.png" alt="Veda Webtech" class="h-8 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" />
+            <img src="<?= SITE_URL ?>/assets/images/brand/logo.png" alt="Explore Your Dream Trip"
+                class="h-8 w-auto brightness-0 invert opacity-90 hover:opacity-100 transition-opacity" />
         </a>
         <!-- Mobile close button -->
-        <button id="closeSidebar" class="ml-auto lg:hidden w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 hover:text-white hover:bg-white/5 transition-all">
+        <button id="closeSidebar"
+            class="ml-auto lg:hidden w-8 h-8 rounded-lg flex items-center justify-center text-gray-500 hover:text-white hover:bg-white/5 transition-all">
             <i class="fa-solid fa-xmark"></i>
         </button>
     </div>
@@ -35,11 +36,12 @@
             <div class="sidebar-icon"><i class="fa-solid fa-newspaper text-[13px]"></i></div>
             <span>Blog Posts</span>
             <?php
-                $blogModel = new BlogModel();
-                $draftCount = $blogModel->count(['status' => 'draft']);
-                if ($draftCount > 0):
-            ?>
-            <span class="ml-auto px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-bold"><?= $draftCount ?></span>
+            $blogModel = new BlogModel();
+            $draftCount = $blogModel->count(['status' => 'draft']);
+            if ($draftCount > 0):
+                ?>
+                <span
+                    class="ml-auto px-2 py-0.5 rounded-md bg-amber-500/10 text-amber-400 text-[10px] font-bold"><?= $draftCount ?></span>
             <?php endif; ?>
         </a>
 
@@ -65,11 +67,12 @@
             <div class="sidebar-icon"><i class="fa-solid fa-inbox text-[13px]"></i></div>
             <span>Leads</span>
             <?php
-                $leadModel = new LeadModel();
-                $newLeads = $leadModel->count(['status' => 'new']);
-                if ($newLeads > 0):
-            ?>
-            <span class="ml-auto px-2 py-0.5 rounded-md bg-blue-500/10 text-blue-400 text-[10px] font-bold"><?= $newLeads ?></span>
+            $leadModel = new LeadModel();
+            $newLeads = $leadModel->count(['status' => 'new']);
+            if ($newLeads > 0):
+                ?>
+                <span
+                    class="ml-auto px-2 py-0.5 rounded-md bg-blue-500/10 text-blue-400 text-[10px] font-bold"><?= $newLeads ?></span>
             <?php endif; ?>
         </a>
 
@@ -90,8 +93,10 @@
 
     <!-- ── User Profile (bottom) ── -->
     <div class="shrink-0 border-t border-white/[0.06] p-4">
-        <div class="flex items-center gap-3 p-3 rounded-2xl hover:bg-white/[0.03] transition-colors group cursor-pointer" id="userMenuTrigger">
-            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400/20 to-gold-600/20 flex items-center justify-center text-gold-400 font-bold text-sm border border-gold-500/10">
+        <div class="flex items-center gap-3 p-3 rounded-2xl hover:bg-white/[0.03] transition-colors group cursor-pointer"
+            id="userMenuTrigger">
+            <div
+                class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400/20 to-gold-600/20 flex items-center justify-center text-gold-400 font-bold text-sm border border-gold-500/10">
                 <?= Auth::initials() ?>
             </div>
             <div class="flex-1 min-w-0">
@@ -102,11 +107,13 @@
         </div>
         <!-- Dropdown -->
         <div id="userMenu" class="hidden mt-2 p-2 bg-[#1a2744] rounded-xl border border-white/[0.06] shadow-xl">
-            <a href="admins?action=edit&id=<?= Auth::id() ?>" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 hover:text-white hover:bg-white/[0.04] transition-all">
+            <a href="admins?action=edit&id=<?= Auth::id() ?>"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-gray-400 hover:text-white hover:bg-white/[0.04] transition-all">
                 <i class="fa-solid fa-user-pen text-xs w-4"></i> Edit Profile
             </a>
             <hr class="border-white/[0.06] my-1">
-            <a href="logout" class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-red-400 hover:text-red-300 hover:bg-red-500/5 transition-all">
+            <a href="logout"
+                class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm text-red-400 hover:text-red-300 hover:bg-red-500/5 transition-all">
                 <i class="fa-solid fa-right-from-bracket text-xs w-4"></i> Sign Out
             </a>
         </div>
@@ -119,9 +126,11 @@
 <main class="flex-1 lg:ml-[280px] min-h-screen flex flex-col">
 
     <!-- ── Top Header Bar ── -->
-    <header class="sticky top-0 z-30 bg-white/80 dark:bg-dark-900/80 backdrop-blur-xl border-b border-gray-200/60 dark:border-white/[0.04] h-20 flex items-center px-6 lg:px-10 shrink-0">
+    <header
+        class="sticky top-0 z-30 bg-white/80 dark:bg-dark-900/80 backdrop-blur-xl border-b border-gray-200/60 dark:border-white/[0.04] h-20 flex items-center px-6 lg:px-10 shrink-0">
         <!-- Mobile menu toggle -->
-        <button id="openSidebar" class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-all mr-4">
+        <button id="openSidebar"
+            class="lg:hidden w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 transition-all mr-4">
             <i class="fa-solid fa-bars text-lg"></i>
         </button>
 
@@ -160,9 +169,12 @@
             </a>
 
             <!-- Notifications (cosmetic) -->
-            <button class="relative w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gold-500 hover:bg-gray-100 dark:hover:bg-white/5 transition-all" title="Notifications">
+            <button
+                class="relative w-10 h-10 rounded-xl flex items-center justify-center text-gray-500 hover:text-gold-500 hover:bg-gray-100 dark:hover:bg-white/5 transition-all"
+                title="Notifications">
                 <i class="fa-solid fa-bell text-sm"></i>
-                <span class="absolute top-2 right-2 w-2 h-2 bg-gold-400 rounded-full ring-2 ring-white dark:ring-dark-900"></span>
+                <span
+                    class="absolute top-2 right-2 w-2 h-2 bg-gold-400 rounded-full ring-2 ring-white dark:ring-dark-900"></span>
             </button>
         </div>
     </header>
@@ -173,27 +185,33 @@
         <!-- Flash Messages -->
         <?php
         $flashSuccess = Session::getFlash('success');
-        $flashError   = Session::getFlash('error');
-        $flashInfo    = Session::getFlash('info');
+        $flashError = Session::getFlash('error');
+        $flashInfo = Session::getFlash('info');
         ?>
         <?php foreach ($flashSuccess as $msg): ?>
-        <div class="mb-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 flex items-center gap-3 text-emerald-700 dark:text-emerald-400 text-sm font-medium flash-message">
-            <i class="fa-solid fa-circle-check"></i>
-            <span><?= e($msg) ?></span>
-            <button class="ml-auto text-emerald-400 hover:text-emerald-600 flash-dismiss"><i class="fa-solid fa-xmark"></i></button>
-        </div>
+            <div
+                class="mb-6 p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-500/10 border border-emerald-200 dark:border-emerald-500/20 flex items-center gap-3 text-emerald-700 dark:text-emerald-400 text-sm font-medium flash-message">
+                <i class="fa-solid fa-circle-check"></i>
+                <span><?= e($msg) ?></span>
+                <button class="ml-auto text-emerald-400 hover:text-emerald-600 flash-dismiss"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
         <?php endforeach; ?>
         <?php foreach ($flashError as $msg): ?>
-        <div class="mb-6 p-4 rounded-2xl bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 flex items-center gap-3 text-red-700 dark:text-red-400 text-sm font-medium flash-message">
-            <i class="fa-solid fa-circle-exclamation"></i>
-            <span><?= e($msg) ?></span>
-            <button class="ml-auto text-red-400 hover:text-red-600 flash-dismiss"><i class="fa-solid fa-xmark"></i></button>
-        </div>
+            <div
+                class="mb-6 p-4 rounded-2xl bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 flex items-center gap-3 text-red-700 dark:text-red-400 text-sm font-medium flash-message">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <span><?= e($msg) ?></span>
+                <button class="ml-auto text-red-400 hover:text-red-600 flash-dismiss"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
         <?php endforeach; ?>
         <?php foreach ($flashInfo as $msg): ?>
-        <div class="mb-6 p-4 rounded-2xl bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center gap-3 text-blue-700 dark:text-blue-400 text-sm font-medium flash-message">
-            <i class="fa-solid fa-circle-info"></i>
-            <span><?= e($msg) ?></span>
-            <button class="ml-auto text-blue-400 hover:text-blue-600 flash-dismiss"><i class="fa-solid fa-xmark"></i></button>
-        </div>
+            <div
+                class="mb-6 p-4 rounded-2xl bg-blue-50 dark:bg-blue-500/10 border border-blue-200 dark:border-blue-500/20 flex items-center gap-3 text-blue-700 dark:text-blue-400 text-sm font-medium flash-message">
+                <i class="fa-solid fa-circle-info"></i>
+                <span><?= e($msg) ?></span>
+                <button class="ml-auto text-blue-400 hover:text-blue-600 flash-dismiss"><i
+                        class="fa-solid fa-xmark"></i></button>
+            </div>
         <?php endforeach; ?>

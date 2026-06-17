@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth" id="htmlRoot">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= e($pageTitle ?? 'Dashboard') ?> — Veda Webtech Admin</title>
+    <title><?= e($pageTitle ?? 'Dashboard') ?> — Explore Your Dream Trip Admin</title>
     <meta name="robots" content="noindex, nofollow">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/png" href="<?= SITE_URL ?>/assets/images/brand/favicon.png" />
@@ -39,13 +42,13 @@
         }
     </script>
     <script>
-        // Theme initialization (prevents flash)
-        (function(){
-            const t = localStorage.getItem('admin_theme');
-            if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
-                document.documentElement.classList.add('dark');
-            }
-        })();
+            // Theme initialization (prevents flash)
+            (function () {
+                const t = localStorage.getItem('admin_theme');
+                if (t === 'dark' || (!t && window.matchMedia('(prefers-color-scheme:dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                }
+            })();
     </script>
 
     <!-- Font Awesome -->
@@ -56,12 +59,15 @@
 
     <!-- CKEditor (only on pages that need it) -->
     <?php if (($useCKEditor ?? false)): ?>
-    <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
+        <script src="https://cdn.ckeditor.com/ckeditor5/41.4.2/classic/ckeditor.js"></script>
     <?php endif; ?>
 </head>
-<body class="font-sans bg-gray-50 dark:bg-dark-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased">
+
+<body
+    class="font-sans bg-gray-50 dark:bg-dark-900 text-gray-900 dark:text-gray-100 transition-colors duration-300 antialiased">
 
     <!-- Mobile Overlay -->
-    <div id="sidebarOverlay" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity"></div>
+    <div id="sidebarOverlay"
+        class="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 hidden lg:hidden transition-opacity"></div>
 
     <div class="flex min-h-screen">

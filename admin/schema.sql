@@ -1,5 +1,5 @@
 -- ============================================================
--- Veda Webtech — Complete Admin Panel Database Schema
+-- Explore Your Dream Trip — Complete Admin Panel Database Schema
 -- Run this SQL on your MySQL server to set up all tables
 -- ============================================================
 

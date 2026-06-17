@@ -1,5 +1,5 @@
 /**
- * Veda Webtech — Admin Panel JavaScript
+ * Explore Your Dream Trip — Admin Panel JavaScript
  */
 $(function () {
 

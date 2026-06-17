@@ -44,6 +44,6 @@ Session::start();
 
 // Site constants (reuse from main config if available)
 if (!defined('SITE_NAME'))
-    define('SITE_NAME', 'Veda Webtech');
+    define('SITE_NAME', 'Explore Your Dream Trip');
 if (!defined('SITE_URL'))
-    define('SITE_URL', 'https://vedawebtech.com');
+    define('SITE_URL', 'https://exploreyourdreamtrip.com');
