@@ -14,7 +14,7 @@ header('Content-Type: application/json');
 // Recipients who will receive inquiry notification emails
 $admin_emails = [
     'exploreyourdreamtrip@gmail.com',
-    'apssmj@gmail.com'
+    // 'apssmj@gmail.com'
 ];
 
 // Only allow POST requests
