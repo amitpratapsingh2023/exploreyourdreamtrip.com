@@ -21,7 +21,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 define('SMTP_HOST', 'smtp.gmail.com');
 define('SMTP_PORT', 587);
 define('SMTP_USER', 'exploreyourdreamtrip@gmail.com'); // Your Gmail
-define('SMTP_PASS', 'vsbgivdldbyqcefy
+define('SMTP_PASS', 'zfsorvuibflxdhcl
 ');  // Gmail App Password
 define('SMTP_FROM', 'exploreyourdreamtrip@gmail.com');
 define('SMTP_FROM_NAME', 'Explore Your Dream Trip');
