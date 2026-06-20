@@ -14,30 +14,31 @@
  */
 
 $TOURS = [
-    'agra-taj-mahal' => [
-        'title' => 'Agra (Taj Mahal) Tour',
+    'agra' => [
+        'title' => 'Agra Tour',
         'subtitle' => 'The Monument of Love',
-        'duration' => '1 Day / 1 Night',
+        'duration' => '2 Days / 1 Night',
         'price' => 0,
         'image' => BASE_URL . 'assets/images/tours/agra-hero.webp',
-        'link' => 'tours/agra-taj-mahal',
+        'link' => 'tours/agra',
         'rating' => '4.9',
         'reviews' => '120',
         'featured' => true,
-        'page_title' => 'Agra (Taj Mahal) Tour – Premium Day Trip Package',
-        'page_desc' => 'Book our premium Agra Taj Mahal day trip from Delhi. Experience the iconic monument of love with private luxury transport, expert guide, Agra Fort, Mehtab Bagh, and more. Contact us for the best price.',
+        'page_title' => 'Agra Tour – Premium 2-Day Historical Getaway',
+        'page_desc' => 'Experience the rich heritage of Agra with our premium 2-day Agra tour from Delhi. Includes Taj Mahal at sunrise, Agra Fort, Baby Taj, Sikandra, and luxury stays.',
         'overview_heading' => 'Discover the Eternal <span class="text-gradient-gold">Mughal Grandeur</span>',
-        'overview' => 'Experience the timeless grandeur of the Taj Mahal — one of the Seven Wonders of the World — on this meticulously curated premium day trip from Delhi. Our luxury Agra tour takes you on a journey through Mughal splendor, from the breathtaking ivory-white marble mausoleum to the imposing red sandstone Agra Fort and the serene Mehtab Bagh gardens. Travel in air-conditioned comfort with a professional chauffeur and licensed heritage guide, enjoying VIP skip-the-line entry and personalized attention throughout. Whether you\'re a solo traveler, a couple seeking romance, or a family creating lifelong memories — this tour is designed to deliver an unforgettable, hassle-free experience of India\'s most iconic landmark.',
+        'overview' => 'Embark on a memorable 2-day luxury tour to Agra, the legendary city of the Taj Mahal. Travel from Delhi via the Yamuna Expressway in a premium private vehicle. Experience the stunning Taj Mahal at sunrise, the majestic Agra Fort, the exquisite Itimad-ud-Daulah (Baby Taj), and the historical Sikandra (Akbar\'s Tomb). Savor local delicacies, explore bustling markets, and enjoy a comfortable overnight stay at a premium hotel, making this a perfect weekend getaway.',
         'highlights' => [
-            'Sunrise/Sunset view of the Taj Mahal',
-            'Skip-the-line VIP entry tickets',
-            'Licensed English-speaking heritage guide',
-            'Luxury AC sedan or SUV transport',
+            'Sunrise view of the Taj Mahal',
             'Visit Agra Fort (UNESCO World Heritage)',
-            'Photo stop at Mehtab Bagh gardens'
+            'Explore Itimad-ud-Daulah (Baby Taj)',
+            'Discover Sikandra (Akbar\'s Tomb)',
+            'Sunset views at Mehtab Bagh gardens',
+            'Private Cab / Tempo Traveller transport',
+            'Breakfast & dinner included at hotel'
         ],
         'key_facts' => [
-            'duration' => '1 Day / 1 Night',
+            'duration' => '2 Days / 1 Night',
             'group_size' => '1–8 Persons',
             'best_season' => 'Oct – Mar (Winter)',
             'difficulty' => 'Easy (Walking Tour)',
@@ -46,59 +47,33 @@ $TOURS = [
         ],
         'itinerary' => [
             [
-                'time' => '05:00 AM',
-                'title' => 'Hotel Pickup & Departure from Delhi',
-                'desc' => 'Our professional chauffeur picks you up from your Delhi NCR hotel or preferred location in a luxury air-conditioned sedan (Swift Dzire / Innova Crysta). Enjoy complimentary bottled water and a fresh newspaper as you settle in for the scenic 3-hour Yamuna Expressway drive to Agra.',
+                'time' => 'Day 1',
+                'title' => 'Delhi to Agra — Drive & Initial Exploration',
+                'desc' => 'Morning pickup from Delhi in a premium private vehicle. Drive to Agra via the Yamuna Expressway. Upon arrival, check in to your hotel and relax. In the afternoon, visit the magnificent red sandstone Agra Fort, explore the beautiful Mehtab Bagh gardens overlooking the Taj Mahal, and browse local markets. Savor a delicious dinner at the hotel. Overnight stay in Agra.',
                 'icon' => 'fa-solid fa-car-side'
             ],
             [
-                'time' => '08:00 AM',
-                'title' => 'Arrive at the Taj Mahal',
-                'desc' => 'Arrive at the East Gate of the Taj Mahal. Your licensed heritage guide meets you with pre-arranged VIP skip-the-line entry tickets. Witness the awe-inspiring ivory marble masterpiece built by Emperor Shah Jahan as a testament of eternal love. Explore the intricate pietra dura inlay work, the perfectly symmetrical gardens, and the reflective pool — all while learning the fascinating history from your expert guide.',
+                'time' => 'Day 2',
+                'title' => 'Agra Sightseeing & Return Journey',
+                'desc' => 'Early morning visit to the iconic Taj Mahal to witness its breathtaking beauty at sunrise. Return to the hotel for breakfast. After check-out, visit the exquisite Itimad-ud-Daulah (Baby Taj) and Sikandra (Akbar\'s Tomb). Later, embark on the comfortable drive back to Delhi with drop-off at your preferred location.',
                 'icon' => 'fa-solid fa-mosque'
-            ],
-            [
-                'time' => '10:30 AM',
-                'title' => 'Explore Agra Fort (UNESCO Heritage)',
-                'desc' => 'Drive to the magnificent Agra Fort, a sprawling 16th-century Mughal fortress of red sandstone. Walk through the Diwan-i-Am (Hall of Public Audience), the Diwan-i-Khas (Hall of Private Audience), the Sheesh Mahal (Mirror Palace), and the Musamman Burj — the octagonal tower where Shah Jahan spent his final days gazing at the Taj Mahal.',
-                'icon' => 'fa-solid fa-fort-awesome'
-            ],
-            [
-                'time' => '12:30 PM',
-                'title' => 'Authentic Mughlai Lunch',
-                'desc' => 'Enjoy a sumptuous lunch at a premium heritage restaurant in Agra. Savor authentic Mughlai cuisine — from tender kebabs and rich biryanis to creamy dal makhani and freshly baked naan. Vegetarian and Jain options are available upon request. (Lunch cost is at your own expense but we pre-arrange the finest options.)',
-                'icon' => 'fa-solid fa-utensils'
-            ],
-            [
-                'time' => '02:00 PM',
-                'title' => 'Mehtab Bagh & Local Marble Crafts',
-                'desc' => 'Visit Mehtab Bagh (Moonlight Garden) on the opposite bank of the Yamuna River for stunning panoramic views and perfect photo opportunities of the Taj Mahal. Optionally, explore a local marble inlay workshop to witness the same pietra dura artistry used in the Taj Mahal, and shop for authentic Agra marble souvenirs.',
-                'icon' => 'fa-solid fa-camera'
-            ],
-            [
-                'time' => '04:00 PM',
-                'title' => 'Return Journey to Delhi',
-                'desc' => 'Begin your comfortable return drive to Delhi on the Yamuna Expressway. Relax, reflect on the day\'s incredible experiences, and enjoy the sunset views along the way. Expected drop-off at your Delhi hotel by 7:30 PM.',
-                'icon' => 'fa-solid fa-route'
             ]
         ],
         'inclusions' => [
-            'Luxury AC sedan/SUV (Delhi ↔ Agra roundtrip)',
-            'Professional chauffeur with verified background',
-            'Licensed English-speaking heritage guide',
-            'All highway tolls & parking charges',
-            'Skip-the-line monument entry facilitation',
-            'Complimentary water bottles & refreshments',
+            '1 Night Hotel Accommodation',
+            'Welcome Drink on Arrival',
+            '1 Breakfast & 1 Dinner included at the hotel',
+            'Private Vehicle (AC Sedan/SUV/Tempo Traveller) for the Entire Tour',
+            'All highway tolls, parking, and driver allowance charges',
+            'Sightseeing as per the itinerary',
             'All applicable taxes (GST)',
             '24/7 on-call travel support'
         ],
         'exclusions' => [
-            'Monument entry tickets (₹50 Indians / ₹1,100 Foreigners)',
+            'Monument entry tickets',
+            'Personal expenses (shopping, laundry, tips, etc.)',
             'Lunch and personal meals',
-            'Camera/video permits at monuments',
-            'Personal shopping & souvenirs',
-            'Travel insurance',
-            'Tips and gratuities'
+            'Anything not explicitly mentioned in inclusions'
         ],
         'gallery' => [
             [
