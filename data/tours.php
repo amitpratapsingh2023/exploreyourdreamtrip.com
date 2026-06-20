@@ -1208,5 +1208,154 @@ $TOURS = [
             'Heritage'
         ],
         'schema_price' => '0'
+    ],
+    'nainital' => [
+        'title' => 'Nainital Tour Package',
+        'subtitle' => 'The Lake City of India',
+        'duration' => '3 Days / 2 Nights',
+        'price' => 0,
+        'image' => BASE_URL . 'assets/images/tours/nainital-card.jpg',
+        'link' => 'tours/nainital',
+        'rating' => '4.8',
+        'reviews' => '150',
+        'featured' => false,
+        'page_title' => 'Nainital Tour Package – Premium 3-Day Hill Station Getaway',
+        'page_desc' => 'Book our premium 3-day Nainital tour package from Delhi. Experience Naini Lake boating, Mall Road shopping, Snow View Point, Naina Devi Temple, and beautiful lake tours.',
+        'overview_heading' => 'Experience the Serene Beauty of <span class="text-gradient-gold">Nainital</span>',
+        'overview' => 'Escape to Nainital, the breathtaking lake city nestled in the hills of Uttarakhand. This premium 3-day tour takes you from Delhi to the peaceful valleys of Kumaon. Enjoy private boating on the pristine Naini Lake, explore the colonial charm of Mall Road, visit the sacred Naina Devi Temple, and witness panoramic Himalayan views from Snow View Point. With luxury transportation, handpicked accommodations, and an exquisite itinerary, it is the perfect relaxing holiday for families, couples, and groups.',
+        'highlights' => [
+            'Private boating on pristine Naini Lake',
+            'Explore the iconic Mall Road',
+            'Panoramic views from Snow View Point',
+            'Visit the sacred Naina Devi Temple',
+            'Excursion to Bhimtal, Sattal & Naukuchiatal',
+            'Private Cab / Tempo Traveller transport',
+            'Breakfast & dinner included at hotel'
+        ],
+        'key_facts' => [
+            'duration' => '3 Days / 2 Nights',
+            'group_size' => '2–12 Persons',
+            'best_season' => 'Mar – Jun (Summer), Oct – Feb (Winter)',
+            'difficulty' => 'Easy (Hill Station Tour)',
+            'pickup' => 'Delhi NCR (Hotel/Airport)',
+            'languages' => 'English, Hindi'
+        ],
+        'itinerary' => [
+            [
+                'time' => 'Day 1',
+                'title' => 'Delhi to Nainital — Arrival & Evening Walk',
+                'desc' => 'Morning pickup from your preferred location in Delhi NCR. Drive towards Nainital, enjoying the changing landscapes as you climb into the hills of Uttarakhand. Upon arrival, check in to your premium hotel and relax. In the evening, stroll along the famous Mall Road and enjoy a scenic private boating experience on the serene Naini Lake. Savor a delicious dinner at the hotel. Overnight stay in Nainital.',
+                'icon' => 'fa-solid fa-car-side'
+            ],
+            [
+                'time' => 'Day 2',
+                'title' => 'Nainital Local Sightseeing — Lakes, Temples & View Points',
+                'desc' => 'Start the day with a hearty breakfast at the hotel. Visit the sacred Naina Devi Temple on the banks of Naini Lake. Head to the Eco Cave Gardens and ride the ropeway to Snow View Point for stunning panoramic views of the snow-capped Himalayas. Explore the scenic Tiffin Top (Dorothy\'s Seat) and spend the evening shopping at the local markets. Enjoy dinner and a comfortable overnight stay in Nainital.',
+                'icon' => 'fa-solid fa-mountain'
+            ],
+            [
+                'time' => 'Day 3',
+                'title' => 'Nainital to Delhi — Lake Excursion & Return Journey',
+                'desc' => 'After breakfast and checkout, proceed on a beautiful excursion of the surrounding lake district, visiting Bhimtal, Sattal, and Naukuchiatal (as time permits). Later, embark on the comfortable drive back to Delhi. Drop-off at your designated location in Delhi with unforgettable memories of the Lake City.',
+                'icon' => 'fa-solid fa-house-chimney'
+            ]
+        ],
+        'inclusions' => [
+            '2 Nights Premium Hotel Accommodation',
+            'Welcome Drink on Arrival',
+            '2 Breakfasts & 2 Dinners included at the hotel',
+            'Private Vehicle (AC Sedan/SUV/Tempo Traveller) for the Complete Tour',
+            'All highway tolls, parking, and driver allowance charges',
+            'Sightseeing as per the itinerary',
+            'All applicable taxes (GST)',
+            '24/7 on-call travel support'
+        ],
+        'exclusions' => [
+            'Boating charges and ropeway tickets',
+            'Monument entry fees and adventure activities',
+            'Lunch and personal meals',
+            'Personal shopping, tips, and souvenirs',
+            'Anything not explicitly mentioned in inclusions'
+        ],
+        'gallery' => [
+            [
+                'src' => BASE_URL . 'assets/images/tours/nainital-hero.jpg',
+                'title' => 'Nainital — Beautiful Lake City View'
+            ],
+            [
+                'src' => BASE_URL . 'assets/images/tours/nainital-card.jpg',
+                'title' => 'Naini Lake Boating Experience'
+            ],
+            [
+                'src' => BASE_URL . 'assets/images/tours/nainital-hero.jpg',
+                'title' => 'Snow-Capped Himalayan Peak Vistas'
+            ],
+            [
+                'src' => BASE_URL . 'assets/images/tours/nainital-card.jpg',
+                'title' => 'Scenic Mall Road Evening Walk'
+            ],
+            [
+                'src' => BASE_URL . 'assets/images/tours/nainital-hero.jpg',
+                'title' => 'Bhimtal Lake Panorama'
+            ],
+            [
+                'src' => BASE_URL . 'assets/images/tours/nainital-card.jpg',
+                'title' => 'Eco Cave Gardens Exploration'
+            ]
+        ],
+        'pricing' => [
+            [
+                'vehicle' => 'Swift Dzire (Sedan)',
+                'capacity' => '1–3 Guests',
+                'price' => 0,
+                'per' => 'per person',
+                'icon' => 'fa-solid fa-car',
+                'popular' => false
+            ],
+            [
+                'vehicle' => 'Toyota Innova Crysta (SUV)',
+                'capacity' => '1–6 Guests',
+                'price' => 0,
+                'per' => 'per person',
+                'icon' => 'fa-solid fa-truck-pickup',
+                'popular' => true
+            ],
+            [
+                'vehicle' => 'Tempo Traveller (12-Seater)',
+                'capacity' => '7–12 Guests',
+                'price' => 0,
+                'per' => 'per person',
+                'icon' => 'fa-solid fa-van-shuttle',
+                'popular' => false
+            ]
+        ],
+        'trust_props' => [
+            [
+                'icon' => 'fa-solid fa-mountain',
+                'title' => 'Lake Specialists',
+                'desc' => 'Experienced drivers for high altitude mountain roads'
+            ],
+            [
+                'icon' => 'fa-solid fa-hotel',
+                'title' => 'Premium Stays',
+                'desc' => 'Handpicked lakeside or hill-view hotels'
+            ],
+            [
+                'icon' => 'fa-solid fa-compass',
+                'title' => 'Complete Lake Tour',
+                'desc' => 'Covers Bhimtal, Sattal & Naukuchiatal'
+            ],
+            [
+                'icon' => 'fa-solid fa-headset',
+                'title' => '24/7 Trip Support',
+                'desc' => 'Dedicated travel coordinator on call'
+            ]
+        ],
+        'schema_tourist_type' => [
+            'Leisure',
+            'Nature',
+            'Adventure'
+        ],
+        'schema_price' => '0'
     ]
 ];
