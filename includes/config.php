@@ -35,7 +35,7 @@ define('WHATSAPP_LINK', 'https://wa.me/91' . WHATSAPP_NUMBER . '?text=' . urlenc
 // Social Media Links
 define('SOCIAL_FACEBOOK', 'https://facebook.com/exploreyourdreamtrip');
 define('SOCIAL_INSTAGRAM', 'https://instagram.com/exploreyourdreamtrip');
-define('SOCIAL_TWITTER', 'https://twitter.com/dreamtrip');
+define('SOCIAL_TWITTER', 'https://x.com/dreamtripyours');
 define('SOCIAL_YOUTUBE', 'https://youtube.com/exploreyourdreamtrip');
 
 // Top Destinations / Tours — loaded from centralized data file

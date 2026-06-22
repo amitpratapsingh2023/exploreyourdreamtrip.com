@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: https://sparsh-clinic.com/sitemap.xml

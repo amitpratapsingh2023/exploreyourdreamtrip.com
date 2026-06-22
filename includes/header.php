@@ -13,19 +13,24 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
     <meta name="description" content="<?php echo isset($page_desc) ? $page_desc : SITE_DESC; ?>">
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+    <link rel="canonical"
+        href="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
-    <meta property="og:title" content="<?php echo isset($page_title) ? $page_title . ' | ' . SITE_NAME : SITE_TITLE . ' | ' . SITE_NAME; ?>">
+    <meta property="og:url"
+        content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+    <meta property="og:title"
+        content="<?php echo isset($page_title) ? $page_title . ' | ' . SITE_NAME : SITE_TITLE . ' | ' . SITE_NAME; ?>">
     <meta property="og:description" content="<?php echo isset($page_desc) ? $page_desc : SITE_DESC; ?>">
     <meta property="og:image" content="<?php echo BASE_URL; ?>assets/images/hero.webp">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
-    <meta property="twitter:title" content="<?php echo isset($page_title) ? $page_title . ' | ' . SITE_NAME : SITE_TITLE . ' | ' . SITE_NAME; ?>">
+    <meta property="twitter:url"
+        content="<?php echo (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']; ?>">
+    <meta property="twitter:title"
+        content="<?php echo isset($page_title) ? $page_title . ' | ' . SITE_NAME : SITE_TITLE . ' | ' . SITE_NAME; ?>">
     <meta property="twitter:description" content="<?php echo isset($page_desc) ? $page_desc : SITE_DESC; ?>">
     <meta property="twitter:image" content="<?php echo BASE_URL; ?>assets/images/hero.webp">
 
@@ -56,27 +61,27 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
     </script>
 
     <?php if ($current_page === 'tours.php'): ?>
-    <!-- Structured Data (JSON-LD) - Breadcrumbs for Tours -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "<?php echo BASE_URL; ?>"
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "name": "Tours & Packages",
-          "item": "<?php echo BASE_URL; ?>tours.php"
-        }
-      ]
-    }
-    </script>
+        <!-- Structured Data (JSON-LD) - Breadcrumbs for Tours -->
+        <script type="application/ld+json">
+                {
+                  "@context": "https://schema.org",
+                  "@type": "BreadcrumbList",
+                  "itemListElement": [
+                    {
+                      "@type": "ListItem",
+                      "position": 1,
+                      "name": "Home",
+                      "item": "<?php echo BASE_URL; ?>"
+                    },
+                    {
+                      "@type": "ListItem",
+                      "position": 2,
+                      "name": "Tours & Packages",
+                      "item": "<?php echo BASE_URL; ?>tours.php"
+                    }
+                  ]
+                }
+                </script>
     <?php endif; ?>
 
     <!-- Favicon -->
@@ -117,7 +122,17 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Custom Style Sheet -->
-    <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/custom.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/custom.css'); ?>">
+    <link rel="stylesheet"
+        href="<?php echo BASE_URL; ?>assets/css/custom.css?v=<?php echo filemtime(__DIR__ . '/../assets/css/custom.css'); ?>">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-708NP8SMGK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-708NP8SMGK');
+    </script>
 </head>
 
 <body class="bg-slate-50 text-obsidian-950 flex flex-col min-h-screen">
@@ -242,7 +257,8 @@ $current_dir = basename(dirname($_SERVER['PHP_SELF']));
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'car-rental.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Car
                 Rental</a>
             <a href="<?php echo BASE_URL; ?>blog"
-                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'blog.php' || $current_page === 'blog-detail.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Travel Blog</a>
+                class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'blog.php' || $current_page === 'blog-detail.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">Travel
+                Blog</a>
             <a href="<?php echo BASE_URL; ?>about"
                 class="block py-3 text-lg font-semibold border-b border-white/5 <?php echo ($current_page === 'about.php') ? 'text-brand' : 'text-slate-300'; ?> hover:text-brand transition-colors">About
                 Us</a>
